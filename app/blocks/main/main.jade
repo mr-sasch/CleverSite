@@ -1,0 +1,217 @@
+mixin main()
+	+b.main&attributes(attributes)
+		block
+		.container-fluid
+			// Меню
+			nav.navbar.navbar-expand-sm.navbar-light.bg-light.fixed-top.brd-g
+				a.navbar-brand(href='#') Логотип
+				button.navbar-toggler(type='button' data-toggle='collapse' data-target='#main-menu')
+					span.navbar-toggler-icon
+				.collapse.navbar-collapse#main-menu
+					ul.navbar-nav
+						li.nav-item.active
+							.nav-link(href='') Главная
+						li.nav-item
+							.nav-link(href='') О компании
+						li.nav-item
+							.nav-link(href='') Каталог
+						li.nav-item
+							.nav-link(href='') Статьи
+						li.nav-item
+							.nav-link(href='') Галерея
+						li.nav-item
+							.nav-link(href='') Контакты
+		// Слайдер
+		.row
+			.container-fluid.block-slider
+				#mainSlider.carousel.slide(data-ride='carousel')
+					// Буллеты
+					//- ol.carousel-indicators
+					//- 	li.active(data-target='#mainSlider' data-slide-to='0')
+					//- 	li(data-target='#mainSlider' data-slide-to='1')
+					//- 	li(data-target='#mainSlider' data-slide-to='2')
+					// Слайды
+					.carousel-inner
+						.carousel-item.active
+							.slider__item(style='width: 100%; height: 400px;').bg-g
+								.container.p-3
+									.col-12
+										.row.justify-content-between.align-items-start
+											.col-3.bg-lg.c-b.p-3.font-bold Мир умной автоматики для вашего дома
+											.header-call.col-3.bg-lg.c-b.p-3
+												.header-call__title Позвоните нам прямо сейчас
+												h3.header-call__phone +7 (978) 090-41-31
+												.header-call__btn.text-right
+													button.p-1 Заказать звонок
+								.row
+									.container-fluid
+										.col-12.text-center.bg-lg.py-4.slider-gradient.c-lg
+											.row.justify-content-center РЕМОНТ КВАРТИРЫ ЗА 60 ДНЕЙ! ОТ 3900 РУБ/М2
+											.sepr-hr.brd-w.my-2
+											.row.justify-content-center ОНЛАЙН - ТРАНСЛЯЦИЯ ВАШЕГО РЕМОНТА
+											.row.justify-content-center.font-bold.mt-1 ПРОПИСЫВАЕМ ГАРАНТИЮ В ДОГОВОРЕ НА 5 ЛЕТ!
+								.container
+									.col-12
+									
+					// Стрелки
+					//- a.carousel-control-prev(href='#mainSlider' data-slide='prev')
+					//- 	span.carousel-control-prev-icon
+					//- a.carousel-control-next(href='#mainSlider' data-slide='next')
+					//- 	span.carousel-control-next-icon
+		.sepr
+		// Каталог
+		.container.block-catalog
+			.row.justify-content-center
+				h2.catalog__title Каталог
+			.row
+				.col-6
+					.cat-item.bg-lg.brd-w.catalog__s-h Умный дом 
+						br
+						| + всплывающий текст
+				.col-6
+					.cat-item.bg-lg.brd-w.catalog__skud СКУД для гостиниц 
+						br
+						| + всплывающий текст
+				.col-6
+					.cat-item.bg-lg.brd-w.catalog__sun Системы солнцезащиты
+						br
+						| + жалюзи
+						br
+						| + карнизы
+				.col-6
+					.cat-item.bg-lg.brd-w.catalog__video
+						.container-fluid.h100p
+							.row.h100p
+								.col-6.cat__sub-item.bg-g.brd-w.c-w Видеонаблюдение
+									br
+									| + всплывающий текст
+								.col-6.cat__sub-item.bg-g.brd-w.c-w Домофоны
+									br
+									| + всплывающий текст
+		.sepr
+		// ООО Клевер - это ... (11 блоков)
+		.container.cleveris
+			.row
+				.col-12
+					h1.text-center ООО "Клевер" - это
+				.col-12.bg-lg.p-2.m-1 
+					.row
+						.col-2
+							.h100.bg-g.d-flex.justify-content-center.align-items-center.c-w Картинка
+						.col-10 1.Автоматические системы управления для Дома и бизнеса –комфорт, энергосбережение, безопасность, контроль.
+				.col-12.bg-lg.p-2.m-1 
+					.row
+						.col-2
+							.h100.bg-g.d-flex.justify-content-center.align-items-center.c-w Картинка
+						.col-10 2. уют и прохлада, стильный интерьер, защита от любопытных глаз :  жалюзи и электрические системы управления шторами – электрокарнизы с пультом ДУ, электрошторы, маркизы от производителей Италии, Германии, Франции,КНР, Испании.
+				.col-12.bg-lg.p-2.m-1 
+					.row
+						.col-2
+							.h100.bg-g.d-flex.justify-content-center.align-items-center.c-w Картинка
+						.col-10 3.   уверенность и информированность - видеонаблюдение и видеодомофония:  передача изображения –он-лайн, просмотр изображения дистанционно  через телефон, ноутбук. Отправка фотосообщений событий. Хранение информации свыше 45 суток;.
+				.col-12.bg-lg.p-2.m-1 
+					.row
+						.col-2
+							.h100.bg-g.d-flex.justify-content-center.align-items-center.c-w Картинка
+						.col-10 4. экономия и порядок: системы контроля доступа и энергосбережения – электронные замки, энергосберегающие карманы, программное обеспечение для контроля доступа и контроля работы персонала. Повышение рентабельности отеля на 25% min. за счет экономии электричества;
+				.col-12.bg-lg.p-2.m-1 
+					.row
+						.col-2
+							.h100.bg-g.d-flex.justify-content-center.align-items-center.c-w Картинка
+						.col-10 5. Ваши мечты, Ваш волшебный Дом, сказка каждый день, волшебный комфорт и надежная защищенность: система автоматики «Умный Дом» JABLOTRON . Охрана  периметра , комплексная безопасность здания, освещение, теплые полы, оптимизация расхода электричества, контроль сна детей и пожилых , управление бассейном, сауной, ночное освещение, сценарии «отпуск» и «частичный доступ», контроль протечек воды и утечки газа, автономная работа при отсутствии электричества до 5-ти суток, обратная он-лайн связь с Хозяином , проверенное  современное веб-приложение.
+				.col-12.bg-lg.p-2.m-1 
+					.row
+						.col-2
+							.h100.bg-g.d-flex.justify-content-center.align-items-center.c-w Картинка
+						.col-10 6. Сценарии работы автоматики - в подарок!
+				.col-12.bg-lg.p-2.m-1 
+					.row
+						.col-2
+							.h100.bg-g.d-flex.justify-content-center.align-items-center.c-w Картинка
+						.col-10 7. Индивидуальные условия оплаты, отсрочка платежа по договору до 3-х месяцев.
+				.col-12.bg-lg.p-2.m-1 
+					.row
+						.col-2
+							.h100.bg-g.d-flex.justify-content-center.align-items-center.c-w Картинка
+						.col-10 8. Монтаж - от одного дня.
+				.col-12.bg-lg.p-2.m-1 
+					.row
+						.col-2
+							.h100.bg-g.d-flex.justify-content-center.align-items-center.c-w Картинка
+						.col-10 9. Гарантия на оборудование - от 2-х лет. На умные системы - от 3-х лет. Гарантия на работу - бессрочная.
+				.col-12.bg-lg.p-2.m-1 
+					.row
+						.col-2
+							.h100.bg-g.d-flex.justify-content-center.align-items-center.c-w Картинка
+						.col-10 10. В штате предприятия - инженеры-электрики, программисты и микроэлектронщики, профессионалы в разнопрофильной автоматике. 
+				.col-12.bg-lg.p-2.m-1 
+					.row
+						.col-2
+							.h100.bg-g.d-flex.justify-content-center.align-items-center.c-w Картинка
+						.col-10 11. Гарантийное и постгарантийное сопровождение, скорая техническая помощь,пунктуальные,аккуратные мастера,  - это мир сервиса "КЛЕВЕР".
+				.row 
+					h4 Мир умной автоматики для Вашего Дома
+		.sepr
+		// Обращение директора
+		.container-fluid.block-dream.bg-lg
+			.container
+				.sepr
+				.row.justify-content-center
+					h1 Обращение директора
+				.row.text-left Здравствуйте, дорогие Друзья, Клиенты и Партнеры!
+					br
+					| Я – Владимир Жмур, основатель и директор по развитию компании «КЛЕВЕР».
+					br
+					| Благодарю Вас за проявленный интерес к нашей продукции.
+					br
+					| «КЛЕВЕР»  – молодая севастопольская компания, созданная для предоставления жителям Крыма услуг по автоматизации комфорта и безопасности Дома и бизнеса.
+					br
+					| Наши  партнеры - компании из Крыма, Ростова-на-Дону, Москвы и Благовещенска (Амурская область).Такая обширная география партнеров связана с нашим стремлением выбирать лучшие  инженерные решения для   реализации Ваших желаний.
+					br
+					| Инженеры ООО  "КЛЕВЕР" - профессионалы автоматизации. Атомщики и микроэлектронщики, программисты и электрики.
+					br 
+					| Мы приготовили для Вас предложения в пяти направлениях:
+					br
+					| "Умный Дом" чешской компании Яблотрон;
+					br
+					| защита от солнца  -жалюзи и маркизы, механические и автоматические,  производства Испании, Италии, Германии и КНР;
+					br
+					| IP-видеонаблюдение;
+					br
+					| видеодомофоны;
+					br
+					| энергосбережение и контроль доступа для гостиниц и офисов, программы учета работы персонала.
+					br
+					| Наша миссия – инновационная автоматика в каждый Дом и офис.
+					br
+					h4.text-center Добро пожаловать в мир инноваций «КЛЕВЕР»!
+				.row.justify-content-center
+					br
+					| + 
+					br
+					| наша команда (3 человека)
+				.sepr
+		.sepr
+		// Галерея
+		.container-fluid.block-dream.h100.bg-lg Галерея, прокрутка(карусель) (+ захват)
+		.sepr
+		// Отзывы
+		.container-fluid.block-dream.h100.bg-lg Отзывы
+		.sepr
+		// Нам доверяют
+		.container-fluid.block-dream.h100.bg-lg Нам доверяют: (3 логотипа компаний)
+		.sepr
+		// Сео текст
+		.container-fluid.block-dream.h100.bg-lg Сео текст
+		.sepr
+		// Футер
+		.container-fluid.block-dream.h100.bg-lg Футер + Контакты + Карта + Захват
+		.sepr
+		// Чат, ЛЛ
+		.container-fluid
+			.row.fixed-bottom.align-items-center.c-w
+				.col-6
+					.h50.bg-g.chat.brd-w Чат
+				.col-6.d-flex.justify-content-end
+					.bg-g.phone Звонок
+		
