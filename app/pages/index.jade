@@ -1,8 +1,53 @@
 extends /blocks/layout-default/layout-default
+include /blocks/1navbar/navbar
+include /blocks/2slider/slider
+include /blocks/3catalog/catalog
+include /blocks/4cleveris/cleveris
+include /blocks/5team/team
+include /blocks/6gallery/gallery
+include /blocks/7reviews/reviews
+include /blocks/8partners/partners
+include /blocks/9seotext/seotext
+include /blocks/10footer/footer
+include /blocks/11ll/ll
 include /blocks/main/main
 
 block head
 	- var pageTitle = 'Smart House - Prototype';
 
 block content
-	+main
+	// навбар 
+	+navbar
+	//- +main
+	// /навбар 
+	// слайдер
+	+slider
+	// /слайдер
+	// каталог
+	+catalog
+	// /каталог
+	// Клевер - это ...
+	+cleveris
+	// /Клевер - это ...
+	// Наша команда
+	+team
+	// /Наша команда
+	// Галерея
+	+gallery
+	// /Галерея
+	// Отзывы
+	+reviews
+	// /Отзывы
+	// Нам доверяют
+	+partners
+	// /Нам доверяют
+	// Сео-текст
+	+seotext
+	// Сео-текст
+	// Футер
+	+footer
+	// /Футер
+	// Ловец лидов
+	+ll
+	// /Ловец лидов
+ 

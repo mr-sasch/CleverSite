@@ -22,42 +22,72 @@ mixin main()
 						li.nav-item
 							.nav-link(href='') Контакты
 		// Слайдер
-		.row
-			.container-fluid.block-slider
-				#mainSlider.carousel.slide(data-ride='carousel')
-					// Буллеты
-					//- ol.carousel-indicators
-					//- 	li.active(data-target='#mainSlider' data-slide-to='0')
-					//- 	li(data-target='#mainSlider' data-slide-to='1')
-					//- 	li(data-target='#mainSlider' data-slide-to='2')
-					// Слайды
-					.carousel-inner
-						.carousel-item.active
-							.slider__item(style='width: 100%; height: 400px;').bg-g
-								.container.p-3
-									.col-12
-										.row.justify-content-between.align-items-start
-											.col-3.bg-lg.c-b.p-3.font-bold Мир умной автоматики для вашего дома
-											.header-call.col-3.bg-lg.c-b.p-3
-												.header-call__title Позвоните нам прямо сейчас
-												h3.header-call__phone +7 (978) 090-41-31
-												.header-call__btn.text-right
-													button.p-1 Заказать звонок
-								.row
-									.container-fluid
-										.col-12.text-center.bg-lg.py-4.slider-gradient.c-lg
-											.row.justify-content-center РЕМОНТ КВАРТИРЫ ЗА 60 ДНЕЙ! ОТ 3900 РУБ/М2
-											.sepr-hr.brd-w.my-2
-											.row.justify-content-center ОНЛАЙН - ТРАНСЛЯЦИЯ ВАШЕГО РЕМОНТА
-											.row.justify-content-center.font-bold.mt-1 ПРОПИСЫВАЕМ ГАРАНТИЮ В ДОГОВОРЕ НА 5 ЛЕТ!
-								.container
-									.col-12
+		.container-fluid.block-slider.bg-g
+			#mainSlider.carousel.slide(data-ride='carousel')
+				// Буллеты
+				//- ol.carousel-indicators
+				//- 	li.active(data-target='#mainSlider' data-slide-to='0')
+				//- 	li(data-target='#mainSlider' data-slide-to='1')
+				//- 	li(data-target='#mainSlider' data-slide-to='2')
+				// Слайды
+				.carousel-inner
+					.carousel-item.active
+						.slider__item(style='width: 100%;')
+							// Ряд 1
+							.container.p-3
+								.col-12
+									.row.justify-content-between.align-items-start
+										.col-3.bg-lg.c-b.p-3.font-bold Мир умной автоматики для вашего дома
+										.header-call.col-3.bg-lg.c-b.p-3
+											.header-call__title Позвоните нам прямо сейчас
+											h3.header-call__phone +7 (978) 090-41-31
+											.header-call__btn.text-right
+												button.btn.btn-secondary.p-1(data-toggle='modal' data-target='#callback-banner') Заказать звонок
+							// Ряд 2
+							.row
+								.container-fluid
+									.col-12.text-center.bg-lg.py-4.slider-gradient.c-lg
+										.row.justify-content-center РЕМОНТ КВАРТИРЫ ЗА 60 ДНЕЙ! ОТ 3900 РУБ/М2
+										.sepr-hr.brd-w.my-2
+										.row.justify-content-center ОНЛАЙН - ТРАНСЛЯЦИЯ ВАШЕГО РЕМОНТА
+										.row.justify-content-center.font-bold.mt-1 ПРОПИСЫВАЕМ ГАРАНТИЮ В ДОГОВОРЕ НА 5 ЛЕТ!
+							// Ряд 3
+							.row.flex-column.align-items-center
+								.col-12.text-center.my-5.banner__bottom
+									.banner__bottom1.p-3.bg-w
+										.banner__bottom-row1
+											h1 Сэкнономим до 30% на работах
+										.banner__bottom-row2
+											h4 Сравните цены с конкурентами сделав экспресс-рассчет
+									.banner__bottom2.py-4.bg-lg ВАМ БУДЕТ ДОСТАТОЧНО 2 МИН ЧТОБЫ ОПРЕДЕЛИТЬ ПРИМЕРНУЮ
+										br
+										| СТОИМОСТЬ ВАШЕГО РЕМОНТА И ДЛЯ ЭТОГО ДАЖЕ НЕ НУЖНО
+										br
+										| СОЗВАНИВАТЬСЯ С МЕНЕДЖЕРОМ НАШЕЙ КОМПАНИИ.
 									
-					// Стрелки
-					//- a.carousel-control-prev(href='#mainSlider' data-slide='prev')
-					//- 	span.carousel-control-prev-icon
-					//- a.carousel-control-next(href='#mainSlider' data-slide='next')
-					//- 	span.carousel-control-next-icon
+				
+				// Модальное окно
+				.modal.fade#callback-banner(tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true")
+					.modal-dialog
+						.modal-content
+							.modal-header
+								.modal-title Обратный звонок
+								button.close(data-dismiss='modal')
+							.modal-body
+								form
+									.form-group
+										label(for='#callbackBannerName').col-form-label Ваше имя
+										input(type='text').form-control#callbackBannerName
+									.form-group
+										label(for='№callbackBannerSirname').col-form-label Ваше имя
+										input(type='text').form-control#callbackBannerSirname
+							.modal-footer
+								button.btn.btn-secondary Отправить заявку				
+				// Стрелки
+				//- a.carousel-control-prev(href='#mainSlider' data-slide='prev')
+				//- 	span.carousel-control-prev-icon
+				//- a.carousel-control-next(href='#mainSlider' data-slide='next')
+				//- 	span.carousel-control-next-icon
 		.sepr
 		// Каталог
 		.container.block-catalog
@@ -89,11 +119,13 @@ mixin main()
 									br
 									| + всплывающий текст
 		.sepr
+		.sepr-hr.brd-g
+		.sepr
 		// ООО Клевер - это ... (11 блоков)
 		.container.cleveris
 			.row
 				.col-12
-					h1.text-center ООО "Клевер" - это
+					h2.text-center ООО "Клевер" - это
 				.col-12.bg-lg.p-2.m-1 
 					.row
 						.col-2
@@ -148,17 +180,21 @@ mixin main()
 					.row
 						.col-2
 							.h100.bg-g.d-flex.justify-content-center.align-items-center.c-w Картинка
-						.col-10 11. Гарантийное и постгарантийное сопровождение, скорая техническая помощь,пунктуальные,аккуратные мастера,  - это мир сервиса "КЛЕВЕР".
-				.row 
-					h4 Мир умной автоматики для Вашего Дома
+						.col-10 11. Гарантийное и постгарантийное сопровождение, скорая техническая помощь,пунктуальные,аккуратные мастера,  - это мир сервиса "КЛЕВЕР". 
+			.row.justify-content-end.flex-row.mt-3
+				h4 Мир умной автоматики для Вашего Дома
+		.sepr
+		.sepr-hr.brd-g
 		.sepr
 		// Обращение директора
-		.container-fluid.block-dream.bg-lg
+		.container-fluid.block-dream.bg-lg.director
 			.container
 				.sepr
-				.row.justify-content-center
+				.row.justify-content-center.mb-4
 					h1 Обращение директора
-				.row.text-left Здравствуйте, дорогие Друзья, Клиенты и Партнеры!
+				.text-left
+					span.font-bold.pb-2(style='line-height: 40px;') Здравствуйте, дорогие Друзья, Клиенты и Партнеры!
+					.director-photo.float-right.bg-g.ml-3.mb-3.c-lg.d-flex.justify-content-center.align-items-center фото директора
 					br
 					| Я – Владимир Жмур, основатель и директор по развитию компании «КЛЕВЕР».
 					br
@@ -182,36 +218,167 @@ mixin main()
 					br
 					| энергосбережение и контроль доступа для гостиниц и офисов, программы учета работы персонала.
 					br
-					| Наша миссия – инновационная автоматика в каждый Дом и офис.
+					.font-bold Наша миссия – инновационная автоматика в каждый Дом и офис.
 					br
-					h4.text-center Добро пожаловать в мир инноваций «КЛЕВЕР»!
-				.row.justify-content-center
-					br
-					| + 
-					br
-					| наша команда (3 человека)
+					h4.text-center.mt-2 Добро пожаловать в мир инноваций «КЛЕВЕР»!
 				.sepr
+				.sepr-hr.brd-g
+				.sepr
+				h2 Наша команда (3 человека)
+				.sepr
+				.row.team
+					.col-4
+						.team-prsn.bg-lg.brd-w
+							.team-prsn__photo.bg-g
+							.team-prsn__about
+								.team-prsn__title.pt-4 Сергей Иванов
+								.team-prsn__text.pb-4 заместитель директора
+					.col-4
+						.team-prsn.bg-lg.brd-w
+							.team-prsn__photo.bg-g
+							.team-prsn__about
+								.team-prsn__title.pt-4 Иван Сергеев
+								.team-prsn__text.pb-4 инженер-наладчик
+					.col-4
+						.team-prsn.bg-lg.brd-w
+							.team-prsn__photo.bg-g
+							.team-prsn__about
+								.team-prsn__title.pt-4 Сергей Иванов
+								.team-prsn__text.pb-4 специалист по коммуникациям
+				.sepr
+						
+		.sepr
+		.sepr-hr.brd-g
 		.sepr
 		// Галерея
-		.container-fluid.block-dream.h100.bg-lg Галерея, прокрутка(карусель) (+ захват)
+		.block-dream
+			.sepr
+			h2.col-12 Галерея, прокрутка(карусель)
+			.sepr
+		.gallery
+			.gallery-item.bg-g.c-lg.brd-lg изображение 1
+			.gallery-item.bg-g.c-lg.brd-lg изображение 2
+			.gallery-item.bg-g.c-lg.brd-lg изображение 3
+			.gallery-item.bg-g.c-lg.brd-lg изображение 4
+			.sepr
 		.sepr
-		// Отзывы
-		.container-fluid.block-dream.h100.bg-lg Отзывы
+		.sepr-hr.brd-g
 		.sepr
-		// Нам доверяют
-		.container-fluid.block-dream.h100.bg-lg Нам доверяют: (3 логотипа компаний)
+	// Отзывы
+	.container.bg-lg
 		.sepr
-		// Сео текст
-		.container-fluid.block-dream.h100.bg-lg Сео текст
+		h2.text-center Отзывы
 		.sepr
-		// Футер
-		.container-fluid.block-dream.h100.bg-lg Футер + Контакты + Карта + Захват
+		// Слайдер с отзывами
+		.reviews-wrap
+			.reviews
+				.reviews__item
+					.review
+						.review__item-img.d-flex.justify-content-center.align-items-center.c-w Фото
+						.review__item-cntnt
+							.review__item-cntnt-ttl Мария
+							.review__item-cntnt-ttl-city г. Севастополь								
+							.review__item-cntnt-txt Заказывали систему умного дома. Порадовало соотношение цены и качества. Очень вежливые ребята, подробно ответили на все мои вопросы. Обязательно буду рекомендовать компанию своим знакомым.
+				.reviews__item
+					.review
+						.review__item-img.d-flex.justify-content-center.align-items-center.c-w Фото
+						.review__item-cntnt
+							.review__item-cntnt-ttl Мария
+							.review__item-cntnt-ttl-city г. Севастополь								
+							.review__item-cntnt-txt Заказывали систему умного дома. Порадовало соотношение цены и качества. Очень вежливые ребята, подробно ответили на все мои вопросы. Обязательно буду рекомендовать компанию своим знакомым.
+				.reviews__item
+					.review
+						.review__item-img.d-flex.justify-content-center.align-items-center.c-w Фото
+						.review__item-cntnt
+							.review__item-cntnt-ttl Мария
+							.review__item-cntnt-ttl-city г. Севастополь								
+							.review__item-cntnt-txt Заказывали систему умного дома. Порадовало соотношение цены и качества. Очень вежливые ребята, подробно ответили на все мои вопросы. Обязательно буду рекомендовать компанию своим знакомым.
+				.reviews__item
+					.review
+						.review__item-img.d-flex.justify-content-center.align-items-center.c-w Фото
+						.review__item-cntnt
+							.review__item-cntnt-ttl Мария
+							.review__item-cntnt-ttl-city г. Севастополь								
+							.review__item-cntnt-txt Заказывали систему умного дома. Порадовало соотношение цены и качества. Очень вежливые ребята, подробно ответили на все мои вопросы. Обязательно буду рекомендовать компанию своим знакомым.
+	.sepr
+	.sepr-hr.brd-g
+	.sepr
+	// Нам доверяют
+	.partners.bg-lg 
+		.container
+			.sepr
+			h2.partners-title.text-center Нам доверяют: (3 логотипа компаний)
+			.sepr
+			.row
+				.partners-item-wrap.col-4
+					.partners-item.brd-w.bg-g.c-w.centerAll.d-flex фото логотипа компании
+				.partners-item-wrap.col-4
+					.partners-item.brd-w.bg-g.c-w.centerAll.d-flex фото логотипа компании
+				.partners-item-wrap.col-4
+					.partners-item.brd-w.bg-g.c-w.centerAll.d-flex фото логотипа компании
+			.sepr
+	.sepr
+	.sepr-hr.brd-g
+	.sepr
+	// Сео текст
+	.seotext.bg-lg
 		.sepr
-		// Чат, ЛЛ
-		.container-fluid
-			.row.fixed-bottom.align-items-center.c-w
-				.col-6
-					.h50.bg-g.chat.brd-w Чат
-				.col-6.d-flex.justify-content-end
-					.bg-g.phone Звонок
+		.container
+			
+			h2.seotext__ttl.text-center Сео текст для главной страницы
+			.seotext__txt Sed porttitor lectus nibh. Donec sollicitudin molestie malesuada. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Curabitur aliquet quam id dui posuere blandit. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Curabitur aliquet quam id dui posuere blandit. Proin eget tortor risus. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Donec rutrum congue leo eget malesuada.
+			.seotext__txt-more-cntnt.collapse#seotext__txt-more-cntnt Sed porttitor lectus nibh. Donec sollicitudin molestie malesuada. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Curabitur aliquet quam id dui posuere blandit. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Curabitur aliquet quam id dui posuere blandit. Proin eget tortor risus. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Donec rutrum congue leo eget malesuada.
+			a(href='#seotext__txt-more-cntnt' data-toggle='collapse').seotext__txt-more-btn Подробнее
+		.sepr
+	.sepr
+	.sepr-hr.brd-g
+	.sepr
+	// Футер
+	.footer.bg-lg
+		.sepr
+		h2.text-center Футер + Контакты + Карта
+		.sepr
+		.container
+			.row
+				.col-3
+					.footer__logo.bg-g
+					.footer__descrn Nulla porttitor accumsan tincidunt. Donec sollicitudin molestie malesuada. Vivamus suscipit tortor eget felis porttitor volutpat. Pellentesque in ipsum id orci porta dapibus.
+				.col-3
+					.footer__menu.d-flex.justify-content-center
+						ul.footer__menu-li
+							li
+								a(href='#') Главная
+							li
+								a(href='#') О компании
+							li
+								a(href='#') Каталог
+							li
+								a(href='#') Статьи
+							li
+								a(href='#') Галерея
+							li
+								a(href='#') Контакты
+				.col-3
+					.footer__contacts +7 (978) 055-19-09, 
+						br
+						| +7 (978) 090-41-31, 
+						br
+						| +7 (915) 259-77-17
+						br
+						| info@top-clever.ru
+						br
+						| г. Севастополь, 
+						br
+						| ул. Курганная, 6
+				.col-3
+					.footer__map
+						iframe(src="https://yandex.by/map-widget/v1/-/CBqTQ4DhpB" width="100%" height="200" frameborder="0")
+		.sepr
+	// Чат, ЛЛ
+	.container-fluid
+		.row.align-items-center.c-w
+			.col-6
+				.h50.bg-g.chat.brd-w Чат
+			.col-6.d-flex.justify-content-end
+				.bg-g.phone.brd-w Звонок
 		
