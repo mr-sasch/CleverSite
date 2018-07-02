@@ -5,3 +5,39 @@ mixin main-catalog()
 		block
 		//- Тест/УТП
 		+testUtp()
+		// Блоки
+		.container
+			.row.flex-wrap
+				.col-6
+					// Умный дом
+					.main-cat__item.main-cat__item-house.collapsed(data-toggle='collapse' data-target='#catItemHouse').my-4
+						.main-cat__item-logo.main-cat__item-logo-house
+						.main-cat__item-ttl Умный дом
+						#catItemHouse.main-cat__item-cntnt.collapse Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel suscipit, nulla quidem nobis quibusdam dolorum consectetur voluptatum architecto. Qui rem, saepe nesciunt, dicta impedit rerum dolore modi consequuntur doloribus non.
+					// Системы солнцезащиты
+					.main-cat__item.main-cat__item-sun.collapsed(data-toggle='collapse' data-target='#catItemSun').my-4
+						.main-cat__item-logo.main-cat__item-logo-sun
+						.main-cat__item-ttl Системы солнцезащиты
+						#catItemSun.main-cat__item-cntnt.collapse Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel suscipit, nulla quidem nobis quibusdam dolorum consectetur voluptatum architecto. Qui rem, saepe nesciunt, dicta impedit rerum dolore modi consequuntur doloribus non.
+					// Видеонаблюдение
+					.main-cat__item.main-cat__item-video.collapsed(data-toggle='collapse' data-target='#catItemVideo').my-4
+						.main-cat__item-logo.main-cat__item-logo-video
+						.main-cat__item-ttl Видеонаблюдение
+						#catItemVideo.main-cat__item-cntnt.collapse Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel suscipit, nulla quidem nobis quibusdam dolorum consectetur voluptatum architecto. Qui rem, saepe nesciunt, dicta impedit rerum dolore modi consequuntur doloribus non.
+				.col-6
+					// СКУД
+					.main-cat__item.main-cat__item-skud.collapsed(data-toggle='collapse' data-target='#catItemSkud').my-4
+						.main-cat__item-logo.main-cat__item-logo-skud
+						.main-cat__item-ttl СКУД для гостиниц
+						#catItemSkud.main-cat__item-cntnt.collapse Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel suscipit, nulla quidem nobis quibusdam dolorum consectetur voluptatum architecto. Qui rem, saepe nesciunt, dicta impedit rerum dolore modi consequuntur doloribus non.
+					// Пожарная сигнализация
+					.main-cat__item.main-cat__item-fire.collapsed(data-toggle='collapse' data-target='#catItemFire').my-4
+						.main-cat__item-logo.main-cat__item-logo-fire
+						.main-cat__item-ttl Пожарная сигнализация
+						#catItemFire.main-cat__item-cntnt.collapse Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel suscipit, nulla quidem nobis quibusdam dolorum consectetur voluptatum architecto. Qui rem, saepe nesciunt, dicta impedit rerum dolore modi consequuntur doloribus non.
+					// Домофоны
+					.main-cat__item.main-cat__item-inter.collapsed(data-toggle='collapse' data-target='#catItemInter').my-4
+						.main-cat__item-logo.main-cat__item-logo-inter
+						.main-cat__item-ttl Домофоны
+						#catItemInter.main-cat__item-cntnt.collapse Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel suscipit, nulla quidem nobis quibusdam dolorum consectetur voluptatum architecto. Qui rem, saepe nesciunt, dicta impedit rerum dolore modi consequuntur doloribus non.						
+		// /Блоки

@@ -2,7 +2,7 @@
 .main-catalog
 	display block
 	position relative
-	height 400px
+	height 1000px
 	margin-top -170px
 .main-catalog:before
 	content ''
@@ -13,4 +13,158 @@
 	left 0
 	background-color #ededed
 	transform skewY(-7deg)
+
+	/* Блок каталога */
+.main-cat__item
+	padding 170px 40px 40px
+	min-height 215px
+	position relative
+	cursor pointer
+	background-position center
+	background-size cover
+	box-shadow 0 0 20px 0px #808080f2
+.main-cat__item:before
+	content ''
+	position absolute
+	width 100%
+	height 100%
+	top 0
+	left 0
+	background-color $hderBlue
+	opacity .3
+	transition .2s ease
+
+	/* блок развернут */
+.main-cat__item-ttl
+	display table
+	color #fff
+	font-size 24px
+	position absolute
+	top 65px
+	left 140px
+	transform translate(0, 0)
+	transition .3s ease
+	padding-bottom 6px
+.main-cat__item-ttl:before
+	position absolute
+	content ''
+	border 1px solid #fff
+	height 1px
+	width 100%
+	left 50%
+	bottom 0
+	opacity 1
+	transform translateX(-50%)
+	transition .2s ease
+
+.main-cat__item-logo
+	left 40px
+	top 40px
+	transform translate(0, 0)
+	height 67px
+	position absolute
+	transition .3s ease
+	height 75px
+	width 75px
+	background-repeat no-repeat
+	background-position center
+.main-cat__item-logo:before
+	content ''
+	position absolute
+	width 100%
+	height 100%
+	top 0
+	left 0
+	background-repeat no-repeat
+	background-position center
+	opacity 1
+	transition .3s ease
+
+	/* Кастомизация блоков */
+	/* Умный дом */
+.main-cat__item-logo-house
+	background-image url('../../images/cat-item-logo-house.png')
+.main-cat__item-logo-house:before
+	background-image url('../../images/cat-item-logo-house-yell.png')
+.main-cat__item-house
+	background-image url('../../images/cat-item-bg-house.png')
+	/* Системы солнцезащиты */
+.main-cat__item-logo-sun
+	background-image url('../../images/cat-item-logo-sun.png')
+.main-cat__item-logo-sun:before
+	background-image url('../../images/cat-item-logo-sun-yell.png')
+.main-cat__item-sun
+	background-image url('../../images/cat-item-bg-sun.png')
+	/* Видеонаблюдение */
+.main-cat__item-logo-video
+	background-image url('../../images/cat-item-logo-video.png')
+.main-cat__item-logo-video:before
+	background-image url('../../images/cat-item-logo-video-yell.png')
+.main-cat__item-video
+	background-image url('../../images/cat-item-bg-video.png')
+	/* СКУД */
+.main-cat__item-logo-skud
+	background-image url('../../images/cat-item-logo-skud.png')
+.main-cat__item-logo-skud:before
+	background-image url('../../images/cat-item-logo-skud-yell.png')
+.main-cat__item-skud
+	background-image url('../../images/cat-item-bg-skud.png')
+	/* Пожарная сигнализация */
+.main-cat__item-logo-fire
+	background-image url('../../images/cat-item-logo-fire.png')
+.main-cat__item-logo-fire:before
+	background-image url('../../images/cat-item-logo-fire-yell.png')
+.main-cat__item-fire
+	background-image url('../../images/cat-item-bg-fire.png')
+	/* Домофоны */
+.main-cat__item-logo-inter
+	background-image url('../../images/cat-item-logo-intercom.png')
+.main-cat__item-logo-inter:before
+	background-image url('../../images/cat-item-logo-intercom-yell.png')
+.main-cat__item-inter
+	background-image url('../../images/cat-item-bg-intercom.png')
+	/* /Кастомизация блоков */
+
+.main-cat__item-cntnt
+	position relative
+	z-index 10
+	opacity 1
+	color #fff
+	line-height 23px
+	padding-left 30px
+	border-left 2px solid $howOrange
+	/* /блок развернут */
+
+	/* блок свернут */
+.collapsed
+	.main-cat__item-ttl
+		font-size 36px
+		left 50%
+		top 50%
+		transform translate(-50%, 50%)
+	.main-cat__item-logo
+		left 50%
+		top 50%
+		transform translate(-50%, -100%)
+	.main-cat__item-cntnt
+		opacity 0
+		transition .3s ease
+	.main-cat__item-logo:before
+		opacity 0
+
+.collapsed.main-cat__item:before
+	opacity 0
+.collapsed.main-cat__item:hover:before
+	opacity .3
+
+.collapsed.main-cat__item .main-cat__item-ttl:before
+	opacity 0
+	width 0
+.collapsed.main-cat__item:hover .main-cat__item-ttl:before
+	opacity 1
+	width 100%
+	/* /блок свернут */
+
+
+	/* /Блок каталога */
 /* Главная. Каталог */
