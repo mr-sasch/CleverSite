@@ -1,0 +1,112 @@
+/* Тест/УТП */
+.test-utp
+	position absolute
+	width 100%
+	top -120px
+.hder__test
+	background-color #fff
+	box-shadow 0 3px 10px 3px #000000a8
+.hder__test-top
+	position relative
+	background-color $hderBlue
+	padding-top 20px
+	height 93px
+.hder__test-top:before
+	content ''
+	position absolute
+	left 50%
+	top 100%
+	transform translateX(-50%)
+	border-top 30px solid $hderBlue
+	border-left 315px solid transparent
+	border-right 315px solid transparent
+
+.hder__test-top-row1
+	color yellow
+	font-size 30px
+	font-weight 600
+	margin-bottom 10px
+.hder__test-top-row2
+	width 100%
+	color #fff
+	font-weight 300
+	font-size 18px
+	line-height 24px
+	position absolute
+	left 50%
+	transform translateX(-50%)
+	bottom -12px
+
+.hder__test-bottom
+	text-align center
+	padding-top 40px
+
+.hder__test-bottom-ttl
+	position relative
+	font-size 48px
+	color $howOrange
+	margin-bottom 10px
+	display inline-block
+	padding 0 30px
+.hder__test-bottom-ttl:before
+	content ''
+	position absolute
+	width 70%
+	height 3px
+	background-color $howOrange
+	top 50%
+	transform translateY(-50%)
+	right 100%
+.hder__test-bottom-ttl:after
+	content ''
+	position absolute
+	width 70%
+	height 3px
+	background-color $howOrange
+	top 50%
+	transform translateY(-50%)
+	left 100%
+
+.hder__test-bottom-cntnt
+	max-width 770px
+	display inline-block
+	font-size 18px
+	font-weight 300
+	line-height 24px
+	color #000
+
+.hder__test-button
+	font-size 18px
+	color #fff
+	background-color red
+	border-radius 10px
+	border none
+	padding 11px 52px
+	margin 20px 0 25px
+
+@media screen and (max-width 768px)
+	.hder__test-top:before
+		border-left 200px solid transparent
+		border-right 200px solid transparent
+
+@media screen and (max-width 500px)
+	.hder__test-top-row1
+		font-size 24px
+	.hder__test-button
+		padding 12px 16px
+		font-size 16px
+
+@media screen and (max-width 425px)
+	.hder__test-top:before
+		border-left 140px solid transparent
+		border-right 140px solid transparent
+	.hder__test-bottom-ttl
+		padding 0 20px
+	.hder__test-bottom-ttl:before,
+	.hder__test-bottom-ttl:after
+		width 40%
+	.hder__test-top
+		height 120px
+	.hder__test-top-row2
+		bottom 0
+/* /Тест/УТП */

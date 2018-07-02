@@ -37,7 +37,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/CSSSR/csssr-project-template.git"
+    "url": "git+ssh@github.com:CSSSR/csssr-project-template.git"
   },
   "author": "Felix Exter <felixexter@ya.ru> (https://github.com/felixexter)",
   "contributors": [
@@ -122,6 +122,5 @@
     "webpack": "^1.12.9",
     "webpack-stats-logger": "^1.0.1",
     "webpack-stream": "^3.1.0"
-  },
-  "main": "gulpfile.babel.js"
+  }
 }

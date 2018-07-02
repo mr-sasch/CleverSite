@@ -1,0 +1,35 @@
+/* Копирайт */
+.copyright
+	display block
+	position absolute
+	width 100%
+	height 50%
+	right 0
+	top 97%
+	text-align right
+	font-size 16px
+	color #333
+.copyright:before
+	content ''
+	position absolute
+	width 100%
+	height 100%
+	left 0
+	bottom 0
+	background-color #fff
+	transform skewY(-7deg)
+.copyright-wrap
+	position absolute
+	width 100%
+	left 0
+	top -10px
+
+@media screen and (max-width 991px)
+	.copyright-wrap
+		top 0
+@media screen and (max-width 768px)
+	.copyright
+		top 95%
+	.copyright-wrap
+		top 30px
+/* /Копирайт */

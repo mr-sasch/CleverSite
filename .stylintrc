@@ -29,7 +29,7 @@
 	"quotePref": "single",
 	"semicolons": "never",
 	"sortOrder": [ // discuss 7
-		"all", // all: initial should be first
+		false, // all: initial should be first
 
 		"position",
 		"z-index",

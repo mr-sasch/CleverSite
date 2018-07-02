@@ -1,0 +1,94 @@
+/* Footer */
+footer
+	display block
+	position relative
+	padding 270px 0 110px
+	margin-top -160px
+	overflow hidden
+	background-color #ededed
+footer:before
+	content ''
+	position absolute
+	width 100%
+	height 75%
+	top 160px
+	left 0
+	transform skewY(-7deg)
+	background-color $fterBlue
+
+.footer__logo
+	margin-bottom 20px
+	width 100%
+	max-width 198px
+
+.footer__text
+	color #ccc
+	font-size 16px
+	line-height 22px
+
+	/* Меню */
+.footer__nav-item
+	margin-bottom 12px
+.footer__nav-item-a
+	color rgba(#ffffff, 0.7)
+	transition .2s ease
+.footer__nav-item-a:hover
+	color #fff
+.footer__nav-item:before
+	color rgba(#ffffff, 0.7)
+	content '-'
+	padding-right 2px
+	/* /Меню */
+
+	/* Контакты */
+.footer__ttl
+	padding-bottom 10px
+	margin-bottom 25px
+	text-transform uppercase
+	color $colorYellow
+	font-size 18px
+	border-bottom 3px solid $howOrange
+.footer__contacts
+	display -webkit-flex
+	display -ms-flex
+	display flex
+	font-size 16px
+	line-height 24px
+	font-weight 300
+	color #fff
+	margin-bottom 20px
+
+.footer__contacts-sign
+	text-align center
+	width 20px
+	margin-right 10px
+.footer__contacts i
+	color rgba(#ffffff, 0.6)
+	padding-top 7px
+	/* /Контакты */
+
+	/* Мы на карте */
+.footer__map
+	min-height 240px
+	/* /Мы на карте */
+
+	/* Вертикальный разделитель */
+.footer__separ-vert
+	border-right 3px solid #fff3
+
+	/* нижний фон */
+.footer__bg-btm
+	position absolute
+	bottom 0
+	width 100%
+	height 50%
+	left 0
+	background-color $fterBlue
+
+// @media screen and (max-width 768px)
+// 	footer
+// 		padding 50px 0
+@media screen and (max-width 991px)
+	footer:before
+		height 79%
+	/* /Footer */

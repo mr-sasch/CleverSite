@@ -3,14 +3,18 @@ head
 	meta(name='viewport' content='width=device-width, initial-scale=1, maximum-scale=1, minimal-ui')
 	meta(http-equiv='X-UA-Compatible' content='IE=edge')
 	
-	block head
-	title= pageTitle
-	// Slick
-	link(rel="stylesheet" type="text/css" href="slick/slick.css")
-	link(rel="stylesheet" type="text/css" href="slick/slick-theme.css")
-	// Главный стиль
-	link(href='/assets/styles/app.min.css' rel='stylesheet')
+	link(sizes='32x32'   href='/favicon-32x32.png'   rel='icon' type='image/png')
 
-	// Шрифт
-	link(href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet")
+	block head
+	title= pageTitle || ''
+	meta(name='description' content=pageDescription || '')
+	meta(name='keywords' content=pageKeywords || '')
+		
+		
+	// Шрифты
+	link(href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,600' rel='stylesheet')
+	// FontAwesome
+	link(rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css")
 	
+	// Стили
+	link(href='/assets/styles/app.min.css' rel='stylesheet')

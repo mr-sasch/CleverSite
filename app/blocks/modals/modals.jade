@@ -1,0 +1,28 @@
+mixin modals()
+	+b.modals&attributes(attributes)
+		block
+		// модалка.Заказать звонок в шапке
+		#headerCallback.modal.fade
+			.modal-dialog
+				.modal-content
+					// Шапка
+					.modal-header
+						h5.modal-title Заказать звонок в шапке
+						button.close(type='button' data-dismiss='modal' aria-label='close')
+							span(aria-hidden='true') &times;
+					.modal-body тело модалки
+					.modal-footer подвал
+		// /Заказать звонок в шапке
+
+		// Рассчитать стоимость онлайн
+		#calculate.modal.fade
+			.modal-dialog
+				.modal-content
+					// Шапка
+					.modal-header
+						h5.modal-title Рассчитать стоимость онлайн
+						button.close(type='button' data-dismiss='modal' aria-label='close')
+							span(aria-hidden='true') &times;
+					.modal-body тело модалки
+					.modal-footer подвал
+		// /Рассчитать стоимость онлайн
