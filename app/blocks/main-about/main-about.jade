@@ -1,5 +1,6 @@
 mixin main-about()
 	+b.main-about&attributes(attributes)
+		.main-about__bg
 		block
 		.container
 			.main-about__ttl ООО "Клевер" - это...
@@ -24,8 +25,8 @@ mixin main-about()
 					+aboutItem('main-about__item-7 main-about__item-left', 'Монтаж - от одного дня.')
 				.col-12.col-lg-6.pr-0.mb-4
 					.main-about__item.mb-4(class='main-about__item-8 main-about__item-right')
-						.main-about__item-cntnt 
-							.main-about__item-cntnt-row	Гарантия на оборудование - 
+						.main-about__item-cntnt
+							.main-about__item-cntnt-row Гарантия на оборудование - 
 								strong от 2-х лет
 							.main-about__item-cntnt-row На умные системы - 
 								strong от 3-х лет 

@@ -6,7 +6,7 @@ mixin main-catalog()
 		//- Тест/УТП
 		+testUtp()
 		// Блоки
-		.container
+		.container.main-catalog__container
 			.row.flex-wrap#mainCat
 				.col-12.col-lg-6
 					mixin mainCatItem(cls1, cls2, ttl, id, tgt)
@@ -19,9 +19,30 @@ mixin main-catalog()
 						.main-cat__item-logo(class='main-cat__item-logo-house')
 						.main-cat__item-ttl Умный дом
 						.main-cat__item-cntnt.collapse.show(id='catItemHouse' data-parent="#mainCat") Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel suscipit, nulla quidem nobis quibusdam dolorum consectetur voluptatum architecto. Qui rem, saepe nesciunt, dicta impedit rerum dolore modi consequuntur doloribus non.
-					//- +mainCatItem('main-cat__item-house', 'main-cat__item-logo-house', 'Умный дом', 'catItemHouse', '#catItemHouse')					
 					// Системы солнцезащиты
-					+mainCatItem('main-cat__item-sun', 'main-cat__item-logo-sun', 'Системы солнцезащиты', 'catItemSun', '#catItemSun')
+					.main-cat__item.main-cat__item-sun#catSun.collapsed.mb-4
+						.main-cat__item-logo(class='main-cat__item-logo-sun')
+						.main-cat__item-ttl Системы солнцезащиты
+						.main-cat__item-sun-row.d-flex.justify-content-center
+							.main-cat__item-sun-col#catSunJalBtn.collapsed(data-toggle='collapse' data-target='#catSunJal') Жалюзи
+							.main-cat__item-sun-col#catSunKarBtn.collapsed(data-toggle='collapse' data-target='#catSunKar') Электрокарнизы
+						.main-cat__item-cntnt.collapse(id='catSunJal' data-parent="#catSun") Жалюзи Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel suscipit, nulla quidem nobis quibusdam dolorum consectetur voluptatum architecto. Qui rem, saepe nesciunt, dicta impedit rerum dolore modi consequuntur doloribus non.
+						.main-cat__item-cntnt.collapse(id='catSunKar' data-parent="#catSun") Карнизы Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel suscipit, nulla quidem nobis quibusdam dolorum consectetur voluptatum architecto. Qui rem, saepe nesciunt, dicta impedit rerum dolore modi consequuntur doloribus non.
+						script.
+							catSun.onclick = catSunCol = (e) => {
+								var sun = document.querySelector('.main-cat__item-sun'),
+								target = e.target;
+								if ((target === catSunJalBtn) || (target === catSunKarBtn)) {
+									if ((catSun.className.includes('collapsed')) && (target.className.includes('collapsed'))) {
+										catSun.classList.remove('collapsed');
+										return;
+										}
+									if ((!catSun.className.includes('collapsed')) && (!target.className.includes('collapsed'))) {
+										catSun.classList.add('collapsed');
+										return;
+										}
+									}				
+							}
 					// Видеонаблюдение
 					+mainCatItem('main-cat__item-video', 'main-cat__item-logo-video', 'Видеонаблюдение', 'catItemVideo', '#catItemVideo')
 				.col-12.col-lg-6
@@ -30,5 +51,5 @@ mixin main-catalog()
 					// Пожарная сигнализация
 					+mainCatItem('main-cat__item-fire', 'main-cat__item-logo-fire', 'Пожарная сигнализация', 'catItemFire', '#catItemFire')
 					// Домофоны
-					+mainCatItem('main-cat__item-inter', 'main-cat__item-logo-inter', 'Домофоны', 'catItemInter', '#catItemInter')						
+					+mainCatItem('main-cat__item-inter', 'main-cat__item-logo-inter', 'Домофоны', 'catItemInter', '#catItemInter')
 		// /Блоки

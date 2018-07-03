@@ -3,13 +3,30 @@
 	display block
 	position relative
 	z-index 10
+	color #fff
+	padding 160px 0 130px
+
+.main-about__bg
+	position absolute
+	z-index -1
+	height 100%
+	width 100%
+	top 0
+	left 0
+	transform skewY(-7deg)
+	overflow hidden
+.main-about__bg:before
+	content ''
+	position absolute
+	width 100%
+	top -200px
+	bottom -200px
+	left 0
 	background-image url('../../images/main-about__bg.png')
 	background-size cover
 	background-position center
+	transform skewY(7deg)
 
-	color #fff
-	padding 350px 0 420px
-	margin-top -200px
 .main-about__ttl
 	font-size 48px
 	font-weight 600
@@ -120,4 +137,16 @@
 	font-size 24px
 	line-height 30px
 	/* /Кастомизация блоков */
+
+@media screen and (max-width 550px)
+	.main-about__ttl,
+	.main-about__ftr
+		font-size 40px
+@media screen and (max-width 450px)
+	.main-about__ttl,
+	.main-about__ftr
+		font-size 30px
+		line-height 40px
+	.main-about__item-cntnt
+		padding 40px 15px
 /* /Клевер - это... */
