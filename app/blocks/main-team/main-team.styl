@@ -1,0 +1,84 @@
+/* Наша команда */
+.main-team
+	display block
+	position relative
+	padding 80px 0 140px
+
+.main-team__wrap
+	position relative
+	z-index 10
+
+.main-team__bg
+	position absolute
+	height 100%
+	width 100%
+	top 0
+	left 0
+	transform skewY(-7deg)
+	background-color $greyBg
+
+.main-team__ttl-row
+	position relative
+	text-align center
+.main-team__ttl-row:before
+	content ''
+	position absolute
+	height 3px
+	background-color $howOrange
+	width 100%
+	top 50%
+	left 0
+	transform translateY(-50%)
+
+.main-team__ttl-txt
+	display inline-block
+	font-size 60px
+	color $hderBlue
+	background-color $greyBg
+	padding 0 30px
+	position relative
+	z-index 10
+	text-align center
+
+.main-team__item
+	display inline-block
+	position relative
+	box-shadow 0 0 30px 0px #00000061
+	text-align center
+	padding 140px 0 50px
+	background-color #fff
+	min-width 290px
+	max-width 390px
+	width 100%
+	margin-top 140px
+
+.main-team__item-img
+	background-image url('../../images/main-director__person.png')
+	background-size contain
+	background-position center
+	position absolute
+	height 214px
+	width 214px
+	top 0
+	left 50%
+	transform translate(-50%, -50%)
+	border-radius 50%
+	box-shadow 0 0 35px 0 #8080806b
+
+.main-team__item-name
+	font-size 24px
+	font-weight 600
+	color $hderBlue
+
+.main-team__item-rang
+	font-size 16px
+	margin-top 8px
+	font-weight 300
+
+@media screen and (max-width 768px)
+	.main-team__ttl-txt
+		font-size 50px
+@media screen and (max-width 450px)
+	.main-team__ttl-txt
+		font-size 40px
+/* /Наша команда */

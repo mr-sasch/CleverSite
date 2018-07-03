@@ -4,6 +4,8 @@ include /blocks/footer/footer
 include /blocks/modals/modals
 include /blocks/main-catalog/main-catalog
 include /blocks/main-about/main-about
+include /blocks/main-director/main-director
+include /blocks/main-team/main-team
 
 
 block head
@@ -19,6 +21,12 @@ block content
 	// Клевер - это...
 	+main-about()
 	// /Клевер - это...
+	// Обращение директора
+	+main-director()
+	// /Обращение директора
+	// Наша команда
+	+main-team()
+	// /Наша команда
 	// Модальные окна
 	+modals()
 	// /Модальные окна

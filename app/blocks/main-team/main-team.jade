@@ -1,0 +1,20 @@
+mixin main-team()
+	+b.main-team&attributes(attributes)
+		block
+		.main-team__bg
+		.container.main-team__wrap
+			.main-team__ttl-row
+				.main-team__ttl-txt Наша команда
+			.main-team__items
+				mixin mainTeamCard()
+					.main-team__item
+						.main-team__item-img
+						.main-team__item-name Сергей Иванов
+						.main-team__item-rang Заместитель директора
+				.row.justify-content-between
+					.col.text-center
+						+mainTeamCard()
+					.col.text-center
+						+mainTeamCard()
+					.col.text-center
+						+mainTeamCard()
