@@ -6,6 +6,10 @@ include /blocks/main-catalog/main-catalog
 include /blocks/main-about/main-about
 include /blocks/main-director/main-director
 include /blocks/main-team/main-team
+include /blocks/main-trust/main-trust
+include /blocks/main-form/main-form
+include /blocks/main-seo/main-seo
+include /blocks/main-gallery/main-gallery
 
 
 block head
@@ -27,6 +31,18 @@ block content
 	// Наша команда
 	+main-team()
 	// /Наша команда
+	// Фотогалерея
+	+main-gallery()
+	// /Фотогалерея
+	// Нам доверяют
+	+main-trust()
+	// /Нам доверяют
+	// Оставьте заявку
+	+main-form() 
+	// /Оставьте заявку
+	// Сео текст
+	+main-seo() 
+	// /Сео текст
 	// Модальные окна
 	+modals()
 	// /Модальные окна

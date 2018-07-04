@@ -1,0 +1,35 @@
+mixin main-form()
+	+b.main-form&attributes(attributes)
+		block
+		.main-form__wrap
+			.main-form__bg
+			.container
+				.row
+					.col.text-center
+						form#mainForm.main-form__form
+							img.main-form__form-girl(src='images/main-form__girl.png')
+							img.main-form__form-bow(src='images/main-form__bow.png')
+							.main-form__form-ttl Оставьте заявку
+							.main-form__form-ttl2 на рассчет стоимости Вашего комплекта
+							.main-form__form-inpts
+								.main-form__form-inpt.main-form__form-inpt-left
+									input.main-form__form-inpt-input(value='' type='text' name='name' onkeyup="this.setAttribute('value', this.value);")
+									label.main-form__form-inpt-label(for='name') Ваше имя
+								.main-form__form-inpt.main-form__form-inpt-right
+									input.main-form__form-inpt-input(value='' type='text' name='mail' onkeyup="this.setAttribute('value', this.value);")
+									label.main-form__form-inpt-label(for='mail') Ваш email
+								.main-form__form-inpt.main-form__form-inpt-center
+									input.main-form__form-inpt-input(value='' type='text' name='more' onkeyup="this.setAttribute('value', this.value);")
+									label.main-form__form-inpt-label(for='more') Ваши пожелания к комплекту безопасности
+							.main-form__form-txt
+								.main-form__form-txt-ttl.main-form__form-txt-ttl1 ПОДАРОК!
+								.main-form__form-txt-txt Свяжитесь в день расчета стоимости с менеджером нашей компании и если Вас устроит цена которую Вам автоматически рассчитает система - Вы получите подарок.
+								.main-form__form-txt-ttl.main-form__form-txt-ttl2
+									strong СКИДКА 15% 
+									span на стоимость всего ремонта
+								.main-form__form-txt-txt 
+									span.main-form__form-txt-txt-star *  
+									| Предложение действует только при обращении в день автоматического расчета цены.
+						
+							
+							

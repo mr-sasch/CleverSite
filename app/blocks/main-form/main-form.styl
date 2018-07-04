@@ -1,0 +1,138 @@
+/* Оставьте заявку */
+.main-form
+	display block
+	position relative
+	transform skewY(-7deg)
+	overflow hidden
+	z-index 10
+
+.main-form__wrap
+	transform skewY(7deg)
+	padding-top 90px
+
+.main-form__bg
+	position absolute
+	height 100%
+	width 100%
+	top 0
+	left 0
+.main-form__bg:before
+	content ''
+	position absolute
+	width 100%
+	top -200px
+	bottom -200px
+	background-image url('../../images/main-form__bg.png')
+	background-size cover
+	background-position center
+
+.main-form__form
+	position relative
+	display inline-block
+	max-width 662px
+	background-color #fff
+	padding 50px 95px
+	box-shadow 0 0 20px 0px #0000004d
+	input
+		width 100%
+
+.main-form__form-inpts
+	display -webkit-flex
+	display -ms-flex
+	display flex
+	flex-wrap wrap
+	justify-content space-between
+
+.main-form__form-inpt
+	margin 25px 0
+	position relative
+	label
+		position absolute
+		left 0
+		bottom 0
+		font-size 16px
+		color #888
+		pointer-events none
+		transition .2s ease
+	input
+		position relative
+		border none
+		border-bottom 2px solid $hderBlue
+		font-size 16px
+		color #888
+		padding-bottom 2px
+	input:focus ~ label
+		bottom 25px
+		font-size 14px
+
+input:not([value=""])~.main-form__form-inpt-label
+	bottom 25px
+	font-size 14px
+
+.main-form__form-inpt-left
+	width 45%
+.main-form__form-inpt-right
+	width 45%
+.main-form__form-inpt-center
+	width 100%
+
+.main-form__form-girl
+	position absolute
+	top 0
+	right -275px
+.main-form__form-bow
+	position absolute
+	top -3px
+	left -2px
+
+.main-form__form-ttl
+	font-size 24px
+	font-weight 600
+	color $hderBlue
+	margin-bottom 10px
+.main-form__form-ttl2
+	font-size 16px
+	color #333
+	margin-bottom 30px
+
+.main-form__form-txt
+	text-align left
+.main-form__form-txt-ttl1
+	color red
+	font-weight 600
+	font-size 24px
+	margin 40px 0 20px
+.main-form__form-txt-ttl2
+	color $howOrange
+	font-size 24px
+	margin 30px 0 20px
+	span
+		font-size 16px
+		font-weight 600
+.main-form__form-txt-txt-star
+	color red
+	font-size 22px
+	font-weight 600
+
+.main-form__form-txt-txt
+	font-size 16px
+	line-height 19px
+
+@media screen and (max-width 1220px)
+	.main-form__form-girl
+		height 400px
+		right -190px
+@media screen and (max-width 1050px)
+	.main-form__form-girl
+		height 260px
+		right -124px
+		top 60px
+@media screen and (max-width 920px)
+	.main-form__form-girl
+		display none
+@media screen and (max-width 767px)
+	.main-form__form
+		padding 50px 20px
+	.main-form__form-bow
+		height 67px
+/* /Оставьте заявку */
