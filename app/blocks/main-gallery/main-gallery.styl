@@ -36,18 +36,44 @@
 
 .main-gallery__items
 	.slick-center
+		pointer-events auto !important
 		transition .2s ease
-	.slick-center
 		transform scale(1.3)
 		z-index 20
 		position relative
-		.main-gallery__item
+		a
 			border 3px solid yellow
+			display inline-block
+			background-color #000
+			position relative
+		.main-gallery__item
+			transition .2s ease
+		.main-gallery__item-zoom
+			opacity 0
+			position absolute
+			content ''
+			top 50%
+			left 50%
+			width 30%
+			height 30%
+			transform translate(-50%, -50%)
+			background-image url('../../images/main-gallery__zoom.png')
+			background-position center
+			background-repeat no-repeat
+			background-size contain
+			transition opacity .2s ease
+			z-index 10
+		a:hover
+			.main-gallery__item-zoom
+				opacity 1
+			.main-gallery__item
+				opacity .5
 	.slick-list
 		padding 90px 70px !important
 	.slick-slide
 		opacity .5
 		transition .2s ease
+		pointer-events none
 	.slick-slide.slick-active
 		opacity 1 !important
 
@@ -62,4 +88,53 @@
 	color #fff
 	font-size 60px
 	text-align right
+
+	/* Стрелки */
+.main-gallery__arrows
+	display -webkit-flex
+	display -ms-flex
+	display flex
+	align-items center
+.main-gallery__arrows-wrap
+	position relative
+	z-index 10
+.main-gallery__arrows-center
+	display -webkit-flex
+	display -ms-flex
+	display flex
+	color #fff
+	font-size 16px
+.main-gallery__arrows-center-txt
+	font-weight 300
+	margin 0 5px
+.main-gallery__arrows-center-current,
+.main-gallery__arrows-center-all
+	font-weight 600
+
+.main-gallery__arrows-arrow
+	width 33px
+	height 33px
+	border-left 2px solid #fff
+	border-top 2px solid #fff
+	cursor pointer
+	opacity .7
+	transition .2s ease
+.main-gallery__arrows-arrow:hover
+	opacity 1
+.main-gallery__arrows-arrow-left
+	transform rotate(-45deg)
+.main-gallery__arrows-arrow-right
+	transform rotate(135deg)
+
+.main-gallery .slick-arrow
+	display none !important
+	/* /Стрелки */
+
+@media screen and (max-width 1024px)
+	.main-gallery__items
+		margin -20px 0
+@media screen and (max-width 500px)
+	.main-gallery__ttl
+		font-size 45px
+
 /* /Фотогалерея */
