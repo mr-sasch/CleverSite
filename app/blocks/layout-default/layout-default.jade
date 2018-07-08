@@ -11,7 +11,7 @@ html(lang='ru')
 		// JQuery
 		script(src='js/jquery331.min.js')
 		// Slick-слайдер
-		script(src='/slick/slick.min.js')
+		script(src='slick/slick.min.js')
 		// Фотогалерея
 		script.
 			$(document).ready(function(){
@@ -45,7 +45,7 @@ html(lang='ru')
 		// Отзывы
 		script.
 			$(document).ready(function(){
-				$('.main-reviews__items').slick({					
+				$('.main-reviews__items').slick({		
 					arrows: true,
 					infinite: true,
 					slidesToShow: 3,
@@ -63,10 +63,9 @@ html(lang='ru')
 				  ]
 				});
 			});		
-		script(src='assets/scripts/slick-init.js')
 		// Bootstrap
 		script(src='js/bootstrap.js')
 		// BaguetteBox
-		script(src='baguettebox/baguetteBox.js')
+		script(src='baguettebox/baguetteBox.min.js')
 		script.
 			baguetteBox.run('.main-gallery__items');
