@@ -24,7 +24,6 @@ window.onload = (e) => {
 }
 // текущая вкладка
 const galleryItem = () => {
-  console.log('клик');
   var target = document.querySelector('.main-gallery .slick-current'),
   galleryItems = document.querySelectorAll('.main-gallery .slick-slide:not(.slick-cloned)'),
   galleryItemCountCurrentField = document.querySelector('.main-gallery .main-gallery__arrows-center-current');
