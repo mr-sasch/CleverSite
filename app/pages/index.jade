@@ -1,5 +1,4 @@
 extends /blocks/layout-default/layout-default
-include /blocks/header/header
 include /blocks/footer/footer
 include /blocks/modals/modals
 include /blocks/main-catalog/main-catalog
@@ -18,7 +17,7 @@ block head
 
 block content
 	// Шапка
-	+header()
+	include ../blocks/header-main/header-main
 	// /Шапка
 	// Каталог
 	+main-catalog()

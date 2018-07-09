@@ -1,5 +1,4 @@
 extends /blocks/layout-default/layout-default
-include /blocks/404-header/404-header
 include /blocks/404-footer/404-footer
 include /blocks/modals/modals
 
@@ -9,7 +8,7 @@ block head
 
 block content
 	// Шапка
-	+404-header()
+	include ../blocks/404-header/header-404
 	// /Шапка
 	// Модальные окна
 	+modals()
