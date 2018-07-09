@@ -1,0 +1,71 @@
+mixin 404-header()
+	+b('header').header404&attributes(attributes)
+		block
+		.container.temp-border-black
+			.navbar.navbar-expand-lg.navbar-light.justify-content-between.px-0
+				// Лого
+				a.navbar-brand(href='#')
+					img.header__logo(src='images/header-logo.png')
+				button.navbar-toggler(type='button' data-toggle='collapse' data-target='#mainMenu' aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation")
+					span.navbar-toggler-icon
+				// Главное меню
+				#mainMenu.main-menu.collapse.navbar-collapse.justify-content-end
+					.navbar-nav.navbar-nav-main_m-r
+						a.nav-item.nav-link.active(href='#') Главная
+						a.nav-item.nav-link(href='#') О компании
+						a.nav-item.nav-link(href='#') Статьи
+						a.nav-item.nav-link(href='#') Галерея
+						a.nav-item.nav-link(href='#') Контакты
+		.separ-nav
+		.container
+			// Меню каталога
+			.navbar.navbar-expand-xl.navbar-light.px-0
+				.cat-menu.navbar-nav.d-flex.justify-content-between.align-items-xl-center
+					a.nav-item.active(href='#') Умный дом
+					.nav-item.d-none.d-xl-block
+						.nav-dot
+					a.nav-item(href='#') СКУД для гостиниц
+					.nav-item.d-none.d-xl-block
+						.nav-dot
+					a.nav-item(href='#') Жалюзи
+					.nav-item.d-none.d-xl-block
+						.nav-dot
+					a.nav-item(href='#') Электрокарнизы
+					.nav-item.d-none.d-xl-block
+						.nav-dot
+					a.nav-item(href='#') Пожарная сигнализация
+					.nav-item.d-none.d-xl-block
+						.nav-dot
+					a.nav-item(href='#') Видонаблюдение
+					.nav-item.d-none.d-xl-block
+						.nav-dot
+					a.nav-item(href='#') Домофоны
+		.separ-nav
+		// Содержимое баннера
+		.container
+			.hder__banner.py-5
+				.row.justify-content-between
+					// УТП слева
+					.col-12.col-sm
+						.hder__utp-left Мир
+							span.c-yellow умной 
+							| автоматики
+							br
+							| для вашего дома
+					// УТП справа
+					.col-12.col-sm.mt-4.mt-sm-0
+						.hder__utp-right
+							.hder__utp-left-row.hder__utp-left-row1 Позвоните нам прямо сейчас
+							.hder__utp-left-row.hder__utp-left-row2 +7(978) 
+								strong 090-41-31
+							.hder__utp-left-row.hder__utp-left-row3(data-toggle='modal' data-target='#headerCallback') Заказать звонок						
+					// УТП центр
+					.col-12.text-center
+						.hder__utp-center
+							.hder__utp-center-row1 Сайт на реконструкции
+							.hder__utp-center-separ
+							.hder__utp-center-row2 Страница в данный момент не доступна,
+								br
+								| зайдите к нам чуть позже...
+
+					
