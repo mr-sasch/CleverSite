@@ -1,15 +1,15 @@
 extends /blocks/layout-default/layout-default
 include /blocks/footer/footer
 include /blocks/modals/modals
-include /blocks/main-catalog/main-catalog
-include /blocks/main-about/main-about
-include /blocks/main-director/main-director
-include /blocks/main-team/main-team
-include /blocks/main-trust/main-trust
-include /blocks/main-form/main-form
-include /blocks/main-seo/main-seo
-include /blocks/main-gallery/main-gallery
-include /blocks/main-reviews/main-reviews
+include /blocks/main/main-catalog/main-catalog
+include /blocks/main/main-about/main-about
+include /blocks/main/main-director/main-director
+include /blocks/main/main-team/main-team
+include /blocks/main/main-trust/main-trust
+include /blocks/main/main-form/main-form
+include /blocks/main/main-seo/main-seo
+include /blocks/main/main-gallery/main-gallery
+include /blocks/main/main-reviews/main-reviews
 
 
 block head
@@ -17,7 +17,7 @@ block head
 
 block content
 	// Шапка
-	include ../blocks/header-main/header-main
+	include ../blocks/main/main-header/main-header
 	// /Шапка
 	// Каталог
 	+main-catalog()
