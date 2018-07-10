@@ -1,5 +1,4 @@
 extends /blocks/layout-default/layout-default
-include /blocks/404-footer/404-footer
 include /blocks/modals/modals
 
 
@@ -14,5 +13,6 @@ block content
 	+modals()
 	// /Модальные окна
 	// Футер
-	+404-footer()
+	.footer404
+		include ../blocks/footer/footer
 	// /Футер
