@@ -1,4 +1,65 @@
 /* Галерея */
 .main-form.main-form_gallery
   z-index 20
+
+  /* ячейки */
+.gallery__item
+  display block
+  height 365px
+  position relative
+  background-color #00427b
+  margin-bottom 30px
+.gallery__item:hover
+  .gallery__item-bg
+    opacity .7
+  .gallery__item-ttl
+    text-decoration underline
+
+.gallery__item-bg
+  position absolute
+  height 100%
+  width 100%
+  top 0
+  left 0
+  background-image url('../../images/gallery__item.png')
+  background-position center
+  background-size cover
+  transition .2s ease
+
+.gallery__item-ttl
+  position absolute
+  top 50%
+  left 50%
+  transform translate(-50%, -50%)
+  color #fff
+  font-size 24px
+  /* /ячейки */
+
+  /* пагинация */
+.col.gallery__pagntn
+  display -webkit-flex
+  display -ms-flex
+  display flex
+.gallery__pagntn-item
+  margin 0 15px
+  border 1px solid grey
+  transition .2s ease
+  display block
+  color #000
+.gallery__pagntn-item:hover
+  color #000
+  text-decoration none
+  border-color $howOrange
+.gallery__pagntn-item.active
+  color #fff
+  background-color $howOrange
+  border-color $howOrange
+.gallery__pagntn-item.active:hover
+  color #fff
+.gallery__pagntn-page
+  padding 10px 14px
+  font-size 18px
+
+  /* /пагинация */
+
 /* /Галерея */

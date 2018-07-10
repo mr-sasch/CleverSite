@@ -13,9 +13,28 @@ block content
 	// /Шапка
 	.container.simple-p
 		// Заголовок
+		.simple-p__ttle-wrap
+			.simple-p__ttle= title
+		.row.gallery__items
+			mixin galleryItem()
+				.col-6
+					a(href='#').gallery__item
+						.gallery__item-bg
+						.gallery__item-ttl Проект Умный дом
+			+galleryItem()
+			+galleryItem()
+			+galleryItem()
+			+galleryItem()
+			+galleryItem()
+			+galleryItem()
 		.row
-			.simple-p__ttle-wrap
-				.simple-p__ttle= title
+			.col.gallery__pagntn
+				a(href='#').gallery__pagntn-item.gallery__pagntn-arrow.gallery__pagntn-arrow-left
+				a(href='#').gallery__pagntn-item.gallery__pagntn-page.active 1
+				a(href='#').gallery__pagntn-item.gallery__pagntn-page 2
+				a(href='#').gallery__pagntn-item.gallery__pagntn-page 3
+				a(href='#').gallery__pagntn-item.gallery__pagntn-arrow.gallery__pagntn-arrow-right
+				
 	// Оставьте заявку	
 	+main-form('main-form_gallery')
 	// /Оставьте заявку
