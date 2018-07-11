@@ -1,13 +1,34 @@
 extends /blocks/simple-pages/simple-page-layout.jade
 include /blocks/simple-pages/mixins
+include /blocks/main/main-gallery/main-gallery
 
 block simpleTitle
 	- var title = 'Галерея. Проект 1';
 
 block simpleContent
-	+contentTitle('Фото')
-	
-				
+	.gallery-item
+		+contentTitle('Фото')
+		// Фотогалерея
+		+mainGalleryOnly()
+		.page-gallery__arrows
+			+mainGalleryArrows()
+		// /Фотогалерея
+		// Видеогалерея
+		+contentTitle('Видео')
+		.container
+			.row.page-gallery__video-items		
+				mixin galleryVideoItem
+					.col-12.col-sm-6.col-lg-4.page-gallery__video-item
+						iframe(width='100%' height='286px' src="https://www.youtube.com/embed/x4xJ-4piQxI" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen)
+				mixin galleryVideoItem
+				mixin galleryVideoItem
+				mixin galleryVideoItem
+				mixin galleryVideoItem
+				mixin galleryVideoItem
 		// Оставьте заявку	
 		+main-form('main-form_gallery')
 		// /Оставьте заявку
+		block pageScripts
+			// Скрипты для Галереи
+			script(src='js/gallery-item-page-scripts.js')
+			// /Скрипты для Галереи
