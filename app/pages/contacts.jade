@@ -1,0 +1,51 @@
+extends /blocks/simple-pages/simple-page-layout.jade
+include /blocks/simple-pages/mixins
+
+block simpleTitle
+	- var title = 'Контакты';
+	
+block simpleContent
+	+contentTitle('Контактые данные')
+	.contacts
+		// Координаты и форма
+		.container
+			.row
+				.col-6
+					.contacts__item
+						.contacts__item-sign
+							i(class="fas fa-map-marker-alt")
+						.contacts__item-cntnt г. Севастополь, ул. Курганная, 6
+					.contacts__item
+						.contacts__item-sign
+							i(class="fas fa-phone")
+						.contacts__item-cntnt +7 (978) 
+							strong 055-19-09, 
+							br
+							| +7 (978)
+							strong 090-41-31,
+							br 
+							| +7 (915)
+							strong 259-77-17
+					.contacts__item
+						.contacts__item-sign
+							i(class="pt-0 far fa-envelope")
+						.contacts__item-cntnt info@top-clever.ru
+				.col-6
+					form#contactsForm.main-form__form.contacts__form
+						.main-form__form-ttl2 Отправьте нам сообщение, и мы обязательно ответим Вам
+						.main-form__form-inpts
+							.main-form__form-inpt.main-form__form-inpt-left
+								input.main-form__form-inpt-input(value='' type='text' name='name' onkeyup="this.setAttribute('value', this.value);")
+								label.main-form__form-inpt-label(for='name') Ваше имя
+							.main-form__form-inpt.main-form__form-inpt-right
+								input.main-form__form-inpt-input(value='' type='text' name='phone' onkeyup="this.setAttribute('value', this.value);")
+								label.main-form__form-inpt-label(for='mail') Ваш email
+							.main-form__form-inpt.main-form__form-inpt-center
+								input.main-form__form-inpt-input(value='' type='text' name='more' onkeyup="this.setAttribute('value', this.value);")
+								label.main-form__form-inpt-label(for='more') Текст сообщения
+						.main-form__form-btn
+							button.hder__test-button(type='button') Отправить
+			// Карта
+			.contacts__map
+				.contacts__map-wrap
+					iframe(src='https://yandex.by/map-widget/v1/-/CBuyf4fPGC' width='100%' height='100%')
