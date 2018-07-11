@@ -41,11 +41,15 @@
   display -ms-flex
   display flex
 .gallery__pagntn-item
-  margin 0 15px
-  border 1px solid grey
+  margin-right 20px
+  width 40px
+  height 40px
+  border 1px solid #bfbfbf
   transition .2s ease
   display block
   color #000
+.gallery__pagntn-item:last-child
+  margin-right 0
 .gallery__pagntn-item:hover
   color #000
   text-decoration none
@@ -56,10 +60,33 @@
   border-color $howOrange
 .gallery__pagntn-item.active:hover
   color #fff
+.gallery__items
+  margin-bottom 70px
+
 .gallery__pagntn-page
   padding 10px 14px
   font-size 18px
 
+
+.gallery__pagntn-arrow
+  position relative
+  display -webkit-flex
+  display -ms-flex
+  display flex
+  align-items center
+.gallery__pagntn-arrow:before
+  content ''
+  position absolute
+  height 20px
+  width 20px
+  border-left 1px solid #000
+  border-top 1px solid #000
+.gallery__pagntn-arrow-right:before
+  transform rotate(135deg)
+  left 4px
+.gallery__pagntn-arrow-left:before
+  transform rotate(-45deg)
+  right 4px
   /* /пагинация */
 
 /* /Галерея */

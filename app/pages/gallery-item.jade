@@ -1,0 +1,13 @@
+extends /blocks/simple-pages/simple-page-layout.jade
+include /blocks/simple-pages/mixins
+
+block simpleTitle
+	- var title = 'Галерея. Проект 1';
+
+block simpleContent
+	+contentTitle('Фото')
+	
+				
+		// Оставьте заявку	
+		+main-form('main-form_gallery')
+		// /Оставьте заявку

@@ -1,7 +1,8 @@
 /* Типовая страница */
 
 .simple-p
-  padding 40px 0
+  padding-top 40px
+  padding-bottom 40px
 
 /* шапка  */
 .hder__utp-center_simple
@@ -26,7 +27,7 @@
   width 100%
   position relative
   margin-top 50px
-  margin-bottom 80px
+  margin-bottom 50px
 .simple-p__ttle-wrap:before
   content ''
   position absolute
@@ -37,6 +38,39 @@
   background-color yellow
 /* /Заголовок */
 
+/* Хлебные крошки */
+.brc
+  position absolute
+  bottom 0
+  width 100%
+  color #212121
+  padding 20px 0
+  border-bottom 5px solid #dddddd
+  overflow hidden
+.brc:before
+  content ''
+  position absolute
+  top 0
+  left 0
+  height 100%
+  width 100%
+  background-color $greyBg
 
+.brc__item
+  position relative
+  z-index 10
+  color #212121
+.brc__item:hover
+  color #212121
+
+.brc__container
+  display -webkit-flex
+  display -ms-flex
+  display flex
+  justify-content flex-end
+
+.brc__item.brc__item-separ
+  margin 0 20px
+/* /Хлебные крошки */
 
 /* /Типовая страница */
