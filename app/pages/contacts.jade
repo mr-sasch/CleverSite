@@ -31,7 +31,7 @@ block simpleContent
 							i(class="pt-0 far fa-envelope")
 						.contacts__item-cntnt info@top-clever.ru
 				.col-12.col-lg-6
-					form#contactsForm.main-form__form.contacts__form
+					form#contactsForm.main-form__form.contacts__form(action="/send.php" method="POST")
 						.main-form__form-ttl2 Отправьте нам сообщение, и мы обязательно ответим Вам
 						.main-form__form-inpts
 							.main-form__form-inpt.main-form__form-inpt-left
@@ -44,7 +44,7 @@ block simpleContent
 								input.main-form__form-inpt-input(value='' type='text' name='more' onkeyup="this.setAttribute('value', this.value);")
 								label.main-form__form-inpt-label(for='more') Текст сообщения
 						.main-form__form-btn
-							button.hder__test-button(type='button') Отправить
+							button.hder__test-button(type='submit') Отправить
 		// Карта
 		.contacts__map
 			.contacts__map-wrap

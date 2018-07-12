@@ -6,15 +6,15 @@ mixin main-team()
 			.main-team__ttl-row
 				.main-team__ttl-txt Наша команда
 			.main-team__items
-				mixin mainTeamCard()
+				mixin mainTeamCard(style, name, rang)
 					.main-team__item
-						.main-team__item-img
-						.main-team__item-name Сергей Иванов
-						.main-team__item-rang Заместитель директора
+						.main-team__item-img(style= style)
+						.main-team__item-name= name
+						.main-team__item-rang= rang
 				.row.justify-content-between
 					.col.text-center
-						+mainTeamCard()
+						+mainTeamCard("background-image: url('../../images/team2.jpg')", "Сергей Иванов", "Заместитель директора")
 					.col.text-center
-						+mainTeamCard()
+						+mainTeamCard("background-image: url('../../images/team1.jpg')", "Сергей Иванов", "Заместитель директора")
 					.col.text-center
-						+mainTeamCard()
+						+mainTeamCard("background-image: url('../../images/team3.jpg')", "Сергей Иванов", "Заместитель директора")
