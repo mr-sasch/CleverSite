@@ -6,7 +6,7 @@ mixin main-form(modificatior)
 			.container
 				.row
 					.col.text-center
-						form#mainForm.main-form__form
+						form#mainForm.main-form__form(action="/send.php" method="POST")
 							img.main-form__form-girl(src='images/main-form__girl.png')
 							img.main-form__form-bow(src='images/main-form__bow.png')
 							.main-form__form-ttl Оставьте заявку
@@ -22,14 +22,14 @@ mixin main-form(modificatior)
 									input.main-form__form-inpt-input(value='' type='text' name='more' onkeyup="this.setAttribute('value', this.value);")
 									label.main-form__form-inpt-label(for='more') Ваши пожелания к комплекту безопасности
 							.main-form__form-btn
-								button.hder__test-button(type='button') Отправить
+								button.hder__test-button(type='submit') Отправить
 							.main-form__form-txt
 								.main-form__form-txt-ttl.main-form__form-txt-ttl1 ПОДАРОК!
 								.main-form__form-txt-txt Свяжитесь в день расчета стоимости с менеджером нашей компании и если Вас устроит цена которую Вам автоматически рассчитает система - Вы получите подарок.
 								.main-form__form-txt-ttl.main-form__form-txt-ttl2
 									strong СКИДКА 15% 
 									span на стоимость всего ремонта
-								.main-form__form-txt-txt 
+								.main-form__form-txt-txt
 									span.main-form__form-txt-txt-star *  
 									| Предложение действует только при обращении в день автоматического расчета цены.
 						

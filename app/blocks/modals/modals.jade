@@ -6,7 +6,7 @@ mixin modals()
 			.modal-dialog
 				.modal-content
 					.modal-content__bg-head
-					form#contactsForm.main-form__form.contacts__form
+					form#contactsForm.main-form__form.contacts__form(action="/send.php" method="POST")
 						.main-form__form-ttl2 Оставьте номер телефона, и мы обязательно перезвоним Вам
 						.main-form__form-inpts
 							.main-form__form-inpt.main-form__form-inpt-left
@@ -16,7 +16,7 @@ mixin modals()
 								input.main-form__form-inpt-input(value='' type='text' name='phone' onkeyup="this.setAttribute('value', this.value);")
 								label.main-form__form-inpt-label(for='phone') Ваш номер телефона
 						.main-form__form-btn
-							button.hder__test-button(type='button') Отправить
+							button.hder__test-button(type='submit') Отправить
 		// /Заказать звонок в шапке
 
 		// Рассчитать стоимость онлайн
@@ -24,7 +24,7 @@ mixin modals()
 			.modal-dialog
 				.modal-content
 					.modal-content__bg-head
-					form#contactsForm.main-form__form.contacts__form
+					form#contactsForm.main-form__form.contacts__form(action="/send.php" method="POST")
 						.main-form__form-ttl2 Оставьте заявку на расчет, и наш менеджер свяжется с Вами
 						.main-form__form-inpts
 							.main-form__form-inpt.main-form__form-inpt-left
@@ -37,5 +37,5 @@ mixin modals()
 								input.main-form__form-inpt-input(value='' type='text' name='more' onkeyup="this.setAttribute('value', this.value);")
 								label.main-form__form-inpt-label(for='more') Дополнительная информация
 						.main-form__form-btn
-							button.hder__test-button(type='button') Отправить
+							button.hder__test-button(type='submit') Отправить
 		// /Рассчитать стоимость онлайн
