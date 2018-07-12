@@ -1,0 +1,32 @@
+extends /blocks/simple-pages/simple-page-layout.jade
+include /blocks/simple-pages/mixins
+
+block simpleTitle
+	- var title = 'Статьи';
+	
+block simpleContent
+	+contentTitle('Статьи')
+	.container
+		.row.gallery__items
+			mixin articleItem()
+				.col-12.col-sm-6
+					a(href='article-item.html').gallery__item.articles__item
+						.gallery__item-bg
+						.gallery__item-ttl.articles__item-ttl Как настроить систему Умный дом под себя
+						.main-cat__item-cntnt.gallery__item-cntnt Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel suscipit, nulla quidem nobis quibusdam dolorum consectetur voluptatum architecto. Qui rem, saepe nesciunt, dicta impedit rerum dolore modi consequuntur doloribus non...
+			+articleItem()
+			+articleItem()
+			+articleItem()
+			+articleItem()
+			+articleItem()
+			+articleItem()
+		.row
+			.col.gallery__pagntn
+				a(href='#').gallery__pagntn-item.gallery__pagntn-arrow.gallery__pagntn-arrow-left
+				a(href='#').gallery__pagntn-item.gallery__pagntn-page.active 1
+				a(href='#').gallery__pagntn-item.gallery__pagntn-page 2
+				a(href='#').gallery__pagntn-item.gallery__pagntn-page 3
+				a(href='#').gallery__pagntn-item.gallery__pagntn-arrow.gallery__pagntn-arrow-right
+	// Оставьте заявку	
+	+main-form('main-form_gallery')
+	// /Оставьте заявку
