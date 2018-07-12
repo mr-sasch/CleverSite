@@ -5,24 +5,37 @@ mixin modals()
 		#headerCallback.modal.fade
 			.modal-dialog
 				.modal-content
-					// Шапка
-					.modal-header
-						h5.modal-title Заказать звонок в шапке
-						button.close(type='button' data-dismiss='modal' aria-label='close')
-							span(aria-hidden='true') &times;
-					.modal-body тело модалки
-					.modal-footer подвал
+					.modal-content__bg-head
+					form#contactsForm.main-form__form.contacts__form
+						.main-form__form-ttl2 Оставьте номер телефона, и мы обязательно перезвоним Вам
+						.main-form__form-inpts
+							.main-form__form-inpt.main-form__form-inpt-left
+								input.main-form__form-inpt-input(value='' type='text' name='name' onkeyup="this.setAttribute('value', this.value);")
+								label.main-form__form-inpt-label(for='name') Ваше имя
+							.main-form__form-inpt.main-form__form-inpt-right
+								input.main-form__form-inpt-input(value='' type='text' name='phone' onkeyup="this.setAttribute('value', this.value);")
+								label.main-form__form-inpt-label(for='phone') Ваш номер телефона
+						.main-form__form-btn
+							button.hder__test-button(type='button') Отправить
 		// /Заказать звонок в шапке
 
 		// Рассчитать стоимость онлайн
 		#calculate.modal.fade
 			.modal-dialog
 				.modal-content
-					// Шапка
-					.modal-header
-						h5.modal-title Рассчитать стоимость онлайн
-						button.close(type='button' data-dismiss='modal' aria-label='close')
-							span(aria-hidden='true') &times;
-					.modal-body тело модалки
-					.modal-footer подвал
+					.modal-content__bg-head
+					form#contactsForm.main-form__form.contacts__form
+						.main-form__form-ttl2 Оставьте заявку на расчет, и наш менеджер свяжется с Вами
+						.main-form__form-inpts
+							.main-form__form-inpt.main-form__form-inpt-left
+								input.main-form__form-inpt-input(value='' type='text' name='name' onkeyup="this.setAttribute('value', this.value);")
+								label.main-form__form-inpt-label(for='name') Ваше имя
+							.main-form__form-inpt.main-form__form-inpt-right
+								input.main-form__form-inpt-input(value='' type='text' name='phone' onkeyup="this.setAttribute('value', this.value);")
+								label.main-form__form-inpt-label(for='phone') Ваш номер телефона
+							.main-form__form-inpt.main-form__form-inpt-center
+								input.main-form__form-inpt-input(value='' type='text' name='more' onkeyup="this.setAttribute('value', this.value);")
+								label.main-form__form-inpt-label(for='more') Дополнительная информация
+						.main-form__form-btn
+							button.hder__test-button(type='button') Отправить
 		// /Рассчитать стоимость онлайн

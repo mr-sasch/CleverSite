@@ -1,2 +1,45 @@
+/* Модальные окна */
 .modals
 	display block
+
+.modal
+	.main-form__form-ttl2
+		text-align center
+		line-height 23px
+		color yellow
+		z-index 10
+		position relative
+		margin-bottom 60px
+	.contacts__form.main-form__form
+		padding 20px 35px 30px
+
+.modal-content
+	position relative
+
+.modal-content__bg-head
+	position absolute
+	width 100%
+	top 0
+	left 0
+	height 27%
+	background-color $hderBlue
+	z-index 10
+.modal-content__bg-head:before
+	content ''
+	position absolute
+	left 50%
+	transform translateX(-50%)
+	bottom -15px
+	border-top 20px solid $hderBlue
+	border-left 180px solid transparent
+	border-right 180px solid transparent
+
+@media screen and (max-width 400px)
+	.modal-content__bg-head:before
+			bottom -19px
+			border-top 20px solid $hderBlue
+			border-left 150px solid transparent
+			border-right 150px solid transparent
+	.modal .contacts__form.main-form__form
+		padding 20px 15px 30px
+/* /Модальные окна */
