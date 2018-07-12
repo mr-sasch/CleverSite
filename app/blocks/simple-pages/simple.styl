@@ -2,6 +2,7 @@
 
 .simple-p
   padding-top 40px
+  padding-top 0px
 
 
 /* шапка  */
@@ -17,20 +18,41 @@
 /* /шапка */
 
 /* Заголовок */
+$bgTtl = #f5f2f2 // Фон под заголовоком
+
+.simple-p__wrap
+  margin-top 40px
+  padding 20px 0
+  margin-bottom 30px
+  background-color $bgTtl
+  border-top 1px solid #dddddd
+  border-bottom 1px solid #dddddd
+
+
 .simple-p__ttle
   font-size 48px
   color $fterBlue
-  background-color #fff
+  background-color $bgTtl
   display inline-block
   z-index 10
   position relative
   padding-right 20px
 
+  padding-left 18px
+.simple-p__ttle:before
+  content ''
+  position absolute
+  left 0
+  top 50%
+  height 70%
+  transform translateY(-50%)
+  border-left 3px solid #ff5a00
+
 .simple-p__ttle-wrap
   width 100%
   position relative
-  margin-top 50px
-  margin-bottom 50px
+  // margin-top 50px
+  // margin-bottom 50px
 .simple-p__ttle-wrap:before
   content ''
   position absolute
@@ -50,21 +72,26 @@
   padding 20px 0
   border-bottom 5px solid #dddddd
   overflow hidden
-.brc:before
-  content ''
+
+  // padding 60px 0
+
+.brc__bg
   position absolute
   top 0
   left 0
   height 100%
   width 100%
-  background-color $greyBg
+  background-color #0000004d
+  border-top 1px solid grey
 
 .brc__item
   position relative
   z-index 10
-  color #212121
+  color #fff
+  transition .2s ease
 .brc__item:hover
-  color #212121
+  color yellow
+  text-decoration none
 
 .brc__container
   display -webkit-flex

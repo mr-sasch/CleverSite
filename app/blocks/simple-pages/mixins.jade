@@ -1,5 +1,12 @@
+//- mixin contentTitle(title)
+//-   .container.simple-p
+//-     // Заголовок
+//-     .simple-p__ttle-wrap
+//-       .simple-p__ttle= title
+
 mixin contentTitle(title)
-  .container.simple-p
-    // Заголовок
-    .simple-p__ttle-wrap
-      .simple-p__ttle= title
+  .simple-p__wrap
+    .container.simple-p
+      // Заголовок
+      .simple-p__ttle-wrap
+        .simple-p__ttle= title
