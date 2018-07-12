@@ -1,0 +1,31 @@
+extends /blocks/simple-pages/simple-page-layout.jade
+include /blocks/simple-pages/mixins
+
+block simpleTitle
+	- var title = 'Статьи';
+	
+block simpleContent
+	+contentTitle('Как настроить систему умный дом под себя')
+	.articles-item
+		.container
+			.articles-item__txt
+				p Sed porttitor lectus nibh. Donec sollicitudin molestie malesuada. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Curabitur aliquet quam id dui posuere blandit. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Curabitur aliquet quam id dui posuere blandit. Proin eget tortor risus. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Donec rutrum congue leo eget malesuada. 
+				.articles-item__images.row
+						mixin articlesImg()
+							.col-12.col-lg-6
+								a.articles-item__images-a(href='images/articles__item.png')
+									.articles-item__images-bg-img
+									.articles-item__images-bg-color
+									img.articles-item__images-bg-zoom(src='images/main-gallery__zoom.png')
+						+articlesImg()
+						+articlesImg()
+				p Sed porttitor lectus nibh. Donec sollicitudin molestie malesuada. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Curabitur aliquet quam id dui posuere blandit. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Curabitur aliquet quam id dui posuere blandit. Proin eget tortor risus. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Donec rutrum congue leo eget malesuada.  Sed porttitor lectus nibh. Donec sollicitudin molestie malesuada. Praesent sapien massa, convallis a pellentesque nec.
+				
+				p Curabitur aliquet quam id dui posuere blandit. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Curabitur aliquet quam id dui posuere blandit. Proin eget tortor risus. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Donec rutrum congue leo eget malesuada. 
+
+				p Sed porttitor lectus nibh. Donec sollicitudin molestie malesuada. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Curabitur aliquet quam id dui posuere blandit. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Curabitur aliquet quam id dui posuere blandit. Proin eget tortor risus. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Donec rutrum congue leo eget malesuada.  Sed porttitor lectus nibh. Donec sollicitudin molestie malesuada. Praesent sapien massa, convallis a pellentesque nec.
+
+				p Curabitur aliquet quam id dui posuere blandit. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Curabitur aliquet quam id dui posuere blandit. Proin eget tortor risus. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Donec rutrum congue leo eget malesuada. 
+		// Оставьте заявку	
+		+main-form('main-form_gallery')
+		// /Оставьте заявку
