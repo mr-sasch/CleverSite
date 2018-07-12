@@ -1,0 +1,40 @@
+extends /blocks/simple-pages/simple-page-layout.jade
+include /blocks/simple-pages/mixins
+include /blocks/main/main-about/main-about
+include /blocks/main/main-director/main-director
+include /blocks/main/main-team/main-team
+include /blocks/main/main-reviews/main-reviews
+include /blocks/main/main-trust/main-trust
+
+block simpleTitle
+	- var title = 'О Компании';
+	
+block simpleContent
+	+contentTitle('О Нас')
+	.about
+		// Текст о компании
+		.container
+			.about__txt
+				p Sed porttitor lectus nibh. Donec sollicitudin molestie malesuada. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Curabitur aliquet quam id dui posuere blandit. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Curabitur aliquet quam id dui posuere blandit. Proin eget tortor risus. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Donec rutrum congue leo eget malesuada. 
+
+				p Sed porttitor lectus nibh. Donec sollicitudin molestie malesuada. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Curabitur aliquet quam id dui posuere blandit. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Curabitur aliquet quam id dui posuere blandit. Proin eget tortor risus. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Donec rutrum congue leo eget malesuada. 
+		// /Текст о компании
+		// Клевер - это...
+		+main-about()
+		// /Клевер - это...	
+		// Обращение директора
+		+main-director()
+		// /Обращение директора
+		// Наша команда
+		+main-team()
+		// /Наша команда
+		// Отзывы
+		+main-reviews()
+		// /Отзывы
+		// Нам доверяют
+		+main-trust()
+		// /Нам доверяют
+		block pageScripts
+			// Скрипты для О Компании
+			script(src='js/about-page-scripts.js')
+			// /Скрипты для О Компании
