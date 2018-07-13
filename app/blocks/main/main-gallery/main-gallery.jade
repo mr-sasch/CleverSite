@@ -5,33 +5,33 @@ mixin main-gallery()
 		.container.main-gallery__wrap
 			.main-gallery__ttl Фотогалерея
 		mixin mainGalleryOnly()
-			.main-gallery__items
+			.main-gallery__items#main-gallery__items
 				.main-gallery__item-wrap(data-value='1')
-					a(href='/images/main-gallery__img.png')
+					a(data-fancybox="gallery" href='/images/main-gallery__img.png')
 						.main-gallery__item-zoom
 						img.main-gallery__item(src='images/main-gallery__img.png')
 				.main-gallery__item-wrap(data-value='2')
-					a(href='/images/main-gallery__img.png')
+					a(data-fancybox="gallery" href='https://youtu.be/azUbCdcAeFM')
 						.main-gallery__item-zoom
-						img.main-gallery__item(src='images/main-gallery__img.png')
+						img.main-gallery__item(src='images/main-gallery__video.png')
 				.main-gallery__item-wrap(data-value='3')
-					a(href='/images/main-gallery__img.png')
+					a(data-fancybox="gallery" href='/images/main-gallery__img.png')
 						.main-gallery__item-zoom
 						img.main-gallery__item(src='images/main-gallery__img.png')
 				.main-gallery__item-wrap(data-value='4')
-					a(href='/images/main-gallery__img.png')
+					a(data-fancybox="gallery" href='/images/main-gallery__img.png')
 						.main-gallery__item-zoom
 						img.main-gallery__item(src='images/main-gallery__img.png')
 				.main-gallery__item-wrap(data-value='4')
-					a(href='/images/main-gallery__img.png')
+					a(data-fancybox="gallery" href='/images/main-gallery__img.png')
 						.main-gallery__item-zoom
 						img.main-gallery__item(src='images/main-gallery__img.png')
 				.main-gallery__item-wrap(data-value='4')
-					a(href='/images/main-gallery__img.png')
+					a(data-fancybox="gallery" href='/images/main-gallery__img.png')
 						.main-gallery__item-zoom
 						img.main-gallery__item(src='images/main-gallery__img.png')
 				.main-gallery__item-wrap(data-value='4')
-					a(href='/images/main-gallery__img.png')
+					a(data-fancybox="gallery" href='/images/main-gallery__img.png')
 						.main-gallery__item-zoom
 						img.main-gallery__item(src='images/main-gallery__img.png')
 		+mainGalleryOnly()
