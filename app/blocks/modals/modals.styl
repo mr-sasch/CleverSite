@@ -9,21 +9,22 @@
 		color yellow
 		z-index 10
 		position relative
-		margin-bottom 60px
+		margin-bottom 0
 	.contacts__form.main-form__form
-		padding 20px 35px 30px
+		padding 30px 35px 30px
 
 .modal-content
 	position relative
 
 .modal-content__bg-head
-	position absolute
+	position relative
 	width 100%
 	top 0
 	left 0
 	height 27%
 	background-color $hderBlue
 	z-index 10
+	padding 20px 35px
 .modal-content__bg-head:before
 	content ''
 	position absolute
@@ -42,4 +43,6 @@
 			border-right 150px solid transparent
 	.modal .contacts__form.main-form__form
 		padding 20px 15px 30px
+	.modal-content__bg-head
+		padding 20px 15px
 /* /Модальные окна */
