@@ -6,82 +6,12 @@ mixin main-gallery()
 			.main-gallery__ttl Фотогалерея
 		mixin mainGalleryOnly()
 			.main-gallery__items#main-gallery__items
-				.main-gallery__item-wrap
-					a(data-fancybox="gallery" href='images/gallery/2.jpg')
-						.main-gallery__item-zoom
-						img.main-gallery__item(src='images/gallery/2.jpg')
-				.main-gallery__item-wrap
-					a(data-fancybox="gallery" href='images/gallery/4.jpg')
-						.main-gallery__item-zoom
-						img.main-gallery__item(src='images/gallery/4.jpg')
-				.main-gallery__item-wrap
-					a(data-fancybox="gallery" href='images/gallery/5.jpg')
-						.main-gallery__item-zoom
-						img.main-gallery__item(src='images/gallery/5.jpg')
-				.main-gallery__item-wrap
-					a(data-fancybox="gallery" href='images/gallery/3.jpg')
-						.main-gallery__item-zoom
-						img.main-gallery__item(src='images/gallery/3.jpg')
-				.main-gallery__item-wrap
-					a(data-fancybox="gallery" href='images/gallery/11.jpg')
-						.main-gallery__item-zoom
-						img.main-gallery__item(src='images/gallery/11.jpg')
-				.main-gallery__item-wrap
-					a(data-fancybox="gallery" href='images/gallery/izobrajenie-007.jpg')
-						.main-gallery__item-zoom
-						img.main-gallery__item(src='images/gallery/izobrajenie-007.jpg')
-				.main-gallery__item-wrap
-					a(data-fancybox="gallery" href='images/gallery/izobrajenie-025.jpg')
-						.main-gallery__item-zoom
-						img.main-gallery__item(src='images/gallery/izobrajenie-025.jpg')
-				.main-gallery__item-wrap
-					a(data-fancybox="gallery" href='images/gallery/izobrajenie-033.jpg')
-						.main-gallery__item-zoom
-						img.main-gallery__item(src='images/gallery/izobrajenie-033.jpg')
-				.main-gallery__item-wrap
-					a(data-fancybox="gallery" href='images/gallery/izobrajenie-036.jpg')
-						.main-gallery__item-zoom
-						img.main-gallery__item(src='images/gallery/izobrajenie-036.jpg')
-				.main-gallery__item-wrap
-					a(data-fancybox="gallery" href='images/gallery/izobrajenie-039.jpg')
-						.main-gallery__item-zoom
-						img.main-gallery__item(src='images/gallery/izobrajenie-039.jpg')
-				.main-gallery__item-wrap
-					a(data-fancybox="gallery" href='images/gallery/izobrajenie-040.jpg')
-						.main-gallery__item-zoom
-						img.main-gallery__item(src='images/gallery/izobrajenie-040.jpg')
-				.main-gallery__item-wrap
-					a(data-fancybox="gallery" href='images/gallery/izobrajenie-044.jpg')
-						.main-gallery__item-zoom
-						img.main-gallery__item(src='images/gallery/izobrajenie-044.jpg')
-				.main-gallery__item-wrap
-					a(data-fancybox="gallery" href='images/gallery/izobrajenie-046.jpg')
-						.main-gallery__item-zoom
-						img.main-gallery__item(src='images/gallery/izobrajenie-046.jpg')
-				.main-gallery__item-wrap
-					a(data-fancybox="gallery" href='images/gallery/izobrajenie-049.jpg')
-						.main-gallery__item-zoom
-						img.main-gallery__item(src='images/gallery/izobrajenie-049.jpg')
-				.main-gallery__item-wrap
-					a(data-fancybox="gallery" href='images/gallery/izobrajenie-051.jpg')
-						.main-gallery__item-zoom
-						img.main-gallery__item(src='images/gallery/izobrajenie-051.jpg')
-				.main-gallery__item-wrap
-					a(data-fancybox="gallery" href='images/gallery/izobrajenie-054.jpg')
-						.main-gallery__item-zoom
-						img.main-gallery__item(src='images/gallery/izobrajenie-054.jpg')
-				.main-gallery__item-wrap
-					a(data-fancybox="gallery" href='images/gallery/izobrajenie-059.jpg')
-						.main-gallery__item-zoom
-						img.main-gallery__item(src='images/gallery/izobrajenie-059.jpg')
-				.main-gallery__item-wrap
-					a(data-fancybox="gallery" href='images/gallery/izobrajenie-061.jpg')
-						.main-gallery__item-zoom
-						img.main-gallery__item(src='images/gallery/izobrajenie-061.jpg')
-				.main-gallery__item-wrap
-					a(data-fancybox="gallery" href='https://youtu.be/azUbCdcAeFM')
-						.main-gallery__item-zoom
-						img.main-gallery__item(src='images/main-gallery__video.png')
+				each val in ['images/gallery/2.jpg', 'images/gallery/3.jpg', 'images/gallery/4.jpg', 'images/gallery/5.jpg', 'images/gallery/11.jpg', 'images/gallery/izobrajenie-007.jpg', 'images/gallery/izobrajenie-025.jpg', 'images/gallery/izobrajenie-033.jpg', 'images/gallery/izobrajenie-036.jpg', 'images/gallery/izobrajenie-039.jpg', 'images/gallery/izobrajenie-040.jpg', 'images/gallery/izobrajenie-044.jpg', 'images/gallery/izobrajenie-046.jpg', 'images/gallery/izobrajenie-049.jpg', 'images/gallery/izobrajenie-051.jpg', 'images/gallery/izobrajenie-054.jpg', 'images/gallery/izobrajenie-059.jpg', 'images/gallery/izobrajenie-061.jpg']
+					.main-gallery__item-wrap
+						a.main-gallery__item-wrap-a(data-fancybox="gallery" href= val)
+							.main-gallery__item-zoom
+							.main-gallery__item-wrap-bg
+							img.main-gallery__item(style='background-image: url('+ val +')')
 		+mainGalleryOnly()
 		// Стрелки
 		mixin mainGalleryArrows()
