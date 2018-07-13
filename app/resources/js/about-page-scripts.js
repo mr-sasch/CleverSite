@@ -36,3 +36,9 @@ reviewBtnRight.onclick = () => {
   reviewHiddenRight.click();
   reviewsItem();
 };
+
+// обновление счетчика при свайпе
+var itemSwipe = document.querySelector('.main-reviews__items');
+itemSwipe.onmouseup = () => {
+  reviewsItem();
+}

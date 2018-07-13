@@ -68,3 +68,13 @@ reviewBtnRight.onclick = () => {
   reviewHiddenRight.click();
   reviewsItem();
 };
+
+// обновление счетчика при свайпе
+var itemSwipe = document.querySelector('.main-gallery__items');
+itemSwipe.onmouseup = () => {
+  galleryItem();
+}
+var itemSwipe = document.querySelector('.main-reviews__items');
+itemSwipe.onmouseup = () => {
+  reviewsItem();
+}
