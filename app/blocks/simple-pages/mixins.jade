@@ -1,8 +1,10 @@
-//- mixin contentTitle(title)
-//-   .container.simple-p
-//-     // Заголовок
-//-     .simple-p__ttle-wrap
-//-       .simple-p__ttle= title
+// Заголовок с чертами по бокам
+mixin ttlWithLines(text)
+  .container.main-reviews__ttl-container
+    .main-reviews__ttl-wrap
+      .main-reviews__ttl-separ.main-reviews__ttl-left
+      .main-reviews__ttl= text
+      .main-reviews__ttl-separ.main-reviews__ttl-right
 
 mixin contentTitle(title)
   .simple-p__wrap

@@ -1,5 +1,6 @@
 /* Видеонаблюдение */
 .cat-video
+  padding 300px 0
   /* УТП */
   .test-utp
     position relative
@@ -13,5 +14,38 @@
     line-height 24px
     p:last-child
       margin-bottom 0
+  /* Заголовок с чертами по бокам */
+  .main-reviews__ttl
+    color $fterBlue
+  .main-reviews__ttl-separ:before
+    background-color $howOrange
+  .main-reviews__ttl-separ:after
+    background-color $howOrange
+
+  /* Вы получаете */
+.you-get__item-text-ttl
+  font-size 18px
+  font-weight 600
+  text-transform uppercase
+
+.you-get__item-text-body
+  font-size 18px
+  font-weight 300
+
+.you-get__item
+  display -webkit-flex
+  display -ms-flex
+  display flex
+  flex-direction row
+
+.you-get__item-text
+  display inline-block
+
+.you-get__item-img
+  width 70px
+  text-align center
+
+
+  /* /Вы получаете */
 
 /* /Видеонаблюдение */
