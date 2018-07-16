@@ -1,0 +1,23 @@
+extends /blocks/layout-default/layout-default
+include /blocks/modals/modals
+include /blocks/main/main-form/main-form
+
+block head
+  - var pageTitle = 'Clever | Мир умной автоматики для вашего дома';
+  
+block content
+  //- Переменная заголовка 
+  block simpleTitle
+  // Шапка
+  include /blocks/catalog/catalog-header
+  // /Шапка
+  
+  block simpleContent
+
+  // Модальные окна
+  +modals()
+  // /Модальные окна
+  // Футер
+  include /blocks/footer/footer
+  // /Футер
+  block pageScripts

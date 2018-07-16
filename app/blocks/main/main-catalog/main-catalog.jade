@@ -1,10 +1,8 @@
-include /blocks/testUtp/testUtp
-
 mixin main-catalog()
 	+b.main-catalog&attributes(attributes)
 		block
-		//- Тест/УТП
-		+testUtp()
+		// Тест/УТП
+		include /blocks/main/testUtpMain
 		// Блоки
 		.container.main-catalog__container
 			.row.flex-wrap#mainCat
@@ -14,7 +12,7 @@ mixin main-catalog()
 							.main-cat__item-logo(class= cls2)
 							.main-cat__item-ttl= ttl
 							.main-cat__item-cntnt.collapse(id= id data-parent="#mainCat") Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel suscipit, nulla quidem nobis quibusdam dolorum consectetur voluptatum architecto. Qui rem, saepe nesciunt, dicta impedit rerum dolore modi consequuntur doloribus non.
-					// Умный дом
+					// Умный дом 
 					.main-cat__item(data-toggle='collapse' data-target='#catItemHouse' class='main-cat__item-house').mb-4
 						.main-cat__item-logo(class='main-cat__item-logo-house')
 						.main-cat__item-ttl Умный дом

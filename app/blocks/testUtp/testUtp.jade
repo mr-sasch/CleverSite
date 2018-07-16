@@ -1,21 +1,14 @@
-mixin testUtp()
-	+b.test-utp&attributes(attributes)
-		block
-		// Тест/УТП
-		.container
-			.row
-				.col-12.text-center
-					.hder__test
-						.hder__test-top
-							.hder__test-top-row1 Сэкономим до 30% на работах
-							.hder__test-top-row2 Сравните цены с конкурентами
-								br
-								| сделав экспресс-расчет								
-						.hder__test-bottom
-							.hder__test-bottom-ttl-wrap
-								.hder__test-bottom-ttl Как?
-							.hder__test-bottom-cntnt Вам будет достаточно 
-								strong 2 минут, 
-								| чтобы определить примерную стоимость вашего ремонта и для этого даже не нужно созваниваться с менеджером нашей компании.
-							.hder__test-button-wrap
-								button.hder__test-button(type='button' data-toggle='modal' data-target='#calculate') Рассчитать стоимость онлайн
+block utpVars
+
+.test-utp
+	// Тест/УТП
+	.container
+		.row
+			.col-12.text-center
+				.hder__test
+					.hder__test-top
+						block testUtpTop
+					.hder__test-bottom
+						block testUtpBottom
+					.hder__test-button-wrap
+						button.hder__test-button(type='button' data-toggle='modal' data-target='#calculate')= testUtpTopBtnTxt

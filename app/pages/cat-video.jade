@@ -1,0 +1,14 @@
+extends /blocks/catalog/catalog-layout.jade
+include /blocks/simple-pages/mixins
+
+block simpleTitle
+	- var title = 'Системы видеонаблюдения';
+	
+	
+block simpleContent
+	.cat-video
+		// УТП
+		include /blocks/catalog/video/testUtpVideo.jade
+		// /УТП
+		include /blocks/catalog/video/you-get.jade
+	
