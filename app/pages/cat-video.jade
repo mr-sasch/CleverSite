@@ -16,4 +16,11 @@ block simpleContent
 		// Мы установим
 		include /blocks/catalog/video/we-set.jade
 		// /Мы установим
-	
+		script.
+			$(document).ready(function(){
+				$('.we-set__imgs1').slick({
+					arrows: false,
+					dots: true,
+					slidesToShow: 1
+				});
+			});
