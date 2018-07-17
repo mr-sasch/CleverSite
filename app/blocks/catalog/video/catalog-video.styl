@@ -67,9 +67,86 @@
   /* /Вы получаете */
 
   /* Мы установим */
+.we-set
+  position relative
+  padding 50px 0
+  margin 50px 0
 
+.we-set__bg
+  position absolute
+  top 0
+  left 0
+  height 100%
+  width 100%
+.we-set__bg:before
+  content ''
+  background-image url("../../images/main-about__bg.png")
+  position absolute
+  top 0
+  left 0
+  height 100%
+  width 100%
 
+.we-set__imgs-img
+  background-image url('../../images/we-set__imgs.png')
+  background-position center
+  background-size cover
+  height 310px
 
+.we-set__ttl
+  font-size 48px
+  font-weight 600
+  color #fff
+  margin-bottom 60px
+
+.we-set__cntnt-ttl
+  position relative
+  font-size 24px
+  font-weight 600
+  color yellow
+  text-transform uppercase
+  padding-bottom 10px
+  display inline-block
+  padding-left 10px
+  padding-right 10px
+.we-set__cntnt-ttl:before
+  content ''
+  position absolute
+  height 2px
+  background-color $howOrange
+  width 100%
+  bottom 0
+  left 0
+
+.we-set__cntnt-ttl-right
+  justify-content flex-start
+  .we-set__cntnt-ttl
+    padding-left 35px
+
+.we-set__cntnt-ttl-left
+  justify-content flex-end
+  .we-set__cntnt-ttl
+    padding-right 35px
+
+.we-set__cntnt-descr-ul
+  margin-top 20px
+  color #fff
+  font-weight 300
+
+.we-set__cntnt-descr-li
+  margin 9px 0
+  padding-left 35px
+
+.we-set__cntnt
+  display -webkit-flex
+  display -ms-flex
+  display flex
+  flex-direction column
+
+@media screen and (max-width 400px)
+  .cat-video
+    .main-reviews__ttl
+      padding 0 10px
   /* /Мы установим */
 
 /* /Видеонаблюдение */
