@@ -256,4 +256,71 @@
   margin-top 30px
 // /Полную информацию смотрите в каталоге
 
+// Остались вопросы
+.video-faq
+  position relative
+  padding 100px 0
+  .simple-p__wrap
+    border none
+  .simple-p__ttle
+    background-color $greyBg
+    font-weight 400
+  .simple-p__ttle-wrap:before
+    background-color yellow
+  .card-header
+    padding 0
+    font-size 24px
+    font-weight 600
+    color $howOrange
+    cursor pointer
+    .collapsed
+      color #000
+      transition .2s ease
+    .collapsed:hover
+      color $howOrange
+    .video-faq__items-ttl
+      position relative
+      padding 15px
+    .video-faq__items-ttl:before,
+    .video-faq__items-ttl:after
+      position absolute
+      right 20px
+      top 50%
+      transform translateY(-50%)
+      transition .2s ease
+    .video-faq__items-ttl:after
+      content '-'
+      opacity 1
+      font-size 42px
+      top calc(50% - 4px)
+    .video-faq__items-ttl:before
+      content '+'
+      opacity 0
+    .collapsed.video-faq__items-ttl:before
+      opacity 1
+    .collapsed.video-faq__items-ttl:after
+      opacity 0
+
+
+  .card
+    margin-bottom 8px
+    border none
+    box-shadow 0 3px 33px 5px #d3d3d373
+
+  .card-body
+    font-size 18px
+    font-weight 400
+    line-height 23px
+
+
+.video-faq__bg
+  position absolute
+  width 100%
+  height 100%
+  top 0
+  left 0
+  background-color $greyBg
+
+// /Остались вопросы
+
 /* /Видеонаблюдение */
