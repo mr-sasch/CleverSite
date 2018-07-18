@@ -1,10 +1,11 @@
 /* Видеонаблюдение */
 .cat-video
-  padding 300px 0
+  position relative
+  top -180px
   /* УТП */
   .test-utp
     position relative
-    top -200px
+    z-index 20
   .cat-video__utp-top
     font-size 30px
     color #fff
@@ -21,8 +22,37 @@
     background-color $howOrange
   .main-reviews__ttl-separ:after
     background-color $howOrange
+  .main-seo
+    padding 120px 0 0
+    margin-bottom -290px
+  .main-seo__bg
+    bottom -50px
 
   /* Вы получаете */
+.you-get
+  position relative
+
+.you-get__bg
+  position absolute
+  height 100%
+  width 100%
+  top 0
+  left 0
+.you-get__bg:before
+  content ''
+  position absolute
+  width 100%
+  top 0
+  bottom -110px
+  left 0
+  background-color $greyBg
+  transform skewY(-7deg)
+  z-index 10
+
+.you-get__content
+  position relative
+  z-index 20
+
 .you-get__item-text-ttl
   font-size 18px
   font-weight 600
@@ -69,10 +99,14 @@
   /* Мы установим */
 .we-set
   position relative
-  padding 50px 0
-  margin 50px 0
+  padding 170px 0 100px
+  margin-top 50px
   .slick-dotted.slick-slider
     margin-bottom 0
+
+.we-set__container
+  position relative
+  z-index 10
 
 .we-set__bg
   position absolute
@@ -87,9 +121,9 @@
   background-size cover
   background-repeat no-repeat
   position absolute
-  top 0
+  top -110px
   left 0
-  height 100%
+  bottom -210px
   width 100%
 
 .we-set__imgs-img
@@ -175,17 +209,28 @@
 // Полную информацию смотрите в каталоге
 .video-cat
   position relative
-  padding 100px 0
+  padding 100px 0 130px
+  z-index 10
 .video-cat__bg
   position absolute
-  width 100%
-  height 100%
-  left 0
   top 0
+  left 0
+  height 100%
+  width 100%
+  overflow hidden
+  transform skewY(-7deg)
+.video-cat__bg:before
+  content ''
+  position absolute
+  width 100%
+  left 0
+  top -170px
+  bottom -160px
   background-image url(../../images/video-cat__bg.png)
   background-size cover
   background-position center
   background-repeat no-repeat
+  transform skewY(7deg)
 
 .video-cat
   .main-form__form-inpt-left
@@ -205,7 +250,7 @@
   .hder__test-bottom
     padding-bottom 60px
   .hder__test
-    margin 100px 0 -200px
+    margin-top 100px
 
 .video-cat__ttl
   font-size 30px
@@ -316,11 +361,14 @@
 .video-faq__bg
   position absolute
   width 100%
-  height 100%
-  top 0
   left 0
+  top -170px
+  bottom -170px
   background-color $greyBg
-
 // /Остались вопросы
+
+@media screen and (max-width 576px)
+  .hder__test-bottom
+    padding 50px 15px 30px 15px !important
 
 /* /Видеонаблюдение */

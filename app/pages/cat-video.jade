@@ -1,14 +1,13 @@
 extends /blocks/catalog/catalog-layout.jade
 include /blocks/simple-pages/mixins
+include /blocks/main/main-form/main-form
+include /blocks/main/main-seo/main-seo
 
 block simpleTitle
 	- var title = 'Системы видеонаблюдения';
 		
 block simpleContent
 	.cat-video
-		// УТП
-		include /blocks/catalog/video/testUtpVideo.jade
-		// /УТП
 		// Вы получаете
 		include /blocks/catalog/video/you-get.jade
 		// /Вы получаете
@@ -21,6 +20,12 @@ block simpleContent
 		// Остались вопросы?
 		include /blocks/catalog/video/faq.jade
 		// /Остались вопросы?
+		// Оставьте заявку
+		+main-form() 
+		// /Оставьте заявку
+		// Сео текст
+		+main-seo() 
+		// /Сео текст
 		script.
 			$(document).ready(function(){
 				$('.we-set__imgs1').slick({
