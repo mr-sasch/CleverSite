@@ -1,0 +1,42 @@
+.video-cat
+  .video-cat__bg
+  .container
+    .row
+      .col-12
+        // Заголовок
+        .video-cat__ttl
+          .hder__utp-center-row2-ttl Комплект видеодомофонии
+            strong.pod-klyuch "под ключ" 
+            | всего
+            strong за
+              span.six-five-zero-zero 6500 
+              | руб.
+        .video-cat__descr
+          strong Лучшая стоимость в Крыму!
+          br
+          | Комплект видеодомофонии  «под ключ» (видеодомофон + встроенная видеокамера
+          br
+          | + вызывная панель+ монтаж) -  всего за 6500 рублей !
+          br
+          strong Подключается к подъездному домофону! 
+          
+      .col-12.d-flex.justify-content-around.flex-wrap
+        // Инпуты
+        .main-form__form-inpt.main-form__form-inpt-left
+          input.main-form__form-inpt-input(value='' type='text' name='name' onkeyup="this.setAttribute('value', this.value);")
+          label.main-form__form-inpt-label(for='name') Ваше имя
+        .main-form__form-inpt.main-form__form-inpt-left
+          input.main-form__form-inpt-input(value='' type='text' name='phone' onkeyup="this.setAttribute('value', this.value);")
+          label.main-form__form-inpt-label(for='phone') Ваш телефон
+        .main-form__form-inpt.main-form__form-inpt-left
+          input.main-form__form-inpt-input(value='' type='text' name='mail' onkeyup="this.setAttribute('value', this.value);")
+          label.main-form__form-inpt-label(for='mail') Ваш email
+      .col-12.text-center
+        // Примечание
+        .video-cat__notice 
+          span.main-form__form-txt-txt-star * 
+          | Отправляя форму, Вы соглашаетесь с нашей 
+          span.video-cat__notice-politics(data-toggle='modal' data-target='#calculate') политикой конфиденциальности        
+      .col-12.text-center
+        // Кнопка
+        button.video-cat__btn(type='button' data-toggle='modal' data-target='#calculate') Заказать

@@ -4,25 +4,29 @@ include /blocks/main/main-form/main-form
 include /blocks/main/main-seo/main-seo
 
 block simpleTitle
-	- var title = 'Системы видеонаблюдения';
+	- var title = 'Домофония';
 		
 block headerCatalog
-	include /blocks/catalog/catalog-header
+	include /blocks/catalog/domof/dom-header
 		
 block simpleContent
-	.cat-video
+	.cat-video.cat-domof
 		// Вы получаете
-		include /blocks/catalog/video/you-get.jade
+		include /blocks/catalog/domof/you-get__domof.jade
 		// /Вы получаете
-		// Мы установим
-		include /blocks/catalog/video/we-set.jade
-		// /Мы установим
+		// Комплект видеодомофонии
+		include /blocks/catalog/domof/complect.jade		
+		// /Комплект видеодомофонии
+		// Мы устанавливаем
+		include /blocks/catalog/domof/we-set-domof.jade
+		// /Мы устанавливаем		
 		// Полную информацию смотрите в каталоге
-		include /blocks/catalog/video/cat.jade
-		// /Полную информацию смотрите в каталоге
+		include /blocks/catalog/domof/cat-domof.jade
+		// /Полную информацию смотрите в каталоге		
 		// Остались вопросы?
-		include /blocks/catalog/video/faq.jade
+		include /blocks/catalog/domof/faq-domof.jade
 		// /Остались вопросы?
+		
 		// Оставьте заявку
 		+main-form() 
 		// /Оставьте заявку

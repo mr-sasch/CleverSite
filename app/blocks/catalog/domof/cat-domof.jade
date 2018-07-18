@@ -1,0 +1,82 @@
+.video-cat.domof__catalog
+  .video-cat__bg
+  .container
+    .row
+      .col-12
+        // Заголовок
+        .video-cat__ttl Полную информацию смотрите 
+          strong в нашем каталоге
+      .col-12.d-flex.justify-content-around.flex-wrap
+        // Инпуты
+        .main-form__form-inpt.main-form__form-inpt-left
+          input.main-form__form-inpt-input(value='' type='text' name='name' onkeyup="this.setAttribute('value', this.value);")
+          label.main-form__form-inpt-label(for='name') Ваше имя
+        .main-form__form-inpt.main-form__form-inpt-left
+          input.main-form__form-inpt-input(value='' type='text' name='phone' onkeyup="this.setAttribute('value', this.value);")
+          label.main-form__form-inpt-label(for='phone') Ваш телефон
+        .main-form__form-inpt.main-form__form-inpt-left
+          input.main-form__form-inpt-input(value='' type='text' name='mail' onkeyup="this.setAttribute('value', this.value);")
+          label.main-form__form-inpt-label(for='mail') Ваш email
+      .col-12.text-center
+        // Примечание
+        .video-cat__notice 
+          span.main-form__form-txt-txt-star * 
+          | Отправляя форму, Вы соглашаетесь с нашей 
+          span.video-cat__notice-politics(data-toggle='modal' data-target='#calculate') политикой конфиденциальности        
+      .col-12.text-center
+        // Кнопка
+        button.video-cat__btn(type='button' data-toggle='modal' data-target='#calculate') Получить каталог
+      // Почему мы?
+      .col-12.text-center
+        .hder__test
+          .hder__test-top
+            .main-team__wrap
+              .main-team__ttl-row
+                .main-team__ttl-txt Почему мы?
+          .hder__test-bottom
+            .row
+              .col-12.col-lg-6
+                .video-cat__item
+                  .video-cat__item-img
+                    img(src='images/cat-symbol-check.png')
+                  .video-cat__item-txt 36 различных видеодомофонов
+                    strong на любой бюджет.
+                .video-cat__item
+                  .video-cat__item-img
+                    img(src='images/cat-symbol-check.png')
+                  .video-cat__item-txt 
+                    strong Гарантия 
+                    | на оборудование от 3-х лет, на работу - бессрочно!
+                .video-cat__item
+                  .video-cat__item-img
+                    img(src='images/cat-symbol-check.png')
+                  .video-cat__item-txt
+                    strong Привозим образцы 
+                    | "посмотреть"
+                .video-cat__item
+                  .video-cat__item-img
+                    img(src='images/cat-symbol-check.png')
+                  .video-cat__item-txt
+                    strong Установка "под ключ" 
+                    | - подбор, проект, монтаж, обучениеб обслуживание.
+              .col-12.col-lg-6
+                .video-cat__item
+                  .video-cat__item-img
+                    img(src='images/cat-symbol-check.png')
+                  .video-cat__item-txt 
+                    strong Консультации 
+                    | по оборудованию
+                    strong круглосоуточно
+                    | без выходных.
+                .video-cat__item
+                  .video-cat__item-img
+                    img(src='images/cat-symbol-check.png')
+                  .video-cat__item-txt
+                    strong ВСЕГДА предлагаем альтернативные решения
+                .video-cat__item
+                  .video-cat__item-img
+                    img(src='images/cat-symbol-check.png')
+                  .video-cat__item-txt
+                    strong Подарок 
+                    | от фирмы при установке.
+        

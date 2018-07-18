@@ -1,0 +1,30 @@
+.you-get
+  .you-get__bg
+  // УТП
+  include /blocks/catalog/domof/testUtpDomof.jade
+  // /УТП
+  +ttlWithLines('Вы получаете:')
+  .you-get__content.container
+    .row
+      mixin you-get__item(img, ttl, bdy)
+        .col-12.col-lg-6
+          .you-get__item
+            .you-get__item-img
+              img.you-get__item-img-image(src= img)
+            .you-get__item-text
+              .you-get__item-text-ttl= ttl
+              .you-get__item-text-body= bdy
+      +you-get__item('images/domof-you-get__img1.png', 'повышенная безопасность', 'не только слышите, но и видите')
+      +you-get__item('images/domof-you-get__img7.png', 'запись изображения', 'на микро-SD карту (до 32 GB)')
+      +you-get__item('images/domof-you-get__img2.png', 'фото и видео съемки событий', '')
+      +you-get__item('images/domof-you-get__img8.png', 'установка беспроводных систем,', 'работает как радиотелефон')
+      +you-get__item('images/domof-you-get__img3.png', 'Фото посетителей', '')
+      +you-get__item('images/domof-you-get__img9.png', 'Видеозапись по детектору движения', '')
+      +you-get__item('images/domof-you-get__img4.png', 'Открытие дверей через телефон', '')
+      +you-get__item('images/domof-you-get__img10.png', 'Подключение тревожного датчика', '')
+      +you-get__item('images/domof-you-get__img5.png', 'Интеграция с системой "Умный дом"', '')
+      +you-get__item('images/domof-you-get__img11.png', 'Подключение дополнительных видеокамер,', 'вызывных панелей')
+      +you-get__item('images/domof-you-get__img6.png', 'Возможность установки системы', 'для многоквартирных домов')
+      +you-get__item('images/domof-you-get__img12.png', 'Инфракрасная подсветка', 'видеосъемка в темное время суток')
+      .you-get__button-row.col-12.text-center
+        button.you-get__button(type='button' data-toggle="modal" data-target="#calculate") Хочу!

@@ -1,0 +1,43 @@
+.we-set
+  .we-set__bg
+  .we-set__container.container
+    .row
+      .col-12.px-2.p-sm-0
+        .we-set__ttl Мы устанавливаем:
+      // Ячейка1
+      mixin we-set__imgs(bgi)
+        // Изображения
+        .col-12.col-lg-6.mb-4.mb-lg-0.p-0
+          // мини-галерея
+          .we-set__imgs.we-set__imgs1
+            a.we-set__imgs.we-set__imgs-a(data-fancybox="gallery" href= bgi)
+              .we-set__imgs-img(style='background-image: url(' + bgi + ');' )
+            a.we-set__imgs.we-set__imgs-a(data-fancybox="gallery" href= bgi)
+              .we-set__imgs-img(style='background-image: url(' + bgi + ');' )
+            a.we-set__imgs.we-set__imgs-a(data-fancybox="gallery" href= bgi)
+              .we-set__imgs-img(style='background-image: url(' + bgi + ');' )
+            a.we-set__imgs.we-set__imgs-a(data-fancybox="gallery" href= bgi)
+              .we-set__imgs-img(style='background-image: url(' + bgi + ');' )
+            a.we-set__imgs.we-set__imgs-a(data-fancybox="gallery" href= bgi)
+              .we-set__imgs-img(style='background-image: url(' + bgi + ');' )
+      mixin we-set__cntnt(ttl, lr)
+        // Описание
+        .col-12.col-lg-6.mb-4.mb-lg-0.p-0.d-flex.align-items-center(class= lr)
+          .we-set__cntnt
+            .we-set__cntnt-ttl= ttl
+      +we-set__imgs('images/we-set__imgs.png')
+      +we-set__cntnt('Видеодомофоны', 'we-set__cntnt-ttl-right')
+      +we-set__cntnt('видеодомофоны, адаптированные для подъездных систем', 'we-set__cntnt-ttl-left')
+      +we-set__imgs('images/we-set__imgs2.png')
+      +we-set__imgs('images/we-set__imgs3.png')
+      +we-set__cntnt('комплекты видеодомофонов', 'we-set__cntnt-ttl-right')
+      +we-set__cntnt('видеопанели и видеоглазки', 'we-set__cntnt-ttl-left')
+      +we-set__imgs('images/we-set__imgs4.png')
+      +we-set__imgs('images/we-set__imgs5.png')
+      +we-set__cntnt('электро-механические замки', 'we-set__cntnt-ttl-right')
+      +we-set__cntnt('электронные замки', 'we-set__cntnt-ttl-left')
+      +we-set__imgs('images/we-set__imgs4.png')
+      +we-set__imgs('images/we-set__imgs4.png')
+      +we-set__cntnt('доводчики дверей', 'we-set__cntnt-ttl-right')
+      +we-set__cntnt('аудиодомофоны', 'we-set__cntnt-ttl-left')
+      +we-set__imgs('images/we-set__imgs4.png')

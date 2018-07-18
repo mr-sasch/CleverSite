@@ -1,0 +1,17 @@
+.video-faq
+  .video-faq__bg
+  +contentTitle('Остались вопросы?')
+  .container
+    .row
+      .col-12
+        .video-faq__items#video-faq__items
+          mixin collapse(headClss, bdyId, bdyClss, txtHead, txtBody)
+            .card
+              .card-header
+                .video-faq__items-ttl(data-toggle='collapse' data-target= '#' + bdyId class= headClss)= txtHead
+              div(data-parent='#video-faq__items' id= bdyId class= bdyClss)
+                .card-body= txtBody
+          +collapse('', 'card-body1', 'collapse show', 'Какая гарантия на ваши видеодомофоны?', 'Гарантия на всё наше оборудование от 3-х лет.')
+          +collapse('collapsed', 'card-body2', 'collapse', 'Сколько времени займет монтаж?', 'Для беспроводных систем от часа до 2-х часов. Для проводных -  1- 6 часов, в зависимости от величины объекта ( дом, квартира).')
+          +collapse('collapsed', 'card-body3', 'collapse', 'У нас дом на ЮБК, ржавеют замки. А как ваши домофоны?', 'Вызывные панели наших видеодомофонов антивандального исполнения, повышенной прочности. Рабочий диапазон окружающей среды - влажность 95%, температура от -50 до +50. Максимальная влажность в Крыму не более 85%.')
+          +collapse('collapsed', 'card-body4', 'collapse', 'Видеодомофоны – это что-то сложное?', 'Проще телевизора. Справится и ребенок. Наш специалист проводит обучение пользованию прибором до уверенного усвоения. Обычно это занимает 10-20 минут. Доверьте Ваш домофон своим детям! Они быстро разберутся!). А мы поможем.')
