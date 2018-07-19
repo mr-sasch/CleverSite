@@ -41,6 +41,75 @@ header
 	border-color rgba(255, 255, 255, 0.8)
 .navbar-light .navbar-toggler:focus
 	outline none
+
+	/* Выпадающее меню */
+.dropdown-menu
+	background-color #0000008c
+	border-left 1px solid red
+.dropdown-item
+	color #fff
+	font-size 14px
+	padding-top 7px
+	padding-bottom 7px
+	transition .2s ease
+	position relative
+
+.dropdown-item.dropdown-item_sub
+	padding 0
+
+.dropdown-submenu-item
+	position absolute
+	border-left 1px solid red
+	background-color #0000008c
+	left calc(100% - 0px)
+	top 0
+	display none
+
+.dropdown-submenu-show
+	background-color #fff
+	color #000
+
+.dropdown-item:active
+	background-color lightgrey
+	color #000
+
+.dropdown-submenu-parent
+	position relative
+	padding-right 15px
+.dropdown-submenu-parent:before
+	position absolute
+	content ''
+	top 50%
+	transform translateY(-50%)
+	right 8px
+	height 4px
+	width 4px
+	border-radius 50%
+	background-color red
+
+.dropdown-submenu-parent:hover > .dropdown-submenu-item
+	display inline-block
+.dropdown-submenu-parent:hover > .dropdown-item_sub
+	color #000
+
+.dropdown-submenu-item:hover,
+.dropdown-submenu-item:focus
+	display inline-block
+
+.dropdown-menu
+	display none
+	top calc(100% - 2px)
+
+.nav-item:hover ~ .dropdown-menu
+	display inline-block
+.dropdown-menu:hover
+	display inline-block
+
+.nav-item
+	padding 7px 0
+	/* /Выпадающее меню */
+
+
 	/* /Меню */
 
 	/* УТП */
