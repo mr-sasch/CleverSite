@@ -1,0 +1,39 @@
+extends /blocks/catalog/catalog-layout.jade
+include /blocks/simple-pages/mixins
+include /blocks/main/main-form/main-form
+include /blocks/main/main-seo/main-seo
+
+block simpleTitle
+	- var title = 'Пожарная сигнализация';
+		
+block headerCatalog
+	include /blocks/catalog/fire/fire-header
+		
+block simpleContent
+	.cat-fire
+		// Преимущества
+		include /blocks/catalog/fire/fire-benefits
+		// /Преимущества
+		// Почему мы
+		include /blocks/catalog/fire/fire-why
+		// /Почему мы
+		// Обратитесь к нам
+		include /blocks/catalog/fire/fire-form
+		// /Обратитесь к нам		
+		// Остались вопросы?
+		include /blocks/catalog/fire/fire-faq
+		// /Остались вопросы?
+		// Оставьте заявку
+		+main-form() 
+		// /Оставьте заявку
+		// Сео текст
+		+main-seo() 
+		// /Сео текст
+		script.
+			$(document).ready(function(){
+				$('.we-set__imgs1').slick({
+					arrows: false,
+					dots: true,
+					slidesToShow: 1
+				});
+			});
