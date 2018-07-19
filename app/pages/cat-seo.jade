@@ -1,0 +1,21 @@
+extends /blocks/catalog/catalog-layout.jade
+include /blocks/simple-pages/mixins
+include /blocks/main/main-form/main-form
+include /blocks/main/main-seo/main-seo
+
+block simpleTitle
+	- var title = 'Системы видеонаблюдения';
+		
+block headerCatalog
+	include /blocks/catalog/seo/seo-header
+		
+block simpleContent
+	.cat-seo
+		// Вы получаете
+		include /blocks/catalog/seo/seo-text.jade
+		// /Вы получаете
+
+
+		// Оставьте заявку
+		+main-form() 
+		// /Оставьте заявку
