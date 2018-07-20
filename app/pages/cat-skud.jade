@@ -1,0 +1,51 @@
+extends /blocks/catalog/catalog-layout.jade
+include /blocks/simple-pages/mixins
+include /blocks/main/main-form/main-form
+include /blocks/main/main-seo/main-seo
+include /blocks/main/main-gallery/main-gallery
+
+block simpleTitle
+	- var title = 'Системы контроля учета доступа';
+		
+block headerCatalog
+	include /blocks/catalog/skud/skud-header
+		
+block simpleContent
+	.cat-video.cat-domof.cat-skud
+		// Решение есть!
+		include /blocks/catalog/skud/you-get__skud.jade
+		// /Решение есть!
+		
+		// Вы получаете
+		include /blocks/catalog/skud/you-get2__skud.jade		
+		// /Вы получаете
+		
+		// Пример расчета окупаемости
+		include /blocks/catalog/skud/example__skud.jade		
+		// /Пример расчета окупаемости
+
+		
+		// Оставьте заявку
+		+main-form() 
+		// /Оставьте заявку
+		
+		// Остались вопросы?
+		include /blocks/catalog/skud/faq-skud.jade
+		// /Остались вопросы?
+		
+		// Фотогалерея
+		+main-gallery()
+		// /Фотогалерея
+
+		// Сео текст
+		+main-seo() 
+		// /Сео текст
+		script(src='js/skud-scripts.js')
+		script.
+			$(document).ready(function(){
+				$('.we-set__imgs1').slick({
+					arrows: false,
+					dots: true,
+					slidesToShow: 1
+				});
+			});

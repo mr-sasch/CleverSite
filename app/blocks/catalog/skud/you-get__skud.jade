@@ -1,0 +1,25 @@
+.you-get
+  .you-get__bg
+  // УТП
+  include /blocks/catalog/skud/testUtpSkud.jade
+  // /УТП
+  .you-get__content.container
+    .row
+      mixin you-get__item(img, ttl, bdy)
+        .col-12.col-lg-6
+          .you-get__item
+            .you-get__item-img
+              img.you-get__item-img-image(src= img)
+            .you-get__item-text
+              .you-get__item-text-ttl.you-get__item-text-ttl-skud= ttl
+              .you-get__item-text-body= bdy
+      +you-get__item('images/skud-how1.png', 'Думаете, как увеличить доходность отеля?', '')
+      +you-get__item('images/skud-how2.png', 'Кондиционер в номере работает на всю катушку, а окна и балкон открыты?', '')
+      +you-get__item('images/skud-how3.png', 'Гости отеля оставляют в номерах включенные кондиционеры?', '')
+      +you-get__item('images/skud-how4.png', 'Ваши деньги вылетают на ветер?', '')
+      .decision.col-12
+        .decision__ttl Решение есть!
+        .decision__txt Комплект электронной системы энергосбережения и контроля доступа с отсрочкой платежа до конца сезона!
+          
+      .you-get__button-row.col-12.text-center
+        button.you-get__button(type='button' data-toggle="modal" data-target="#calculate") Хочу!
