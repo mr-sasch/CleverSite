@@ -18,30 +18,34 @@ block simpleContent
 		// /Вы получаете
 		
 		// Вы получаете
-		include /blocks/catalog/skud/you-get2__skud.jade
+		include /blocks/catalog/jal/cat-jal.jade
 		// /Вы получаете
 		
-		// Пример расчета окупаемости
-		include /blocks/catalog/skud/example__skud.jade		
-		// /Пример расчета окупаемости
-
+		// Каталог
+		include /blocks/catalog/jal/cat-jal-cat.jade
 		
-		// Оставьте заявку
-		+main-form() 
-		// /Оставьте заявку
+		
+		// /Каталог
+		
+		
 		
 		// Остались вопросы?
 		include /blocks/catalog/skud/faq-skud.jade
 		// /Остались вопросы?
-		
+
 		// Фотогалерея
 		+main-gallery()
 		// /Фотогалерея
 		
 		// Отзывы
-		+main-reviews()
+		.reviews-jal
+			+main-reviews()
 		// /Отзывы
-
+		
+		// Оставьте заявку
+		+main-form() 
+		// /Оставьте заявку
+				
 		// Сео текст
 		+main-seo() 
 		// /Сео текст
