@@ -4,6 +4,11 @@
 .you-get__bg.you-get__bg_kar
   z-index 10
 
+.you-get.you-get2
+  margin-top 140px
+  padding-bottom 100px
+.you-get__bg.you-get__bg2
+  top -140px
 
   /* Рекламные ячейки */
 .kar__adv
@@ -39,8 +44,9 @@
 
   /* Подарок */
 .kar-gift
-  padding 200px 0
+  padding 130px 0 80px
   position relative
+  margin-top 90px
 
 .kar-gift__bg
   position absolute
@@ -55,8 +61,8 @@
 .kar-gift__bg:before
   content ''
   position absolute
-  top 0
-  bottom 0
+  top -160px
+  bottom -160px
   left 0
   width 100%
   background-image url(../../images/kar__gift-bg.png)
@@ -90,8 +96,65 @@
   font-size 16px
   line-height 26px
   margin-top 20px
-
-
   /* /Подарок */
+
+  /* Полную информацию смотрите в нашем каталоге */
+.video-cat
+  position relative
+
+.video-kar__bg
+  position absolute
+  top 0
+  bottom 0
+  left auto
+  width 100%
+  overflow hidden
+  transform skewY(-7deg)
+
+.video-kar__bg:before
+  content ''
+  background-image url(../../images/kar__cat-bg.png)
+  background-position center
+  background-size cover
+  background-repeat no-repeat
+  position absolute
+  transform skewY(7deg)
+  top -80px
+  left 0
+  bottom -80px
+  width 100%
+  /* /Полную информацию смотрите в нашем каталоге */
+
+  /* Продукция */
+.we-set.kar-prods
+  padding 270px 0 80px
+
+.we-set__bg.we-set__bg_prods:before
+  background-image url(../../images/kar__prod-bg.jpg)
+  background-attachment fixed
+
+.we-set__ttl.we-set__ttl_prods
+  font-size 28px
+  line-height 32px
+
+.we-set__cntnt-ttl.we-set__cntnt-ttl_kar
+  line-height 30px
+
+.we-set__cntnt-txt
+  font-size 18px
+  color #fff
+  line-height 22px
+  font-weight 300
+  padding-top 15px
+
+.we-set__cntnt-ttl-right .we-set__cntnt-txt
+  padding-left 35px
+.we-set__cntnt-ttl-left .we-set__cntnt-txt
+  padding-right 35px
+  text-align right
+
+
+  /* /Продукция */
+
 
 /* /Электрокарнизы */

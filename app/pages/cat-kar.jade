@@ -2,6 +2,7 @@ extends /blocks/catalog/catalog-layout.jade
 include /blocks/simple-pages/mixins
 include /blocks/main/main-form/main-form
 include /blocks/main/main-seo/main-seo
+include /blocks/main/main-gallery/main-gallery
 
 block simpleTitle
 	- var title = 'Электрокарнизы';
@@ -23,18 +24,17 @@ block simpleContent
 		include /blocks/catalog/kar/you-get__kar2.jade
 		// /Наши преимущества
 		
-		// Комплект видеодомофонии
-		include /blocks/catalog/domof/complect.jade		
-		// /Комплект видеодомофонии
-		// Мы устанавливаем
-		include /blocks/catalog/domof/we-set-domof.jade
-		// /Мы устанавливаем		
+		// Каталог - продукция
+		include /blocks/catalog/kar/products
+		// /Каталог - продукция
+		
 		// Полную информацию смотрите в каталоге
-		include /blocks/catalog/domof/cat-domof.jade
+		include /blocks/catalog/kar/kar-cat.jade
 		// /Полную информацию смотрите в каталоге		
-		// Остались вопросы?
-		include /blocks/catalog/domof/faq-domof.jade
-		// /Остались вопросы?
+
+		// Фотогалерея
+		+main-gallery()
+		// /Фотогалерея
 		
 		// Оставьте заявку
 		+main-form() 
@@ -42,6 +42,7 @@ block simpleContent
 		// Сео текст
 		+main-seo() 
 		// /Сео текст
+		script(src='js/skud-scripts.js')
 		script.
 			$(document).ready(function(){
 				$('.we-set__imgs1').slick({
