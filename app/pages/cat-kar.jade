@@ -1,0 +1,43 @@
+extends /blocks/catalog/catalog-layout.jade
+include /blocks/simple-pages/mixins
+include /blocks/main/main-form/main-form
+include /blocks/main/main-seo/main-seo
+
+block simpleTitle
+	- var title = 'Электрокарнизы';
+		
+block headerCatalog
+	include /blocks/catalog/kar/kar-header
+		
+block simpleContent
+	.cat-video.cat-domof
+		// Вы получаете
+		include /blocks/catalog/domof/you-get__domof.jade
+		// /Вы получаете
+		// Комплект видеодомофонии
+		include /blocks/catalog/domof/complect.jade		
+		// /Комплект видеодомофонии
+		// Мы устанавливаем
+		include /blocks/catalog/domof/we-set-domof.jade
+		// /Мы устанавливаем		
+		// Полную информацию смотрите в каталоге
+		include /blocks/catalog/domof/cat-domof.jade
+		// /Полную информацию смотрите в каталоге		
+		// Остались вопросы?
+		include /blocks/catalog/domof/faq-domof.jade
+		// /Остались вопросы?
+		
+		// Оставьте заявку
+		+main-form() 
+		// /Оставьте заявку
+		// Сео текст
+		+main-seo() 
+		// /Сео текст
+		script.
+			$(document).ready(function(){
+				$('.we-set__imgs1').slick({
+					arrows: false,
+					dots: true,
+					slidesToShow: 1
+				});
+			});
