@@ -3,6 +3,7 @@ include /blocks/simple-pages/mixins
 include /blocks/main/main-form/main-form
 include /blocks/main/main-seo/main-seo
 include /blocks/main/main-gallery/main-gallery
+include /blocks/main/main-reviews/main-reviews
 
 block simpleTitle
 	- var title = 'Системы контроля учета доступа';
@@ -17,7 +18,7 @@ block simpleContent
 		// /Решение есть!
 		
 		// Вы получаете
-		include /blocks/catalog/skud/you-get2__skud.jade		
+		include /blocks/catalog/skud/you-get2__skud.jade
 		// /Вы получаете
 		
 		// Пример расчета окупаемости
@@ -36,6 +37,10 @@ block simpleContent
 		// Фотогалерея
 		+main-gallery()
 		// /Фотогалерея
+		
+		// Отзывы
+		+main-reviews()
+		// /Отзывы
 
 		// Сео текст
 		+main-seo() 
