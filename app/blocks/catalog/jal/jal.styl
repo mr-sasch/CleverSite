@@ -41,7 +41,123 @@
     background-color yellow !important
   .main-reviews__ttl
     color #fff !important
-
   /* /Отзывы */
+
+  /* Каталог */
+.jal-cat
+  position relative
+
+  padding 200px 0
+
+.jal-cat__bg
+  position absolute
+  top 0
+  left 0
+  bottom 0
+  width 100%
+  transform skewY(-7deg)
+
+.jal-cat__bg:before
+  position absolute
+  content ''
+  top 0
+  left 0
+  bottom 0
+  width 100%
+  background-image url(../../images/jal__cat-bg1.png)
+  background-position center
+  background-size cover
+  background-repeat no-repeat
+  transform skewY(7deg)
+
+  /* Заголовок */
+.jal-cat__ttl-wrap
+  overflow hidden
+
+.jal-cat__ttl
+  font-size 48px
+  font-weight 600
+  color #fff
+  display inline-block
+  position relative
+  padding-right 20px
+  margin-bottom 60px
+
+.jal-cat__ttl:before
+  position absolute
+  content ''
+  bottom 5px
+  height 3px
+  background-color yellow
+  width 500%
+  left 100%
+  /* /Заголовок */
+
+  /* Ячейки */
+.jal-cat__item-img
+  height 315px
+  position relative
+  background-color #000
+
+.jal-cat__item-img-bg
+  position absolute
+  top 0
+  left 0
+  height 100%
+  width 100%
+  background-image url(../../images/jal__cat-item.png)
+  background-position center
+  background-size cover
+  background-repeat no-repeat
+  transition .2s ease
+
+.jal-cat__item-img:hover
+  .jal-cat__item-img-bg
+    opacity .5
+  .jal-cat__item-img-more
+    opacity 1
+
+.jal-cat__item-img-more
+  position absolute
+  top 50%
+  left 50%
+  transform translate(-50%, -50%)
+  background-color $hderBlue
+  border-radius 10px
+  color #fff
+  text-transform uppercase
+  font-size 18px
+  padding 13px 42px
+  cursor pointer
+  opacity 0
+  transition .2s ease
+
+.jal-cat__item
+  margin-bottom 50px
+
+.jal-cat__item-ttl
+  color #fff
+  text-align center
+  font-size 18px
+  font-weight 300
+  padding 20px 15px
+
+.jal-cat__item-price
+  font-size 18px
+  color #fff
+  text-align center
+  padding 0 15px
+
+.jal-cat__item-price-prc
+  font-size 24px
+  font-weight 600
+  color $howOrange
+
+@media screen and (max-width 470px)
+  .jal-cat__ttl
+    font-size 33px
+  /* /Ячейки */
+
+  /* /Каталог */
 
 /* /Жалюзи */

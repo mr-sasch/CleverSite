@@ -1,0 +1,26 @@
+.jal-cat
+  .jal-cat__bg
+  .container
+    .row
+      .col-12
+        mixin jal-cat__ttl(txt)
+          .jal-cat__ttl-wrap
+            .jal-cat__ttl= txt
+        +jal-cat__ttl('Горизонтальные жалюзи')
+      mixin jal-cat-item()
+        .col-12.col-lg-3
+          .jal-cat__item
+            .jal-cat__item-img
+              .jal-cat__item-img-bg
+              .jal-cat__item-img-more(data-toggle='modal' data-target="#calculate") Подробнее
+            .jal-cat__item-ttl Деревянные горизонтальные жалюзи
+            .jal-cat__item-price от
+              span.jal-cat__item-price-prc 1080 р.
+        
+      +jal-cat-item()
+      +jal-cat-item()
+      +jal-cat-item()
+      +jal-cat-item()
+      +jal-cat-item()
+      +jal-cat-item()
+      +jal-cat-item()
