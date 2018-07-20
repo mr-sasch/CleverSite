@@ -1,0 +1,27 @@
+.you-get
+  .you-get__bg
+  .you-get__content.container
+    .row
+      mixin you-get__item(img, ttl, bdy)
+        .col-12.col-lg-6
+          .you-get__item
+            .you-get__item-img
+              img.you-get__item-img-image(src= img)
+            .you-get__item-text
+              .you-get__item-text-ttl= ttl
+              .you-get__item-text-body= bdy
+      +you-get__item('images/kar__get-item1.png', 'Защиту от солнца', '')
+      +you-get__item('images/kar__get-item3.png', 'Долговечность', '')
+      +you-get__item('images/kar__get-item2.png', 'Простоту ухода', 'просто протрите влажной тряпкой')
+      +you-get__item('images/kar__get-item4.png', 'Фотожалюзи', 'печать любого изображения на жалюзи - тренд сезона')
+      +you-get__item('images/kar__get-item5.png', 'Элемент стиля', 'более 500 моделей, цветов и фактур, а также индивидуальные дизайны')
+      +you-get__item('images/kar__get-item6.png', 'ЭКОНОМИЮ ПРОСТРАНСТВА', 'жалюзи можно установить в проем окна')
+      +you-get__item('images/kar__get-item7.png', 'РЕГУЛИРОВАНИЕ ОСВЕЩЕНИЯ', 'в зависимости от яркости света')
+      +you-get__item('images/kar__get-item8.png', 'ЗАЩИТУ ОТ ПОСТОРОННИХ ВЗГЛЯДОВ', '')
+      +you-get__item('images/kar__get-item9.png', 'РЕСПЕКТАБЕЛЬНОСТЬ', 'нанесение логотипа а контактных данных компании')
+      +you-get__item('images/kar__get-item10.png', 'РЕСПЕКТАБЕЛЬНОСТЬ', 'нанесение логотипа а контактных данных компании')
+      +you-get__item('images/kar__get-item11.png', 'РЕСПЕКТАБЕЛЬНОСТЬ', 'нанесение логотипа а контактных данных компании')
+      +you-get__item('images/kar__get-item12.png', 'РЕСПЕКТАБЕЛЬНОСТЬ', 'нанесение логотипа а контактных данных компании')
+          
+      .you-get__button-row.col-12.text-center
+        button.you-get__button(type='button' data-toggle="modal" data-target="#calculate") Хочу!
