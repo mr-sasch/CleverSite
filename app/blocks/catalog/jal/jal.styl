@@ -46,23 +46,26 @@
   /* Каталог */
 .jal-cat
   position relative
-
-  padding 200px 0
+  z-index 20
+  margin-bottom -81px
+  padding 200px 0 100px
 
 .jal-cat__bg
   position absolute
-  top 0
+  top 80px
   left 0
   bottom 0
   width 100%
   transform skewY(-7deg)
+  overflow hidden
+  border-bottom 20px solid $fterBlue
 
 .jal-cat__bg:before
   position absolute
   content ''
-  top 0
+  top -160px
   left 0
-  bottom 0
+  bottom -160px
   width 100%
   background-image url(../../images/jal__cat-bg1.png)
   background-position center
@@ -70,6 +73,12 @@
   background-repeat no-repeat
   transform skewY(7deg)
 
+.jal-cat__vert.jal-cat__bg:before
+  background-image url(../../images/jal__cat-bg2.png)
+.jal-cat__rul.jal-cat__bg:before
+  background-image url(../../images/jal__cat-bg3.png)
+.jal-cat__foto.jal-cat__bg:before
+  background-image url(../../images/jal__cat-bg4.png)
   /* Заголовок */
 .jal-cat__ttl-wrap
   overflow hidden
@@ -157,6 +166,13 @@
   .jal-cat__ttl
     font-size 33px
   /* /Ячейки */
+
+  /* Остались вопросы? */
+.cat-video.cat-domof.cat-skud.cat-jal
+  .video-faq
+    padding-top 0
+
+  /* /Остались вопросы? */
 
   /* /Каталог */
 

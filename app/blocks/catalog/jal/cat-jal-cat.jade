@@ -1,5 +1,6 @@
+// Горизонтальные жалюзи
 .jal-cat
-  .jal-cat__bg
+  .jal-cat__bg.jal-cat__bg_horiz
   .container
     .row
       .col-12
@@ -15,8 +16,88 @@
               .jal-cat__item-img-more(data-toggle='modal' data-target="#calculate") Подробнее
             .jal-cat__item-ttl Деревянные горизонтальные жалюзи
             .jal-cat__item-price от
-              span.jal-cat__item-price-prc 1080 р.
-        
+              span.jal-cat__item-price-prc 1080 р.        
+      +jal-cat-item()
+      +jal-cat-item()
+      +jal-cat-item()
+      +jal-cat-item()
+      +jal-cat-item()
+      +jal-cat-item()
+      +jal-cat-item()
+      
+// Вертикальные жалюзи
+.jal-cat
+  .jal-cat__bg.jal-cat__vert
+  .container
+    .row
+      .col-12
+        mixin jal-cat__ttl(txt)
+          .jal-cat__ttl-wrap
+            .jal-cat__ttl= txt
+        +jal-cat__ttl('Вертикальные жалюзи')
+      mixin jal-cat-item()
+        .col-12.col-lg-3
+          .jal-cat__item
+            .jal-cat__item-img
+              .jal-cat__item-img-bg
+              .jal-cat__item-img-more(data-toggle='modal' data-target="#calculate") Подробнее
+            .jal-cat__item-ttl Деревянные горизонтальные жалюзи
+            .jal-cat__item-price от
+              span.jal-cat__item-price-prc 1080 р.        
+      +jal-cat-item()
+      +jal-cat-item()
+      +jal-cat-item()
+      +jal-cat-item()
+      +jal-cat-item()
+      +jal-cat-item()
+      +jal-cat-item()
+      
+// Рулонные шторы
+.jal-cat
+  .jal-cat__bg.jal-cat__rul
+  .container
+    .row
+      .col-12
+        mixin jal-cat__ttl(txt)
+          .jal-cat__ttl-wrap
+            .jal-cat__ttl= txt
+        +jal-cat__ttl('Рулонные шторы')
+      mixin jal-cat-item()
+        .col-12.col-lg-3
+          .jal-cat__item
+            .jal-cat__item-img
+              .jal-cat__item-img-bg
+              .jal-cat__item-img-more(data-toggle='modal' data-target="#calculate") Подробнее
+            .jal-cat__item-ttl Деревянные горизонтальные жалюзи
+            .jal-cat__item-price от
+              span.jal-cat__item-price-prc 1080 р.        
+      +jal-cat-item()
+      +jal-cat-item()
+      +jal-cat-item()
+      +jal-cat-item()
+      +jal-cat-item()
+      +jal-cat-item()
+      +jal-cat-item()
+      
+// Фотожалюзи
+.jal-cat
+  .jal-cat__bg.jal-cat__foto
+  .container
+    .row
+      .col-12
+        mixin jal-cat__ttl(txt)
+          .jal-cat__ttl-wrap
+            .jal-cat__ttl= txt
+        +jal-cat__ttl('Фотожалюзи')
+      mixin jal-cat-item()
+        .col-12.col-lg-3
+          .jal-cat__item
+            .jal-cat__item-img
+              .jal-cat__item-img-bg
+              .jal-cat__item-img-more(data-toggle='modal' data-target="#calculate") Подробнее
+            .jal-cat__item-ttl Деревянные горизонтальные жалюзи
+            .jal-cat__item-price от
+              span.jal-cat__item-price-prc 1080 р.        
       +jal-cat-item()
       +jal-cat-item()
       +jal-cat-item()
