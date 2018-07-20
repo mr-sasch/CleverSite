@@ -1,0 +1,27 @@
+.you-get.you-get_skud
+  .you-get__bg
+  // УТП
+  include /blocks/catalog/jal/testUtpJal.jade
+  // /УТП
+  +ttlWithLines('Вы получаете:')
+  .you-get__content.container
+    .row
+      mixin you-get__item(img, ttl, bdy)
+        .col-12.col-lg-6
+          .you-get__item
+            .you-get__item-img
+              img.you-get__item-img-image(src= img)
+            .you-get__item-text
+              .you-get__item-text-ttl= ttl
+              .you-get__item-text-body= bdy
+      +you-get__item('images/jal__you-get1.png', 'Защиту от солнца', '')
+      +you-get__item('images/jal__you-get2.png', 'Долговечность', '')
+      +you-get__item('images/jal__you-get3.png', 'Простоту ухода', 'просто протрите влажной тряпкой')
+      +you-get__item('images/jal__you-get4.png', 'Фотожалюзи', 'печать любого изображения на жалюзи - тренд сезона')
+      +you-get__item('images/jal__you-get5.png', 'Элемент стиля', 'более 500 моделей, цветов и фактур, а также индивидуальные дизайны')
+      +you-get__item('images/jal__you-get6.png', 'Экономию пространства', 'жалюзи можно установить в проем окна')
+      +you-get__item('images/jal__you-get7.png', 'Регулирование освещения', 'в зависимости от яркости цвета')
+      +you-get__item('images/jal__you-get8.png', 'Защиту от посторонних взглядов', '')
+      +you-get__item('images/jal__you-get9.png', 'Респектабельность', 'нанесениее логотипа и контактных данных компании')          
+      .you-get__button-row.col-12.text-center
+        button.you-get__button(type='button' data-toggle="modal" data-target="#calculate") Хочу!
