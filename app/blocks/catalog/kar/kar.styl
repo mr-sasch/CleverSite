@@ -99,8 +99,9 @@
   /* /Подарок */
 
   /* Полную информацию смотрите в нашем каталоге */
-.video-cat
-  position relative
+.video-cat.domof__catalog.domof__catalog_kar
+  margin-top 50px
+  padding 130px 0 170px
 
 .video-kar__bg
   position absolute
@@ -119,9 +120,9 @@
   background-repeat no-repeat
   position absolute
   transform skewY(7deg)
-  top -80px
+  top -160px
   left 0
-  bottom -80px
+  bottom -160px
   width 100%
   /* /Полную информацию смотрите в нашем каталоге */
 
@@ -129,12 +130,18 @@
 .we-set.kar-prods
   padding 270px 0 80px
 
+.we-set__bg.we-set__bg_prods
+  overflow hidden
+  top -20px
+  bottom -210px
+  height inherit
+
 .we-set__bg.we-set__bg_prods:before
   background-image url(../../images/kar__prod-bg.jpg)
   background-attachment fixed
 
-.we-set__ttl.we-set__ttl_prods
-  font-size 28px
+.we-set__ttl.we-set__ttl_kar.we-set__ttl_prods
+  font-size 28px !important
   line-height 32px
 
 .we-set__cntnt-ttl.we-set__cntnt-ttl_kar
