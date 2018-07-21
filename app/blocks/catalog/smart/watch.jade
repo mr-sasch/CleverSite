@@ -1,0 +1,18 @@
+.smart-watch
+  .smart-watch__bg
+  .smart-watch__container.container
+    .col-12.col-lg-8
+      .smart-manage__txt.c-black
+        .smart-manage__ttl.smart-manage__ttl_watch Наблюдайте за своим домом из любой точки мира
+        .smart-manage__cntnt С помощью мобильного и Интернет-приложения MyJABLOTRON вы можете дистанционно управлять своей сигнализацией или домашними электроприборами. Где бы вы ни были – в отпуске, на работе или в магазине, – вы всегда будете знать, что происходит у вас дома.
+        .smart-manage__ttl2 С помощью нашего приложения вы сможете:
+        ul.smart-watch__ul
+          mixin li(txt)
+            li.smart-watch__li
+              img.smart-watch__li-img(src='images/cat-symbol-check.png')
+              .smart-watch__li-txt= txt
+          +li('получать доступ к информации обо всех устройствах JABLOTRON')
+          +li('управлять своей сигнализацией столь же эффективно, как если бы вы использовали контрольную панель')
+          +li('выводить на экран изображения с датчиков, установленных в охраняемых комнатах')
+          +li('следить за температурой и расходом энергии')
+    .col-12.col-lg-4
