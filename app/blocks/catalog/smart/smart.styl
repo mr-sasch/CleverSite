@@ -228,5 +228,94 @@
     font-size 44px
   /* /Наблюдайте за своим домом */
 
+  /* Мы защитим вашу квартиру */
+.smart-we-safe
+  position relative
+  padding 200px 0
+
+.smart-we-safe__bg
+  position absolute
+  top 0
+  bottom 0
+  left 0
+  width 100%
+  overflow hidden
+  transform skewY(-7deg)
+
+.smart-we-safe__bg:before
+  transform skewY(7deg)
+  content ''
+  position absolute
+  top 0
+  bottom 0
+  left 0
+  width 100%
+  background-image url(../../images/smart-we-safe__bg.png)
+  background-position center
+  background-size cover
+  background-repeat no-repeat
+
+.smart-we-safe__ttl
+  font-size 48px
+  margin-bottom 50px
+.smart-we-safe__txt
+  font-size 18px
+  font-weight 300
+  line-height 25px
+  /* /Мы защитим вашу квартиру */
+
+  /* Новые ip-камеры */
+.smart-ip
+  position relative
+  padding 200px 0
+
+.smart-ip__bg
+  position absolute
+  top 0
+  left 0
+  bottom 0
+  width 100%
+
+.smart-ip__bg:before
+  content ''
+  position absolute
+  top 0
+  left 0
+  bottom 0
+  width 100%
+  overflow hidden
+  background-image url(../../images/smart-ip__bg.png)
+  background-position center
+  background-size cover
+  background-repeat no-repeat
+
+.smart-ip__ttl
+  font-size 48px
+  color #fff
+  margin-bottom 60px
+.smart-ip__item-txt
+  color #fff
+  font-weight 300
+  padding-left 50px
+
+.smart-ip__item
+  position relative
+  margin-bottom 35px
+
+.smart-ip__item-img-wrap
+  position absolute
+  left 0
+  top 50%
+  transform translateY(-50%)
+  width 36px
+  text-align center
+
+.smart-ip__cntnt
+  margin-bottom 50px
+
+@media screen and (max-width 400px)
+  .smart-ip__ttl
+    font-size 40px
+  /* /Новые ip-камеры */
 
 /* /Умный дом */

@@ -1,0 +1,16 @@
+.smart-ip
+  .smart-ip__bg
+  .smart-ip__container.container
+    .col-12.col-lg-8
+      .smart-ip__cntnt
+        .smart-ip__ttl Новые IP-камеры расширяют Ваши возможности обеспечения безопасности
+        mixin item(img, txt)
+          .smart-ip__item
+            .smart-ip__item-img-wrap
+              img.smart-ip__item-img(src='images/' + img)
+            .smart-ip__item-txt= txt
+        +item('smart-ip__item-img1.png', 'Активируются сигналом тревоги JABLOTRON 100')
+        +item('smart-ip__item-img2.png', 'Они автоматически выполняют одноминутную запись каждого события срабатывания сигнализации')
+        +item('smart-ip__item-img3.png', 'Немедленная доступность в приложении MyJablotron')
+      button(data-toggle="modal" data-target="#calculate" class="hder__test-button" style='background-color: #ff5a00;') Дополнительные сведения
+    .col-12.col-lg-4
