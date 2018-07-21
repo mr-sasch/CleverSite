@@ -1,0 +1,21 @@
+extends /blocks/catalog/catalog-layout.jade
+include /blocks/simple-pages/mixins
+include /blocks/main/main-form/main-form
+include /blocks/main/main-seo/main-seo
+
+block simpleTitle
+	- var title = 'Умный дом';
+		
+block headerCatalog
+	include /blocks/catalog/smart/smart-header
+		
+block simpleContent
+	.cat-seo.cat-seo_smart.cat-seo__text
+		// УТП
+		include /blocks/catalog/smart/testUtpSmart.jade
+		// /УТП 
+
+
+		// Оставьте заявку
+		+main-form() 
+		// /Оставьте заявку
