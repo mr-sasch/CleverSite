@@ -318,4 +318,61 @@
     font-size 40px
   /* /Новые ip-камеры */
 
+  /* Почему */
+.smart-why
+  padding 200px 0
+  position relative
+  font-size 16px
+  font-weight 300
+  line-height 20px
+
+.smart-why__bg
+  position absolute
+  top 0
+  bottom 0
+  left 0
+  width 100%
+  background-color $greyBg
+  transform skewY(-7deg)
+
+.smart-why__container
+  position relative
+
+.smart-why__ttl
+  position relative
+  overflow hidden
+  margin-bottom 40px
+.smart-why__ttl-txt
+  font-size 60px
+  line-height 80px
+  display inline-block
+  color $fterBlue
+  position relative
+  padding-right 20px
+.smart-why__ttl-txt:before
+  content ''
+  position absolute
+  bottom 17px
+  left 100%
+  width 500%
+  height 3px
+  background-color yellow
+
+.smart-why
+  img
+    width 100%
+  img.fr
+    padding-left 30px
+    padding-bottom 20px
+  img.fl
+    padding-right 30px
+    padding-bottom 20px
+
+@media screen and (max-width 450px)
+  .smart-why__ttl-txt
+    font-size 40px
+  /* /Почему */
+
+
+
 /* /Умный дом */
