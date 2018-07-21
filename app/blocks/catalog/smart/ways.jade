@@ -1,0 +1,15 @@
+.smart-ways
+  .smart-ways__bg
+  +ttlWithLines('4 способа управления "умным домом"')
+  .smart-ways__container.container.text-center
+    .smart-ways__notice Если вы хотите включить свет в своем саду или открыть гаражные двери, то можете воспользоваться одним из нижеперечисленных способов.
+    .row
+      mixin way(txt, img)
+        .smart-ways__item.col-12.col-sm-6.col-lg-3
+          .smart-ways__item-crcle
+            img.smart-ways__item-crcle-img(src='images/' + img)
+          .smart-ways__item-txt= txt
+      +way('Сегментная клавиатура', 'smart-ways__item-crcle-img1.png')
+      +way('Мобильное приложение для смартфонов', 'smart-ways__item-crcle-img2.png')
+      +way('Приложение для браузеров', 'smart-ways__item-crcle-img3.png')
+      +way('Радиопередатчик-брелок', 'smart-ways__item-crcle-img4.png')
