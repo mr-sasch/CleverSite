@@ -1,7 +1,6 @@
 extends /blocks/catalog/catalog-layout.jade
 include /blocks/simple-pages/mixins
 include /blocks/main/main-form/main-form
-include /blocks/main/main-seo/main-seo
 
 block simpleTitle
 	- var title = 'Умный дом';
@@ -10,10 +9,16 @@ block headerCatalog
 	include /blocks/catalog/smart/smart-header
 		
 block simpleContent
-	.cat-seo.cat-seo_smart.cat-seo__text
+	.cat-seo.cat-seo__text.cat-smart
 		// УТП
 		include /blocks/catalog/smart/testUtpSmart.jade
 		// /УТП 
+		// 4 шага к безопасности
+		include /blocks/catalog/smart/safe
+		// /4 шага к безопасности 
+		// управляйте своим домом
+		include /blocks/catalog/smart/manage
+		// /управляйте своим домом
 
 
 		// Оставьте заявку
