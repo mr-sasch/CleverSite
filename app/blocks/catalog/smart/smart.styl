@@ -1,8 +1,17 @@
 /* Умный дом */
 .header-smart
   background-image url(../../images/smart-header__bg.png)
+  padding-bottom 470px
+
+.cat-seo.cat-smart
+  margin-top -350px
 
   /* УТП */
+
+.cat-smart.cat-seo .test-utp
+  margin-bottom -270px
+  z-index 10
+
 .cat-video__utp-bottom-li
   display inline-block
   position relative
@@ -26,7 +35,7 @@
   /* 4 шага к безопасности */
 .smart-steps
   position relative
-  padding 500px 0
+  padding 280px 0 100px
 
   .main-reviews__ttl
     color $fterBlue
@@ -46,6 +55,7 @@
   left 0
   width 100%
   background-color $greyBg
+  transform skewY(-7deg)
 
 .smart-steps__container
   position relative
@@ -67,12 +77,13 @@
   /* Управляйте своим домом */
 .smart-manage
   position relative
-
-  padding 230px 0 120px
+  padding 190px 0 360px
+  margin-top 90px
+  z-index 10
 
 .smart-manage__bg
   position absolute
-  top 0
+  top -300px
   bottom 0
   left 0
   width 100%
@@ -99,6 +110,18 @@
   /* /Управляйте своим домом */
 
   /* Что вы получаете */
+.we-set_smart
+  .we-set__bg
+    transform skewY(-7deg)
+    overflow hidden
+  .we-set__bg:before
+    transform skewY(7deg)
+    top -160px
+.we-set_smart.we-set
+  z-index 10
+  margin-top -270px
+  padding 170px 0 160px
+
 .we-set__cntnt-lbl
   padding-top 20px
 
@@ -158,9 +181,9 @@
 
 .smart-ways__bg
   position absolute
-  top 0
+  top -160px
   left 0
-  bottom 0
+  bottom -160px
   width 100%
   background-color $greyBg
 
@@ -193,20 +216,30 @@
   /* Наблюдайте за своим домом */
 .smart-watch
   position relative
-  padding 230px 0 150px
+  padding 150px 0 70px
   .smart-manage__ttl
     margin-bottom 40px
 
 .smart-watch__bg
   position absolute
   top 0
-  left 0
   bottom 0
+  left 0
+  width 100%
+  transform skewY(-7deg)
+  overflow hidden
+.smart-watch__bg:before
+  content ''
+  position absolute
+  top -160px
+  left 0
+  bottom -160px
   width 100%
   background-image url(../../images/smart-watch__bg.png)
   background-position center
   background-size cover
   background-repeat no-repeat
+  transform skewY(7deg)
 
 .smart-watch__ul
   font-size 18px
@@ -249,8 +282,8 @@
   transform skewY(7deg)
   content ''
   position absolute
-  top 0
-  bottom 0
+  top -160px
+  bottom -160px
   left 0
   width 100%
   background-image url(../../images/smart-we-safe__bg.png)
@@ -270,7 +303,7 @@
   /* Новые ip-камеры */
 .smart-ip
   position relative
-  padding 200px 0
+  padding 160px 0 70px
 
 .smart-ip__bg
   position absolute
@@ -278,19 +311,22 @@
   left 0
   bottom 0
   width 100%
+  overflow hidden
+  transform skewY(-7deg)
 
 .smart-ip__bg:before
   content ''
   position absolute
-  top 0
+  top -160px
   left 0
-  bottom 0
+  bottom -160px
   width 100%
   overflow hidden
   background-image url(../../images/smart-ip__bg.png)
   background-position center
   background-size cover
   background-repeat no-repeat
+  transform skewY(7deg)
 
 .smart-ip__ttl
   font-size 48px
@@ -323,7 +359,7 @@
 
   /* Почему */
 .smart-why
-  padding 200px 0
+  padding 110px 0 80px
   position relative
   font-size 16px
   font-weight 300
@@ -404,6 +440,8 @@
   /* Таблица */
 .smart-price
   position relative
+  padding 210px 0 170px
+  z-index 20
   .hder__test-bottom
     padding-left 0
     padding-right 0
@@ -419,8 +457,8 @@
 .smart-price__bg:before
   content ''
   position absolute
-  top 0
-  bottom 0
+  top -160px
+  bottom -160px
   left 0
   width 100%
   background-image url(../../images/smart-price__bg.png)
@@ -491,8 +529,10 @@
       border-left 120px solid transparent
       border-right 120px solid transparent
   /* /Таблица */
-
   /* /Наши цены */
 
+.cat-smart
+  .main-seo
+    margin-bottom -100px
 
 /* /Умный дом */
