@@ -1,0 +1,30 @@
+.we-set.we-set_smart
+  .we-set__bg
+  .we-set__container.container
+    .row
+      .col-12.px-2.p-sm-0
+        .we-set__ttl Что вы получаете:
+      // Ячейка1
+      mixin we-set__imgs(bgi)
+        // Изображения
+        .col-12.col-lg-6.mb-4.mb-lg-0.p-0
+          // мини-галерея
+          .we-set__imgs.we-set__imgs1
+            .we-set__imgs-img(style='background-image: url(' + bgi + ');' )
+      mixin we-set__cntnt(ttl, lr, ...lbls)
+        // Описание
+        .col-12.col-lg-6.mb-4.mb-lg-0.p-0.d-flex.align-items-center(class= lr)
+          .we-set__cntnt
+            .we-set__cntnt-ttl= ttl
+            .we-set__cntnt-lbl
+              each lbl in lbls
+                .we-set__cntnt-lbl-item
+                  img.we-set__cntnt-lbl-item-img(src= lbl)
+      +we-set__imgs('images/smart-we-set__imgs-img1.png')
+      +we-set__cntnt('Система охранной сигнализации', 'we-set__cntnt-ttl-right', 'images/smart-we-set__cntnt-lbl-item-img1.png', 'images/smart-we-set__cntnt-lbl-item-img2.png', 'images/smart-we-set__cntnt-lbl-item-img3.png')
+      +we-set__cntnt('Управляйте системой находясь в любом месте', 'we-set__cntnt-ttl-left')
+      +we-set__imgs('images/smart-we-set__imgs-img2.png')
+      +we-set__imgs('images/smart-we-set__imgs-img3.png')
+      +we-set__cntnt('защитит вас от огня, воды и газа', 'we-set__cntnt-ttl-right', 'images/smart-we-set__cntnt-lbl-item-img4.png', 'images/smart-we-set__cntnt-lbl-item-img5.png', 'images/smart-we-set__cntnt-lbl-item-img6.png')
+      +we-set__cntnt('Комфортная жизнь с ситемой Jablotron', 'we-set__cntnt-ttl-left', 'images/smart-we-set__cntnt-lbl-item-img7.png', 'images/smart-we-set__cntnt-lbl-item-img8.png', 'images/smart-we-set__cntnt-lbl-item-img9.png', 'images/smart-we-set__cntnt-lbl-item-img10.png')
+      +we-set__imgs('images/smart-we-set__imgs-img4.png')

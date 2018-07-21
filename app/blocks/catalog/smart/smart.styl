@@ -31,6 +31,10 @@
   .main-reviews__ttl-separ:after
     background-color $howOrange
 
+  @media screen and (max-width 550px)
+    .main-reviews__ttl
+      font-size 36px
+      padding 0
 
 .smart-steps__bg
   position absolute
@@ -51,6 +55,10 @@
   font-size 18px
   line-height 22px
   padding 10px 0
+
+.smart-steps__img
+  max-width 500px
+  width 100%
   /* /4 шага к безопасности */
 
   /* Управляйте своим домом */
@@ -85,7 +93,52 @@
   font-weight 300
   line-height 24px
   margin-bottom 30px
-
   /* /Управляйте своим домом */
+
+  /* Что вы получаете */
+.we-set__cntnt-lbl
+  padding-top 20px
+
+.we-set__cntnt-ttl-right
+  .we-set__cntnt-lbl
+    padding-left 35px
+
+.we-set__cntnt-ttl-left
+  .we-set__cntnt-lbl
+    padding-right 35px
+
+.we-set__cntnt-lbl-item
+  position relative
+  display inline-block
+  background-color #fff
+  border-radius 50%
+  height 110px
+  width 110px
+  margin-right 25px
+
+.we-set__cntnt-lbl
+  .we-set__cntnt-lbl-item:last-child
+    margin-right 0
+
+.we-set__cntnt-lbl-item:before
+  content ''
+  height 100px
+  width 100px
+  position absolute
+  z-index 20
+  top 50%
+  left 50%
+  transform translate(-50%, -50%)
+  border-radius 50%
+  border 1px solid #b9b9b9
+
+.we-set__cntnt-lbl-item-img
+  z-index 10
+  position absolute
+  top 50%
+  left 50%
+  transform translate(-50%, -50%)
+
+  /* /Что вы получаете */
 
 /* /Умный дом */
