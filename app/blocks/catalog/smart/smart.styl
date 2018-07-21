@@ -1,4 +1,7 @@
 /* Умный дом */
+.header-smart
+  background-image url(../../images/smart-header__bg.png)
+
   /* УТП */
 .cat-video__utp-bottom-li
   display inline-block
@@ -373,6 +376,123 @@
     font-size 40px
   /* /Почему */
 
+  /* Наши цены */
+.smart-price__ttl-wrap
+  position relative
+
+.smart-price__ttl-wrap:before
+  content ''
+  position absolute
+  height 3px
+  top 50%
+  left 50%
+  width 90%
+  transform translate(-50%, -50%)
+  background-color $howOrange
+
+.smart-price__ttl
+  font-size 48px
+  font-weight 400
+  color yellow
+  position relative
+  display inline-block
+  z-index 10
+  background-color $hderBlue
+  padding 0 60px
+  text-transform initial
+
+  /* Таблица */
+.smart-price
+  position relative
+  .hder__test-bottom
+    padding-left 0
+    padding-right 0
+
+.smart-price__bg
+  position absolute
+  top 0
+  bottom 0
+  left 0
+  width 100%
+  overflow hidden
+  transform skewY(-7deg)
+.smart-price__bg:before
+  content ''
+  position absolute
+  top 0
+  bottom 0
+  left 0
+  width 100%
+  background-image url(../../images/smart-price__bg.png)
+  background-position center
+  background-size cover
+  background-repeat no-repeat
+  transform skewY(7deg)
+
+.smart-table
+  width 100%
+  font-size 14px
+  th
+    font-style italic
+    font-weight 600
+    padding 7px
+  td
+    padding 7px
+  tr:nth-child(odd)
+    background-color #efefef
+  tr:last-child
+    background-color #efefef
+    td:last-child
+      font-weight 600
+      color red
+      font-size 16px
+    td:nth-child(2)
+      font-style italic
+      font-weight 600
+    td
+      padding-top 10px
+      padding-bottom 10px
+      border-top 1px solid lightgrey
+  tr
+    td:nth-child(5),
+    td:nth-child(6)
+      font-style italic
+    th,
+    td
+      border-right 1px solid lightgrey
+    th:last-child,
+    td:last-child
+      border-right none
+
+@media screen and (max-width 768px)
+  .smart-table
+    tr
+      th:nth-child(3),
+      th:nth-child(4),
+      td:nth-child(3),
+      td:nth-child(4)
+        display none
+  .smart-price .hder__test-bottom
+    padding-right 0 !important
+    padding-left 0 !important
+@media screen and (max-width 430px)
+  .smart-table
+    tr
+      th:nth-child(1),
+      th:nth-child(5),
+      td:nth-child(1),
+      td:nth-child(5)
+        display none
+@media screen and (max-width 350px)
+  .smart-price__ttl
+    padding 0
+  .smart-price
+    .hder__test-top:before
+      border-left 120px solid transparent
+      border-right 120px solid transparent
+  /* /Таблица */
+
+  /* /Наши цены */
 
 
 /* /Умный дом */

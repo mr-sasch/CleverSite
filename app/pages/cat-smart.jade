@@ -1,6 +1,7 @@
 extends /blocks/catalog/catalog-layout.jade
 include /blocks/simple-pages/mixins
 include /blocks/main/main-form/main-form
+include /blocks/main/main-seo/main-seo
 
 block simpleTitle
 	- var title = 'Умный дом';
@@ -34,11 +35,17 @@ block simpleContent
 		// Новые ip-камеры
 		include /blocks/catalog/smart/ip
 		// /Новые ip-камеры
+		// Оставьте заявку
+		+main-form() 
+		// /Оставьте заявку		
 		// Почему?
 		include /blocks/catalog/smart/why
 		// /Почему?
+		// Цены
+		include /blocks/catalog/smart/price		
+		// /Цены
 
 
-		// Оставьте заявку
-		+main-form() 
-		// /Оставьте заявку
+		// Сео текст
+		+main-seo() 
+		// /Сео текст
