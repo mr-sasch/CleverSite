@@ -11,17 +11,17 @@ header(class= headerType)
 			// Главное меню
 			#mainMenu.main-menu.collapse.navbar-collapse.justify-content-end
 				.navbar-nav.navbar-nav-main_m-r
-					a.nav-item.nav-link.active(href='index.html') Главная
-					a.nav-item.nav-link(href='about.html') О компании
-					a.nav-item.nav-link(href='articles.html') Статьи
-					a.nav-item.nav-link(href='gallery.html') Галерея
-					a.nav-item.nav-link(href='contacts.html') Контакты
+					a.nav-item.nav-link(href='/index.html') Главная
+					a.nav-item.nav-link(href='/about.html') О компании
+					a.nav-item.nav-link(href='/articles.html') Статьи
+					a.nav-item.nav-link(href='/gallery.html') Галерея
+					a.nav-item.nav-link(href='/contacts.html') Контакты
 	.separ-nav
 	.container
 		// Меню каталога
-		.navbar.navbar-expand-xl.navbar-light.p-0
+		#catalogMenu.navbar.navbar-expand-xl.navbar-light.p-0
 			.cat-menu.navbar-nav.d-flex.justify-content-between.align-items-xl-center
-				a.nav-item.active(href='cat-smart.html') Умный дом
+				a.nav-item(href='/cat-smart.html') Умный дом
 				// Вложенное меню
 				.dropdown-menu
 					a.dropdown-item(href='#') Система "Умный дом"
@@ -53,22 +53,22 @@ header(class= headerType)
 						
 				.nav-item.d-none.d-xl-block
 					.nav-dot
-				a.nav-item(href='cat-skud.html') СКУД для гостиниц
+				a.nav-item(href='/cat-skud.html') СКУД для гостиниц
 				.nav-item.d-none.d-xl-block
 					.nav-dot
-				a.nav-item(href='cat-jal.html') Жалюзи
+				a.nav-item(href='/cat-jal.html') Жалюзи
 				.nav-item.d-none.d-xl-block
 					.nav-dot
-				a.nav-item(href='cat-kar.html') Электрокарнизы
+				a.nav-item(href='/cat-kar.html') Электрокарнизы
 				.nav-item.d-none.d-xl-block
 					.nav-dot
-				a.nav-item(href='cat-fire.html') Пожарная сигнализация
+				a.nav-item(href='/cat-fire.html') Пожарная сигнализация
 				.nav-item.d-none.d-xl-block
 					.nav-dot
-				a.nav-item(href='cat-video.html') Видеонаблюдение
+				a.nav-item(href='/cat-video.html') Видеонаблюдение
 				.nav-item.d-none.d-xl-block
 					.nav-dot
-				a.nav-item(href='cat-domof.html') Домофоны
+				a.nav-item(href='/cat-domof.html') Домофоны
 	.separ-nav
 	// Содержимое баннера
 	.container
@@ -91,3 +91,31 @@ header(class= headerType)
 				// УТП центр
 				block centerUtp
 	block breadcrumbs
+	// Подсветка активного меню
+	script.
+		var activeMenu = () => {
+			var currentUrl = window.location.pathname,
+			menuA = document.querySelectorAll('#mainMenu a'),
+			menuAlength = menuA.length;
+			for (var i=0; i<menuAlength; i++) {
+				var menuAhref = menuA[i].getAttribute('href');
+				if (currentUrl === menuAhref) {
+					menuA[i].classList.add('active');
+					break;
+					}
+				}
+		};
+		activeMenu();
+		var activeMenuCat = () => {
+			var currentUrl = window.location.pathname,
+			menuA = document.querySelectorAll('#catalogMenu a.nav-item'),
+			menuAlength = menuA.length;
+			for (var i=0; i<menuAlength; i++) {
+				var menuAhref = menuA[i].getAttribute('href');
+				if (currentUrl === menuAhref) {
+					menuA[i].classList.add('active');
+					break;
+					}
+				}
+		};
+		activeMenuCat();
