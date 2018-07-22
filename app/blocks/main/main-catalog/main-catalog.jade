@@ -7,16 +7,20 @@ mixin main-catalog()
 		.container.main-catalog__container
 			.row.flex-wrap#mainCat
 				.col-12.col-lg-6
-					mixin mainCatItem(cls1, cls2, ttl, id, tgt)
+					mixin mainCatItem(cls1, cls2, ttl, id, tgt, href)
 						.main-cat__item.collapsed(data-toggle='collapse' data-target= tgt class= cls1).mb-4
 							.main-cat__item-logo(class= cls2)
 							.main-cat__item-ttl= ttl
 							.main-cat__item-cntnt.collapse(id= id data-parent="#mainCat") Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel suscipit, nulla quidem nobis quibusdam dolorum consectetur voluptatum architecto. Qui rem, saepe nesciunt, dicta impedit rerum dolore modi consequuntur doloribus non.
+								.main-cat__item-cntnt-more 
+									a.main-cat__item-cntnt-more-a(href= href) подробнее
 					// Умный дом 
 					.main-cat__item(data-toggle='collapse' data-target='#catItemHouse' class='main-cat__item-house').mb-4
 						.main-cat__item-logo(class='main-cat__item-logo-house')
 						.main-cat__item-ttl Умный дом
 						.main-cat__item-cntnt.collapse.show(id='catItemHouse' data-parent="#mainCat") Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel suscipit, nulla quidem nobis quibusdam dolorum consectetur voluptatum architecto. Qui rem, saepe nesciunt, dicta impedit rerum dolore modi consequuntur doloribus non.
+							.main-cat__item-cntnt-more 
+								a.main-cat__item-cntnt-more-a(href='/cat-smart.html') подробнее
 					// Системы солнцезащиты
 					.main-cat__item.main-cat__item-sun#catSun.collapsed.mb-4
 						.main-cat__item-logo(class='main-cat__item-logo-sun')
@@ -25,7 +29,11 @@ mixin main-catalog()
 							.main-cat__item-sun-col#catSunJalBtn.collapsed(data-toggle='collapse' data-target='#catSunJal') Жалюзи
 							.main-cat__item-sun-col#catSunKarBtn.collapsed(data-toggle='collapse' data-target='#catSunKar') Электрокарнизы
 						.main-cat__item-cntnt.collapse(id='catSunJal' data-parent="#catSun") Жалюзи Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel suscipit, nulla quidem nobis quibusdam dolorum consectetur voluptatum architecto. Qui rem, saepe nesciunt, dicta impedit rerum dolore modi consequuntur doloribus non.
+							.main-cat__item-cntnt-more 
+								a.main-cat__item-cntnt-more-a(href='/cat-jal.html') подробнее
 						.main-cat__item-cntnt.collapse(id='catSunKar' data-parent="#catSun") Карнизы Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel suscipit, nulla quidem nobis quibusdam dolorum consectetur voluptatum architecto. Qui rem, saepe nesciunt, dicta impedit rerum dolore modi consequuntur doloribus non.
+							.main-cat__item-cntnt-more 
+								a.main-cat__item-cntnt-more-a(href='/cat-kar.html') подробнее
 						script.
 							catSun.onclick = catSunCol = (e) => {
 								var sun = document.querySelector('.main-cat__item-sun'),
@@ -42,12 +50,12 @@ mixin main-catalog()
 									}				
 							}
 					// Видеонаблюдение
-					+mainCatItem('main-cat__item-video', 'main-cat__item-logo-video', 'Видеонаблюдение', 'catItemVideo', '#catItemVideo')
+					+mainCatItem('main-cat__item-video', 'main-cat__item-logo-video', 'Видеонаблюдение', 'catItemVideo', '#catItemVideo', '/cat-video.html')
 				.col-12.col-lg-6
 					// СКУД
-					+mainCatItem('main-cat__item-skud', 'main-cat__item-logo-skud', 'СКУД для гостиниц', 'catItemSkud', '#catItemSkud')
+					+mainCatItem('main-cat__item-skud', 'main-cat__item-logo-skud', 'СКУД для гостиниц', 'catItemSkud', '#catItemSkud', '/cat-skud.html')
 					// Пожарная сигнализация
-					+mainCatItem('main-cat__item-fire', 'main-cat__item-logo-fire', 'Пожарная сигнализация', 'catItemFire', '#catItemFire')
+					+mainCatItem('main-cat__item-fire', 'main-cat__item-logo-fire', 'Пожарная сигнализация', 'catItemFire', '#catItemFire', '/cat-fire.html')
 					// Домофоны
-					+mainCatItem('main-cat__item-inter', 'main-cat__item-logo-inter', 'Домофоны', 'catItemInter', '#catItemInter')
+					+mainCatItem('main-cat__item-inter', 'main-cat__item-logo-inter', 'Домофоны', 'catItemInter', '#catItemInter', '/cat-domof.html')
 		// /Блоки
