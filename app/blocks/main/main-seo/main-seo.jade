@@ -1,31 +1,32 @@
 mixin main-seo()
 	+b.main-seo&attributes(attributes)
 		block
-		.main-seo__wrap.main-seo__bg
-		.container
-			.main-seo__ttl Сео текст для главной страницы
-			.main-seo__text-wrap
-				.main-seo__text 
-					p Sed porttitor lectus nibh. Donec sollicitudin molestie malesuada. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Curabitur aliquet quam id dui posuere blandit. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Curabitur aliquet quam id dui posuere blandit. Proin eget tortor risus. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Donec rutrum congue leo eget malesuada. 
-					p Sed porttitor lectus nibh. Donec sollicitudin molestie malesuada. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Curabitur aliquet quam id dui posuere blandit. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Curabitur aliquet quam id dui posuere blandit. Proin eget tortor risus. Vestibulum ac diam sit amet quam ehicula elementum sed sit amet dui. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Donec rutrum congue leo eget malesuada.
-					p Sed porttitor lectus nibh. Donec sollicitudin molestie malesuada. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Curabitur aliquet quam id dui posuere blandit. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Curabitur aliquet quam id dui posuere blandit. Proin eget tortor risus. Vestibulum ac diam sit amet quam ehicula elementum sed sit amet dui. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Donec rutrum congue leo eget malesuada.
-				.main-seo__text-grad
-			.main-seo__more(onclick='mainSeo()')
-				.main-seo__more-show Смотреть полный текст
-				.main-seo__more-hide Свернуть
-				script.
-					const mainSeo = () => {
-						var seoCont = document.querySelector('.main-seo__wrap'),							
-						btn = document.querySelector('.main-seo__more'),
-						text = document.querySelector('.main-seo__text'),		
-						textHeight = text.offsetHeight,
-						textWrap = document.querySelector('.main-seo__text-wrap'),
-						textWrapHeight = textWrap.offsetHeight;
-						
-						if (!seoCont.className.includes('active')) {
-							textWrap.style.height = textHeight + 'px';
-							} else {
-								textWrap.style.height = '250px';
-							}
-						seoCont.classList.toggle('active');							
-					}
+		.main-seo__bg
+		.main-seo__wrap
+			.container
+				.main-seo__ttl Сео текст для главной страницы
+				.main-seo__text-wrap
+					.main-seo__text 
+						p Sed porttitor lectus nibh. Donec sollicitudin molestie malesuada. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Curabitur aliquet quam id dui posuere blandit. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Curabitur aliquet quam id dui posuere blandit. Proin eget tortor risus. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Donec rutrum congue leo eget malesuada. 
+						p Sed porttitor lectus nibh. Donec sollicitudin molestie malesuada. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Curabitur aliquet quam id dui posuere blandit. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Curabitur aliquet quam id dui posuere blandit. Proin eget tortor risus. Vestibulum ac diam sit amet quam ehicula elementum sed sit amet dui. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Donec rutrum congue leo eget malesuada.
+						p Sed porttitor lectus nibh. Donec sollicitudin molestie malesuada. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Curabitur aliquet quam id dui posuere blandit. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Curabitur aliquet quam id dui posuere blandit. Proin eget tortor risus. Vestibulum ac diam sit amet quam ehicula elementum sed sit amet dui. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Donec rutrum congue leo eget malesuada.
+					.main-seo__text-grad
+				.main-seo__more(onclick='mainSeo()')
+					.main-seo__more-show Смотреть полный текст
+					.main-seo__more-hide Свернуть
+					script.
+						const mainSeo = () => {
+							var seoCont = document.querySelector('.main-seo__wrap'),							
+							btn = document.querySelector('.main-seo__more'),
+							text = document.querySelector('.main-seo__text'),		
+							textHeight = text.offsetHeight,
+							textWrap = document.querySelector('.main-seo__text-wrap'),
+							textWrapHeight = textWrap.offsetHeight;
+							
+							if (!seoCont.className.includes('active')) {
+								textWrap.style.height = textHeight + 'px';
+								} else {
+									textWrap.style.height = '250px';
+								}
+							seoCont.classList.toggle('active');							
+						}
