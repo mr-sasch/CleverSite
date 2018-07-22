@@ -55,6 +55,45 @@
 .cat-domof
   .we-set
     margin-top -170px
+
+.we-set__imgs-a
+  position relative
+.we-set__imgs-a:before
+  content ''
+  position absolute
+  top 0
+  left 0
+  width 100%
+  height 100%
+  background-image url("../../images/main-gallery__zoom.png")
+  background-position center
+  background-size initial
+  background-repeat no-repeat
+  opacity 0
+  transition .2s ease
+  z-index 20
+.we-set__imgs-a:hover:before
+  opacity 1
+.we-set__imgs-a:after
+  content ''
+  position absolute
+  top 0
+  left 0
+  width 100%
+  height 100%
+  background-color grey
+  z-index -1
+
+.we-set__imgs-img
+  position relative
+  opacity 1
+  transition .2s ease
+  z-index 10
+.we-set__imgs-a:hover
+  .we-set__imgs-img
+    opacity .5
+
+
   /* /Мы устанавливаем */
 
   /* Полную информацию смотрите в нашем каталоге */
