@@ -77,16 +77,28 @@
   /* Управляйте своим домом */
 .smart-manage
   position relative
-  padding 190px 0 360px
-  margin-top 90px
-  z-index 10
+  padding 160px 0 70px
+  margin-top 0
+  z-index 20
+  margin-bottom 260px
 
 .smart-manage__bg
   position absolute
-  top -300px
+  top 0
   bottom 0
   left 0
   width 100%
+  overflow hidden
+  transform skewY(-7deg)
+
+.smart-manage__bg:before
+  content ''
+  position absolute
+  top -160px
+  bottom -160px
+  left 0
+  width 100%
+  transform skewY(7deg)
   background-image url(../../images/smart-manage__bg.png)
   background-position center
   background-size cover
@@ -267,7 +279,7 @@
   /* Мы защитим вашу квартиру */
 .smart-we-safe
   position relative
-  padding 200px 0
+  padding 170px 0 200px
 
 .smart-we-safe__bg
   position absolute
