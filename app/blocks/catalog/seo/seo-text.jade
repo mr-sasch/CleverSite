@@ -7,29 +7,39 @@
     .row
       .col-12.col-lg-4
         .video-faq__items.video-faq.video-faq_cat#menuCatItems
+          // СКУД - уровень 1
           .card
+            // Кнопка
             .card-header
               .video-faq__items-ttl.video-faq__items-ttl_cat(data-toggle='collapse' data-target= '#catItem1') СКУД для гостиниц
+            // Содержимое
             div(data-parent='#menuCatItems' id='catItem1' class='collapse show')
               .card-body 
                 // Вложенное меню
                 .video-faq__sub-items#menuCatSubItems
+                  // Блок
                   .card
+                    // Кнопка
                     .card-header
                       .video-faq__items-ttl.video-faq__items-ttl_cat.cat-subitems.collapsed(data-toggle='collapse' data-target= '#catSubItem1') Жалюзи
+                    // Содержимое
                     div(data-parent='#menuCatSubItems' id='catSubItem1' class='collapse')
                       .card-body 
+                        // ссылки
                         a.cat-seo__link(href='#') IP-домофоны
                         a.cat-seo__link(href='#') Домофоны для квартиры
                         a.cat-seo__link(href='#') Домофоны для частного дома
                         a.cat-seo__link(href='#') Домофоны для коттеджа
+                  // Блок
                   .card
+                    // Кнопка
                     .card-header
                       .video-faq__items-ttl.video-faq__items-ttl_cat.cat-subitems.collapsed(data-toggle='collapse' data-target= '#catSubItem2') Электрокарнизы
+                    // Содержимое
                     div(data-parent='#menuCatSubItems' id='catSubItem2' class='collapse')
                       .card-body 
-                        // Вложенное меню
                         .video-faq__sub-items#catKarnizi
+                          // Вложенное меню - уровень 2 
                           .card
                             .card-header
                               .video-faq__items-ttl.video-faq__items-ttl_cat.cat-subitems.collapsed(data-toggle='collapse' data-target= '#catKarnizi1') Жалюзи
@@ -84,6 +94,7 @@
                         a.cat-seo__link(href='#') Домофоны для квартиры
                         a.cat-seo__link(href='#') Домофоны для частного дома
                         a.cat-seo__link(href='#') Домофоны для коттеджа              
+          // Жалюзи - уровень 1
           .card
             .card-header
               .video-faq__items-ttl.video-faq__items-ttl_cat.collapsed(data-toggle='collapse' data-target= '#catItem2') Жалюзи
@@ -93,6 +104,7 @@
                 a.cat-seo__link(href='#') Домофоны для квартиры
                 a.cat-seo__link(href='#') Домофоны для частного дома
                 a.cat-seo__link(href='#') Домофоны для коттеджа
+          // Электрокарнизы - уровень 1
           .card
             .card-header
               .video-faq__items-ttl.video-faq__items-ttl_cat.collapsed(data-toggle='collapse' data-target= '#catItem3') Электрокарнизы
@@ -102,6 +114,7 @@
                 a.cat-seo__link(href='#') Домофоны для квартиры
                 a.cat-seo__link(href='#') Домофоны для частного дома
                 a.cat-seo__link(href='#') Домофоны для коттеджа
+          // Видеонаблюдение - уровень 1
           .card
             .card-header
               .video-faq__items-ttl.video-faq__items-ttl_cat.collapsed(data-toggle='collapse' data-target= '#catItem4') Видеонаблюдение
@@ -111,6 +124,7 @@
                 a.cat-seo__link(href='#') Домофоны для квартиры
                 a.cat-seo__link(href='#') Домофоны для частного дома
                 a.cat-seo__link(href='#') Домофоны для коттеджа
+          // Умный дом - уровень 1
           .card
             .card-header
               .video-faq__items-ttl.video-faq__items-ttl_cat.collapsed(data-toggle='collapse' data-target= '#catItem5') Умный дом
@@ -120,6 +134,7 @@
                 a.cat-seo__link(href='#') Домофоны для квартиры
                 a.cat-seo__link(href='#') Домофоны для частного дома
                 a.cat-seo__link(href='#') Домофоны для коттеджа
+                
       .col-12.col-lg-8
         .cat-seo__text-txt
           .cat-seo__text-ttl.mt-5.mt-lg-0
