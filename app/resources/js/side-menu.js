@@ -1,8 +1,8 @@
 
 
-sideMenu.onclick = (e) => {
+function mainSubMenu(event) {
+  var target = event.target;
   var catalogItem = document.querySelectorAll('.catalog-item');
-  var target = e.target;
   var catalogItemCntnt = document.querySelectorAll('.catalog-item__cntnt');
   var catalogItemCntntWrap = document.querySelectorAll('.catalog-item__cntnt-wrap');
 
@@ -36,7 +36,4 @@ sideMenu.onclick = (e) => {
       catalogItemCntntWrap[currentItem].style.height = currentItemHeight + 'px';
     }
   }
-
-
-
 }
