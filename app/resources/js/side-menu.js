@@ -2,9 +2,10 @@
 
 function mainSubMenu(event) {
   var target = event.target;
-  var catalogItem = document.querySelectorAll('.catalog-item');
-  var catalogItemCntnt = document.querySelectorAll('.catalog-item__cntnt');
-  var catalogItemCntntWrap = document.querySelectorAll('.catalog-item__cntnt-wrap');
+
+  var catalogItem = target.parentNode.parentNode.querySelectorAll('.catalog > .catalog-item');
+  var catalogItemCntnt = target.parentNode.parentNode.querySelectorAll('.catalog > .catalog-item > .catalog-item__cntnt-wrap > .catalog-item__cntnt');
+  var catalogItemCntntWrap = target.parentNode.parentNode.querySelectorAll('.catalog > .catalog-item > .catalog-item__cntnt-wrap');
 
   // Определяем текущий элемент
   for (var i=0; i<catalogItem.length; i++) {

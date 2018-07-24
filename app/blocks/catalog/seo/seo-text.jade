@@ -12,17 +12,19 @@
             .catalog-item__ttl(onclick='mainSubMenu(event)') Заголовок меню 1
             .catalog-item__cntnt-wrap
               .catalog-item__cntnt
-                .catalog-menu__link Ссылка
-                .catalog-menu__link Ссылка
-                .catalog-menu__link Ссылка
                 // вложенное меню
-                .catalog-item
-                  .catalog-item__ttl Заголовок меню 1
-                  .catalog-item__cntnt-wrap
-                    .catalog-item__cntnt
-                      .catalog-menu__link Ссылка
-                      .catalog-menu__link Ссылка
-                      .catalog-menu__link Ссылка
+                .catalog.catalog_sub
+                  .catalog-item
+                    .catalog-item__ttl(onclick='mainSubMenu(event)') Заголовок меню 1
+                    .catalog-item__cntnt-wrap
+                      .catalog-item__cntnt
+                        .catalog-menu__link Ссылка
+                        .catalog-menu__link Ссылка
+                        .catalog-menu__link Ссылка
+                .catalog-menu__link Ссылка
+                .catalog-menu__link Ссылка
+                .catalog-menu__link Ссылка
+
           .catalog-item
             .catalog-item__ttl(onclick='mainSubMenu(event)') Заголовок меню 2
             .catalog-item__cntnt-wrap
