@@ -18,10 +18,19 @@ function mainSubMenu(event) {
   }
   var currentItemHeight = catalogItemCntnt[currentItem].offsetHeight;
 
+  var catalogItemCntntWrapParent = catalogItemCntntWrap[currentItem];
+
   // удаляем эктив, если уже есть
   if (target.parentNode.className.includes('active')) {
     catalogItemCntntWrap[currentItem].style.height = '0px';
     target.parentNode.classList.remove('active');
+    while (catalogItemCntntWrapParent !== document.body) {
+      catalogItemCntntWrapParent = catalogItemCntntWrapParent.parentNode;
+      if (catalogItemCntntWrapParent.className === 'catalog-item__cntnt-wrap') {
+        var height = catalogItemCntntWrapParent.offsetHeight;
+        catalogItemCntntWrapParent.style.height = height - currentItemHeight + 'px';
+      }
+    }
     return;
   }
 
@@ -35,6 +44,14 @@ function mainSubMenu(event) {
       catalogItem[currentItem].classList.add('active');
       // задаем высоту активного айтема
       catalogItemCntntWrap[currentItem].style.height = currentItemHeight + 'px';
+
+      while (catalogItemCntntWrapParent !== document.body) {
+        catalogItemCntntWrapParent = catalogItemCntntWrapParent.parentNode;
+        if (catalogItemCntntWrapParent.className === 'catalog-item__cntnt-wrap') {
+          var height = catalogItemCntntWrapParent.offsetHeight;
+          catalogItemCntntWrapParent.style.height = height + currentItemHeight + 'px';
+        }
+      }
     }
   }
 }
