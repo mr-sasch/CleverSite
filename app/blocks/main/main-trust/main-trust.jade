@@ -6,7 +6,14 @@ mixin main-trust()
 			.row.main-trust__top
 				.col.d-flex.flex-column.flex-sm-row
 					.main-trust__ttl.mb-4.mb-sm-0 Нам доверяют:
-					.main-trust__txt ООО "Клевер"
+					#strings(style='display:none;') 
+						.string.active
+							span Первая строка
+						.string
+							span Вторая строка
+						.string
+							span Третья строка
+					.main-trust__txt#typed
 			.row
 				.col
 					.main-trust__item.active
@@ -17,5 +24,3 @@ mixin main-trust()
 				.col
 					.main-trust__item
 						img.main-trust__item-img(src='images/clever-logo-blue.png')
-			
-			

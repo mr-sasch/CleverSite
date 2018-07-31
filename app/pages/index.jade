@@ -20,16 +20,16 @@ block content
 	include ../blocks/main/main-header/main-header
 	// /Шапка
 	// Каталог
-	+main-catalog()
+	//- +main-catalog()
 	// /Каталог
 	// Клевер - это...
-	+main-about()
+	//- +main-about()
 	// /Клевер - это...
 	// Обращение директора
-	+main-director()
+	//- +main-director()
 	// /Обращение директора
 	// Наша команда
-	+main-team()
+	//- +main-team()
 	// /Наша команда
 	// Фотогалерея
 	+main-gallery()
@@ -41,17 +41,24 @@ block content
 	+main-trust()
 	// /Нам доверяют
 	// Оставьте заявку
-	+main-form() 
+	//- +main-form() 
 	// /Оставьте заявку
 	// Сео текст
-	+main-seo() 
+	//- +main-seo() 
 	// /Сео текст
 	// Модальные окна
-	+modals()
+	//- +modals()
 	// /Модальные окна
 	// Футер
 	include ../blocks/footer/footer
 	// /Футер
 	// Скрипты для Главной
+	// Typed.JS 
+	script(src='https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.8/typed.js')
+	// script.
+		var typed = new Typed('#typed', {
+			stringsElement: '.string.active',
+			typeSpeed: 40
+		});
 	script(src='js/main-page-scripts.js')
-	// /Скрипты для Главной
+	// /Скрипты для Главной 

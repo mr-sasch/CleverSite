@@ -78,3 +78,43 @@ var itemSwipe = document.querySelector('.main-reviews__items');
 itemSwipe.onmouseup = () => {
   reviewsItem();
 }
+
+// Нам доверяют
+var items = document.querySelectorAll('.string');
+  // Активные строки текста
+var addActive = (i) => {
+  for (var q = 0; q < items.length; q++) {
+    items[q].classList.remove('active');
+  }
+  items[i].classList.add('active');
+};
+
+  // Активные логотипы
+var itemsLogo = document.querySelectorAll('.main-trust__item');
+var addActiveLogo = (i) => {
+  for (var q = 0; q < itemsLogo.length; q++) {
+    itemsLogo[q].classList.remove('active');
+  }
+  itemsLogo[i].classList.add('active');
+}
+
+var i = 0;
+var typed;
+var doTyped = () => {
+  typed = new Typed('#typed', {
+    stringsElement: '.string.active',
+    typeSpeed: 50
+  });
+  var func = setTimeout(function() {
+    typed.destroy();
+    addActive(i);
+    addActiveLogo(i);
+    i++;
+    if (i === items.length) {
+      i = 0;
+      }
+    doTyped();
+  }, 2000);
+}
+
+doTyped();
